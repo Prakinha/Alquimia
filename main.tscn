@@ -167,6 +167,7 @@ position = Vector2(617, 219)
 texture = ExtResource("28_4w656")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1645136903]
+visible = false
 material = SubResource("ShaderMaterial_kq58d")
 offset_left = -481.0
 offset_top = -389.0

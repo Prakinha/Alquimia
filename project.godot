@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*uid://cys7ie1w8kqfn"
+Receitas="*uid://cel1nst3llnyn"
 
 [dotnet]
 

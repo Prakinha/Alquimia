@@ -1,9 +1,13 @@
 extends Node
 
 enum Element {
-	FIRE,
-	WATER,
-	EARTH,
-	AIR,
-	VOID
+	Red,
+	Green,
+	Blue,
+	Yellow,
+	Cyan,
+	Magenta,
+	White,
+	Black,
+	none
 }
