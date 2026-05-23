@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://2silpsqoegtg"]
+
+[ext_resource type="Texture2D" uid="uid://be2tvmrclkfb4" path="res://WWpasta/WWPlayer/coco.png" id="1_54535"]
+
+[node name="ItemTeste" type="Node2D" unique_id=1062872610]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1010538964]
+position = Vector2(200, 0)
+scale = Vector2(5, 5)
+texture = ExtResource("1_54535")
+hframes = 20
