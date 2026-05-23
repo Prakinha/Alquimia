@@ -23,4 +23,5 @@ scale = Vector2(7, 7)
 [node name="Player" parent="." unique_id=800378027 instance=ExtResource("1_bjfuu")]
 
 [node name="Esteira" parent="." unique_id=912511156 instance=ExtResource("2_536ej")]
+position = Vector2(-88, -2)
 arrayDeItensPossiveis = Array[ExtResource("4_3kam1")]([SubResource("Resource_fxf81"), null])
