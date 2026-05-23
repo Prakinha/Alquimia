@@ -1,10 +1,12 @@
 extends Node2D
 
 @export var goblinScene: PackedScene
+@export var arrayDeItensPossiveis: Array[ItemData]
 
 
 func _on_timer_timeout() -> void:
-	var newgoblin = goblinScene.instantiate()
+	var newgoblin: GoblinArea2D = goblinScene.instantiate()
+	newgoblin.itemdata = arrayDeItensPossiveis.pick_random()
 	add_child(newgoblin)
 	
 

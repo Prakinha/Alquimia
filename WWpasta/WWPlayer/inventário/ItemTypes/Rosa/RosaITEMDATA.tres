@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dckd4sote67p5"]
+
+[ext_resource type="PackedScene" uid="uid://b2n4wqgsbufqv" path="res://WWpasta/WWPlayer/inventário/ItemTypes/Rosa/RosaITEMSCENE.tscn" id="1_6oije"]
+[ext_resource type="Script" uid="uid://dweef7bq1l6rt" path="res://WWpasta/WWPlayer/inventário/ItemData.gd" id="1_qgnnm"]
+[ext_resource type="Texture2D" uid="uid://b0asd5vgdyni5" path="res://WWpasta/WWPlayer/inventário/ItemTypes/Rosa/Rosa.png" id="2_kqnqs"]
+
+[resource]
+script = ExtResource("1_qgnnm")
+ItemName = "Rosa"
+icon = ExtResource("2_kqnqs")
+ItemScene = ExtResource("1_6oije")
+metadata/_custom_type_script = "uid://dweef7bq1l6rt"
