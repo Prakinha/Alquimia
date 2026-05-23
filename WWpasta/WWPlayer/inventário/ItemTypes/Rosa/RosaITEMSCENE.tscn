@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://b2n4wqgsbufqv"]
 
-[ext_resource type="Texture2D" uid="uid://lscyajgwevbu" path="res://WWpasta/WWPlayer/inventário/ItemTypes/Vermelho/Vermelho.png" id="1_ugpqv"]
+[ext_resource type="Texture2D" uid="uid://b0asd5vgdyni5" path="res://WWpasta/WWPlayer/inventário/ItemTypes/Rosa/Rosa.png" id="1_sk17l"]
 
 [node name="ItemTeste" type="Node2D" unique_id=1062872610]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1010538964]
 position = Vector2(200, 0)
 scale = Vector2(2, 2)
-texture = ExtResource("1_ugpqv")
+texture = ExtResource("1_sk17l")
