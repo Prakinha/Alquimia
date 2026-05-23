@@ -3,9 +3,11 @@
 [ext_resource type="Script" uid="uid://cdvep004hkr6h" path="res://WWpasta/WWPlayer/inventário/item_slot.gd" id="1_3yovt"]
 [ext_resource type="Script" uid="uid://cg80ccybum57f" path="res://WWpasta/WWPlayer/inventário/inventory_panel.gd" id="1_4l7ki"]
 [ext_resource type="Script" uid="uid://q1wv82d7viog" path="res://WWpasta/WWPlayer/inventário/inventário.gd" id="1_ywqdb"]
-[ext_resource type="PackedScene" path="res://WWpasta/WWPlayer/inventário/item_drop.tscn" id="2_ywqdb"]
+[ext_resource type="PackedScene" uid="uid://cmcxlcvf7ovuq" path="res://WWpasta/WWPlayer/inventário/item_drop.tscn" id="2_ywqdb"]
 
 [node name="Inventário" type="CanvasLayer" unique_id=1854727514]
+scale = Vector2(0.5, 0.5)
+transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
 script = ExtResource("1_ywqdb")
 item_drop = ExtResource("2_ywqdb")
 
