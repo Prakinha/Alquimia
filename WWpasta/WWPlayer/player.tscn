@@ -8,11 +8,11 @@
 [ext_resource type="Script" uid="uid://dr663150gojes" path="res://WWpasta/WWPlayer/animation_controler.gd" id="4_qjkh3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3pqv"]
-radius = 70.0
-height = 144.0
+radius = 40.0
+height = 106.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g1dw6"]
-radius = 105.22357
+radius = 106.004715
 
 [sub_resource type="Animation" id="Animation_g6k8r"]
 resource_name = "Idle_down"
@@ -246,6 +246,7 @@ script = ExtResource("1_onrkg")
 itens_iniciais = Array[ExtResource("2_yaav1")]([ExtResource("3_yaav1"), ExtResource("3_yaav1"), ExtResource("3_yaav1"), ExtResource("3_yaav1")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1594310992]
+position = Vector2(-1, 17)
 shape = SubResource("CapsuleShape2D_i3pqv")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2128878290]
