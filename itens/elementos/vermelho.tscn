@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://kq6gc1gkw2ih"]
 
 [ext_resource type="PackedScene" uid="uid://dd10ge25mjn47" path="res://itens/elementos/azul.tscn" id="1_fcgub"]
+[ext_resource type="Texture2D" uid="uid://lscyajgwevbu" path="res://itens/elementosSprites/Vermelho.png" id="2_piqcf"]
 
 [node name="vermelho" unique_id=1751028922 instance=ExtResource("1_fcgub")]
 item_id = "R"
 item_name = "Vermelho"
+
+[node name="Sprite2D" parent="Area2D" parent_id_path=PackedInt32Array(1651896402) index="1" unique_id=1298149292]
+texture = ExtResource("2_piqcf")

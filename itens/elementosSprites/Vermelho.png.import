@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcastyc2lx34s"
-path="res://.godot/imported/Azul.png-ace4e6388e5daf1010589e2790e0a54f.ctex"
+uid="uid://lscyajgwevbu"
+path="res://.godot/imported/Vermelho.png-75131eb933fcf62935fff3a3ca8c23b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://WWpasta/WWPlayer/inventário/ItemTypes/Azul/Azul.png"
-dest_files=["res://.godot/imported/Azul.png-ace4e6388e5daf1010589e2790e0a54f.ctex"]
+source_file="res://itens/elementosSprites/Vermelho.png"
+dest_files=["res://.godot/imported/Vermelho.png-75131eb933fcf62935fff3a3ca8c23b8.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d3g5gx76duxhn"]
 
-[ext_resource type="Texture2D" uid="uid://lscyajgwevbu" path="res://WWpasta/WWPlayer/inventário/ItemTypes/Vermelho/Vermelho.png" id="1_xy7td"]
+[ext_resource type="Texture2D" uid="uid://lscyajgwevbu" path="res://itens/elementosSprites/Vermelho.png" id="1_xy7td"]
 
 [node name="ItemTeste" type="Node2D" unique_id=1062872610]
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b2n4wqgsbufqv"]
 
-[ext_resource type="Texture2D" uid="uid://b0asd5vgdyni5" path="res://WWpasta/WWPlayer/inventário/ItemTypes/Rosa/Rosa.png" id="1_sk17l"]
+[ext_resource type="Texture2D" uid="uid://b0asd5vgdyni5" path="res://itens/elementosSprites/Rosa.png" id="1_sk17l"]
 
 [node name="ItemTeste" type="Node2D" unique_id=1062872610]
 

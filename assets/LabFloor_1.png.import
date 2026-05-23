@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lscyajgwevbu"
-path="res://.godot/imported/Vermelho.png-c3cc550f38f04847e4c169665b8b5d35.ctex"
+uid="uid://cc7kifbib7aqu"
+path="res://.godot/imported/LabFloor_1.png-118de6309a7f47a1733826b4fd6ab623.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://WWpasta/WWPlayer/inventário/ItemTypes/Vermelho/Vermelho.png"
-dest_files=["res://.godot/imported/Vermelho.png-c3cc550f38f04847e4c169665b8b5d35.ctex"]
+source_file="res://assets/LabFloor_1.png"
+dest_files=["res://.godot/imported/LabFloor_1.png-118de6309a7f47a1733826b4fd6ab623.ctex"]
 
 [params]
 
