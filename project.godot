@@ -15,6 +15,10 @@ run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*uid://cys7ie1w8kqfn"
+
 [dotnet]
 
 project/assembly_name="Alquimia"

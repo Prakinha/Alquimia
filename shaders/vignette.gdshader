@@ -1,6 +1,6 @@
 shader_type canvas_item;
 
-uniform float alpha = 0.4;
+uniform float alpha = 0.2;
 uniform float inner_radius = 0.2;
 uniform float outer_radius = 0.8;
 

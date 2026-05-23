@@ -28,7 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://nkjghxrhbhcs" path="res://sprites/iloveimg-converted/ezgif-3eefef821a5819d3-0026.jpg" id="26_abqjc"]
 [ext_resource type="Texture2D" uid="uid://cbbkg32b2kii2" path="res://sprites/iloveimg-converted/ezgif-3eefef821a5819d3-0027.jpg" id="27_6iyjs"]
 [ext_resource type="Texture2D" uid="uid://sip6cufx8s2g" path="res://icon.svg" id="28_4w656"]
-[ext_resource type="Shader" uid="uid://dvdjeakuy45l8" path="res://vignette.gdshader" id="29_qsp4k"]
+[ext_resource type="Shader" uid="uid://dvdjeakuy45l8" path="res://shaders/vignette.gdshader" id="29_qsp4k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e71vb"]
 size = Vector2(1153.5, 172)
