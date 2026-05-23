@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cowyyj1q2dtd1"]
+
+[ext_resource type="PackedScene" uid="uid://dgcarvigog85b" path="res://itens/elementos/amarelo.tscn" id="1_c8hxb"]
+
+[node name="purple" unique_id=1751028922 instance=ExtResource("1_c8hxb")]
+item_id = "purple"
+item_name = "purple"

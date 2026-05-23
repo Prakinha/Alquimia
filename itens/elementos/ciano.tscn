@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dqj3lxla1brit"]
+
+[ext_resource type="PackedScene" uid="uid://bs3kpo6graif8" path="res://itens/elementos/magenta.tscn" id="1_tpfst"]
+
+[node name="ciano" unique_id=1751028922 instance=ExtResource("1_tpfst")]
+item_id = "C"
+item_name = "Ciano"

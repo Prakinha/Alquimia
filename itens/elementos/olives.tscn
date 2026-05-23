@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b863cvjq3t2iw"]
+
+[ext_resource type="PackedScene" uid="uid://dgcarvigog85b" path="res://itens/elementos/amarelo.tscn" id="1_dyup4"]
+
+[node name="olives" unique_id=1751028922 instance=ExtResource("1_dyup4")]
+item_id = "olive"
+item_name = "olive"

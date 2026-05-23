@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bs3kpo6graif8"]
+
+[ext_resource type="PackedScene" uid="uid://dd10ge25mjn47" path="res://itens/elementos/azul.tscn" id="1_jj0ra"]
+
+[node name="magenta" unique_id=1751028922 instance=ExtResource("1_jj0ra")]
+item_id = "M"
+item_name = "Magenta"

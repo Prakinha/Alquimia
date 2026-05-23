@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bhu5xlt0kjge5"]
+
+[ext_resource type="PackedScene" uid="uid://dgcarvigog85b" path="res://itens/elementos/amarelo.tscn" id="1_vbsxk"]
+
+[node name="ruby" unique_id=1751028922 instance=ExtResource("1_vbsxk")]
+item_id = "ruby"
+item_name = "ruby"
