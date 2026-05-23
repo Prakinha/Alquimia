@@ -130,7 +130,7 @@ func dropar_items() -> void:
 			if not area.isSegurando():
 				area.ReceberItem(meu_inventario.retirar_item_do_slot(item_atualmente_equipado,true))
 				limpar_as_maos()
-				print("item dropado!")
+				print("item dropado para o goblin!")
 				return
 				
 			
