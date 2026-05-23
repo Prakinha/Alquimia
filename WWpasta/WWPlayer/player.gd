@@ -101,10 +101,10 @@ func coletar_items() -> void:
 	for area in areas_proximas:
 		var possivelGoblin = area.get_parent().get_parent()
 		if possivelGoblin is GoblinArea2D:
-			possivelGoblin.isSegurandoItem = false
-			possivelGoblin.limpar_as_maos()
-			if meu_inventario.adicionar_item_novo(area.itemdata):
+			if meu_inventario.adicionar_item_novo(area.itemdata) and possivelGoblin.isSegurando():
 				print("Coletou do goblin: ", area.itemdata.ItemName)
+				possivelGoblin.isSegurandoItem = false
+				area.queue_free()
 				return
 			
 		
@@ -131,6 +131,7 @@ func dropar_items() -> void:
 				area.ReceberItem(meu_inventario.retirar_item_do_slot(item_atualmente_equipado,true))
 				limpar_as_maos()
 				print("item dropado!")
+				return
 				
 			
 

@@ -5,10 +5,11 @@ class_name GoblinArea2D
 @export var itemdata: ItemData
 @onready var goblinHand: Marker2D = $Hand
 @export var itemdrop: PackedScene
-@onready var isSegurandoItem: bool = false
+@onready var isSegurandoItem: bool
 
 
 func _ready() -> void:
+	isSegurandoItem = false
 	if itemdata:
 		isSegurandoItem = true
 		var itemDoGoblin : ItemDrop = itemdrop.instantiate()
