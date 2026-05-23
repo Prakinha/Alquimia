@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cl18yhp1wt86u"]
+
+[ext_resource type="PackedScene" uid="uid://dx4ts1l86k5j0" path="res://itens/itembase.tscn" id="1_itvmd"]
+
+[node name="verde" unique_id=1751028922 instance=ExtResource("1_itvmd")]
+item_id = "G"
+item_name = "Verde"

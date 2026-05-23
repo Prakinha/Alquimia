@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dd10ge25mjn47"]
+
+[ext_resource type="PackedScene" uid="uid://cl18yhp1wt86u" path="res://itens/elementos/verde.tscn" id="1_qawuy"]
+
+[node name="azul" unique_id=1751028922 instance=ExtResource("1_qawuy")]
+item_id = "B"
+item_name = "Azul"

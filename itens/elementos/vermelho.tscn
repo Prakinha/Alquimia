@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://kq6gc1gkw2ih"]
+
+[ext_resource type="PackedScene" uid="uid://dd10ge25mjn47" path="res://itens/elementos/azul.tscn" id="1_fcgub"]
+
+[node name="vermelho" unique_id=1751028922 instance=ExtResource("1_fcgub")]
+item_id = "R"
+item_name = "Vermelho"
