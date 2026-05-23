@@ -1,8 +1,15 @@
 [gd_scene format=3 uid="uid://s8qu6kl1dfcs"]
 
+[ext_resource type="Script" uid="uid://c075rdkm6sryf" path="res://WWpasta/WWesteira/esteira.gd" id="1_3036i"]
 [ext_resource type="Texture2D" uid="uid://d5r1ytuyx606" path="res://WWpasta/WWesteira/Bloco preto.png" id="1_id4gq"]
+[ext_resource type="PackedScene" uid="uid://bnufdt1nx47p3" path="res://WWpasta/WWesteira/goblin/Goblin.tscn" id="2_v2mle"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3036i"]
+size = Vector2(64, 64)
 
 [node name="Esteira" type="Node2D" unique_id=912511156]
+script = ExtResource("1_3036i")
+goblinScene = ExtResource("2_v2mle")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1806667218]
 position = Vector2(32, 32)
@@ -17,3 +24,15 @@ modulate = Color(1, 1, 1, 0.49411765)
 position = Vector2(575.5, 32)
 scale = Vector2(16.015625, 1)
 texture = ExtResource("1_id4gq")
+
+[node name="Timer" type="Timer" parent="." unique_id=1058702934]
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2089607802]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1613512839]
+position = Vector2(1120, 32)
+shape = SubResource("RectangleShape2D_3036i")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
