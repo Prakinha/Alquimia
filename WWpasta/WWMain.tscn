@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://divs4oafvp81o"]
+
+[ext_resource type="PackedScene" uid="uid://djcxipulbl6j0" path="res://WWpasta/WWPlayer/player.tscn" id="1_h3hi5"]
+[ext_resource type="PackedScene" uid="uid://s8qu6kl1dfcs" path="res://WWpasta/WWesteira/Esteira.tscn" id="3_mvryu"]
+
+[node name="WwMain" type="Node2D" unique_id=1219875113]
+
+[node name="Player" parent="." unique_id=800378027 instance=ExtResource("1_h3hi5")]
+
+[node name="Esteira" parent="." unique_id=912511156 instance=ExtResource("3_mvryu")]
