@@ -5,3 +5,5 @@
 [node name="magenta" unique_id=1751028922 instance=ExtResource("1_jj0ra")]
 item_id = "M"
 item_name = "Magenta"
+
+[node name="Area2D" type="Area2D" parent="." index="1" unique_id=1241117096]

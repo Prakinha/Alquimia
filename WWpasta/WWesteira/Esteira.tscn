@@ -16,14 +16,17 @@ goblinScene = ExtResource("2_v2mle")
 arrayDeItensPossiveis = Array[ExtResource("3_vmruu")]([ExtResource("4_243xl"), ExtResource("5_vmruu"), ExtResource("4_243xl")])
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1806667218]
+visible = false
 position = Vector2(32, 32)
 texture = ExtResource("1_id4gq")
 
 [node name="Sprite2D3" type="Sprite2D" parent="." unique_id=956368437]
+visible = false
 position = Vector2(1120, 32)
 texture = ExtResource("1_id4gq")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=196530221]
+visible = false
 modulate = Color(1, 1, 1, 0.49411765)
 position = Vector2(575.5, 32)
 scale = Vector2(16.015625, 1)
@@ -33,6 +36,7 @@ texture = ExtResource("1_id4gq")
 autostart = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2089607802]
+position = Vector2(120, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1613512839]
 position = Vector2(1120, 32)

@@ -54,13 +54,13 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		return
 		
 	# Troca por número (1, 2, 3)
-	if event.keycode == KEY_Q:
+	if event.keycode == KEY_1:
 		equipar_item(0)
-	elif event.keycode == KEY_W:
+	elif event.keycode == KEY_2:
 		equipar_item(1)
-	elif event.keycode == KEY_E:
+	elif event.keycode == KEY_3:
 		equipar_item(2)
-	elif event.keycode == KEY_R:
+	elif event.keycode == KEY_4:
 		equipar_item(3)
 	elif event.keycode == KEY_F:
 		coletar_items()

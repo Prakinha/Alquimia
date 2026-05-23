@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://ce2a0dk6qsa3y"]
+
+[ext_resource type="PackedScene" uid="uid://djcxipulbl6j0" path="res://WWpasta/WWPlayer/player.tscn" id="1_bjfuu"]
+[ext_resource type="PackedScene" uid="uid://s8qu6kl1dfcs" path="res://WWpasta/WWesteira/Esteira.tscn" id="2_536ej"]
+[ext_resource type="PackedScene" uid="uid://dff20ncqq8asq" path="res://mapa/alchemy lab.tscn" id="3_s0tju"]
+[ext_resource type="Script" uid="uid://dweef7bq1l6rt" path="res://WWpasta/WWPlayer/inventário/ItemData.gd" id="4_3kam1"]
+[ext_resource type="PackedScene" uid="uid://kq6gc1gkw2ih" path="res://itens/elementos/vermelho.tscn" id="5_jpfkd"]
+[ext_resource type="Texture2D" uid="uid://lscyajgwevbu" path="res://itens/elementosSprites/Vermelho.png" id="6_kgfak"]
+
+[sub_resource type="Resource" id="Resource_fxf81"]
+script = ExtResource("4_3kam1")
+ItemName = "Vermelho"
+icon = ExtResource("6_kgfak")
+ItemScene = ExtResource("5_jpfkd")
+metadata/_custom_type_script = "uid://dweef7bq1l6rt"
+
+[node name="WwMain" type="Node2D" unique_id=1219875113]
+
+[node name="mapa" parent="." unique_id=1199859687 instance=ExtResource("3_s0tju")]
+position = Vector2(-1906.9999, -800.9999)
+scale = Vector2(7, 7)
+
+[node name="Player" parent="." unique_id=800378027 instance=ExtResource("1_bjfuu")]
+
+[node name="Esteira" parent="." unique_id=912511156 instance=ExtResource("2_536ej")]
+arrayDeItensPossiveis = Array[ExtResource("4_3kam1")]([SubResource("Resource_fxf81"), null])

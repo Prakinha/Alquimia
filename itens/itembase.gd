@@ -38,7 +38,7 @@ func transmute(nome_da_cena: String):
 	print(item_name + " transmutou para " + nome_da_cena + "!")
 	
 	# ⚠️ ATENÇÃO: Ajuste este caminho para a pasta onde você salva as cenas dos seus itens!
-	var caminho_da_cena = "res://itens/" + nome_da_cena + ".tscn"
+	var caminho_da_cena = "res://itens/elementos/" + nome_da_cena + ".tscn"
 	var cena_carregada = load(caminho_da_cena) as PackedScene
 	
 	if cena_carregada:
