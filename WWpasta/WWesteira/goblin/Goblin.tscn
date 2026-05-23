@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bnufdt1nx47p3"]
+
+[ext_resource type="Texture2D" uid="uid://vxh2a8piqd3y" path="res://WWpasta/WWesteira/goblin/triangulo.png" id="1_58vxr"]
+[ext_resource type="Script" uid="uid://dosuhwlhe1m4r" path="res://WWpasta/WWesteira/goblin/goblin.gd" id="1_eu6x4"]
+[ext_resource type="Resource" uid="uid://dcsu243k7n5qv" path="res://WWpasta/WWPlayer/inventário/ItemTypes/Vermelho/VermelhoITEMDATA.tres" id="2_t5q8k"]
+[ext_resource type="PackedScene" uid="uid://cmcxlcvf7ovuq" path="res://WWpasta/WWPlayer/inventário/item_drop.tscn" id="3_myoah"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eu6x4"]
+radius = 120.26637
+
+[node name="Goblin" type="Area2D" unique_id=392190091]
+script = ExtResource("1_eu6x4")
+itemdata = ExtResource("2_t5q8k")
+itemdrop = ExtResource("3_myoah")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1396809648]
+position = Vector2(32, 64)
+shape = SubResource("CircleShape2D_eu6x4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1387187831]
+position = Vector2(32, 64)
+scale = Vector2(1, 2)
+texture = ExtResource("1_58vxr")
+
+[node name="Hand" type="Marker2D" parent="." unique_id=1998258678]
+position = Vector2(32, 0)

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://divs4oafvp81o"]
+
+[ext_resource type="PackedScene" uid="uid://djcxipulbl6j0" path="res://WWpasta/WWPlayer/player.tscn" id="1_h3hi5"]
+[ext_resource type="PackedScene" uid="uid://bnufdt1nx47p3" path="res://WWpasta/WWesteira/goblin/Goblin.tscn" id="2_mvryu"]
+
+[node name="WwMain" type="Node2D" unique_id=1219875113]
+
+[node name="Player" parent="." unique_id=800378027 instance=ExtResource("1_h3hi5")]
+
+[node name="Goblin" parent="." unique_id=1704999616 instance=ExtResource("2_mvryu")]

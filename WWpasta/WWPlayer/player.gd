@@ -99,9 +99,16 @@ func equipar_item(slot_index: int) -> void:
 func coletar_items() -> void:
 	var areas_proximas: Array[Area2D] = area_coleta.get_overlapping_areas()
 	for area in areas_proximas:
+		var possivelGoblin = area.get_parent().get_parent()
+		if possivelGoblin is GoblinArea2D:
+			possivelGoblin.isSegurandoItem = false
+			possivelGoblin.limpar_as_maos()
+			if meu_inventario.adicionar_item_novo(area.itemdata):
+				print("Coletou do goblin: ", area.itemdata.ItemName)
+				return
+			
 		
 		if area is ItemDrop:
-			
 			if meu_inventario.adicionar_item_novo(area.itemdata):
 				print("Coletou: ", area.itemdata.ItemName)
 				area.queue_free() 
@@ -109,10 +116,26 @@ func coletar_items() -> void:
 				
 	print("Nenhum item por perto ou inventário cheio.")
 func dropar_items() -> void:
+
+
+
 	if item_atualmente_equipado == 99:
 		print("nemhum item equipado!")
 		return
-	elif meu_inventario.retirar_item_do_slot(item_atualmente_equipado):
+
+
+	var areas_proximas: Array[Area2D] = area_coleta.get_overlapping_areas()
+	for area in areas_proximas:
+		if area is GoblinArea2D:
+			if not area.isSegurando():
+				area.ReceberItem(meu_inventario.retirar_item_do_slot(item_atualmente_equipado,true))
+				limpar_as_maos()
+				print("item dropado!")
+				
+			
+
+		
+	if meu_inventario.retirar_item_do_slot(item_atualmente_equipado):
 		limpar_as_maos()
 		print("item dropado!")
 		return

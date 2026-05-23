@@ -27,22 +27,23 @@ func pegar_item_do_slot(index: int) -> ItemData:
 		
 	return null
 	
-func retirar_item_do_slot(index: int) -> bool:
+func retirar_item_do_slot(index: int, paraOGoblin: bool = false) -> ItemData:
 	if index >= 0 and index < slots.size():
 		if slots[index].item == null:
-			return false
+			return null
+		if not paraOGoblin:
+			var item_dropado: ItemDrop = item_drop.instantiate()
+			item_dropado.itemdata = slots[index].item
+			player.get_parent().add_child(item_dropado)
+			item_dropado.global_position = player.global_position
 		
-		var item_dropado: ItemDrop = item_drop.instantiate()
-		item_dropado.itemdata = slots[index].item
-		player.get_parent().add_child(item_dropado)
-		item_dropado.global_position = player.global_position
-		
+		var itemRetirado = slots[index].item
 		slots[index].item = null
 		slots[index].update_inventory()
 		
-		return true
+		return itemRetirado
 	else:
-		return false
+		return null
 		
 func adicionar_item_novo(novo_item: ItemData) -> bool:
 

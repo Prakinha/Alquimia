@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://s8qu6kl1dfcs"]
+
+[ext_resource type="Texture2D" uid="uid://d5r1ytuyx606" path="res://WWpasta/WWesteira/Bloco preto.png" id="1_id4gq"]
+
+[node name="Esteira" type="Node2D" unique_id=912511156]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1806667218]
+position = Vector2(32, 32)
+texture = ExtResource("1_id4gq")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=956368437]
+position = Vector2(1120, 32)
+texture = ExtResource("1_id4gq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=196530221]
+modulate = Color(1, 1, 1, 0.49411765)
+position = Vector2(575.5, 32)
+scale = Vector2(16.015625, 1)
+texture = ExtResource("1_id4gq")
