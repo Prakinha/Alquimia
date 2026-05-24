@@ -27,6 +27,7 @@ func takeItem(slot_index: int) -> void:
 		if item_retirado != null:
 			item_dissoluto = item_retirado
 			atualizar_visual()
+			InventarioGlobal.player_limpe_as_maos.emit()
 			print("Máquina pegou: ", item_dissoluto.ItemName) # Usando item_id se você mudou no ItemData
 	else:
 		if InventarioGlobal.colocar_item_no_slot(slot_index, item_dissoluto):

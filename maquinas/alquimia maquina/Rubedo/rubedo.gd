@@ -56,6 +56,7 @@ func takeItem(slot_index: int) -> void:
 			ingredientes.append(item_retirado)
 			print("Rubedo pegou: ", item_retirado.ItemName)
 			atualizar_visual()
+			InventarioGlobal.player_limpe_as_maos.emit()
 		else:
 			print("O círculo de transmutação já está completo! Pressione ENTER para ativar.")
 			InventarioGlobal.colocar_item_no_slot(slot_index, item_retirado)

@@ -30,6 +30,7 @@ func takeItem(slot_index: int) -> void:
 			ingredientes.append(item_retirado)
 			print("Citrinas pegou: ", item_retirado.ItemName)
 			atualizar_visual()
+			InventarioGlobal.player_limpe_as_maos.emit()
 		else:
 			print("A máquina já está cheia! Devolvendo...")
 			InventarioGlobal.colocar_item_no_slot(slot_index, item_retirado)

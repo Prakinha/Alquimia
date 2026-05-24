@@ -1,7 +1,8 @@
 extends Node
 
 # Esse sinal é o que avisa a UI para atualizar as fotos!
-signal inventario_atualizado 
+signal inventario_atualizado
+signal player_limpe_as_maos
 
 var itens: Array[ItemData] = [null, null, null, null]
 

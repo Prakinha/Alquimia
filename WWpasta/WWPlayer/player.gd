@@ -22,6 +22,7 @@ var pedras_do_rubedo: Array[String] = [
 func _ready() -> void:
 	# Carrega os itens no Global
 	InventarioGlobal.carregar_itens_iniciais(itens_iniciais)
+	InventarioGlobal.player_limpe_as_maos.connect(_on_limpar_as_maos_signal)
 
 func _physics_process(_delta: float) -> void:
 	var direction := Vector2.ZERO
@@ -192,3 +193,5 @@ func cheat() -> void:
 		else:
 			print("x Arquivo não encontrado: ", caminho)
 			indice_cheat += 1 # Pula pra próxima se houver erro no arquivo
+func _on_limpar_as_maos_signal():
+	limpar_as_maos()
