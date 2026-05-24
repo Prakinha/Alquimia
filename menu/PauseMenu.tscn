@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://qvnuodoolmd0" path="res://Livro/86e42162d216e1f016d0dd49e5278bf2/5a457bb2-3928-488d-8986-fe5303339888-2.png" id="8_qnbko"]
 [ext_resource type="Texture2D" uid="uid://c6axko4kgns5l" path="res://Livro/86e42162d216e1f016d0dd49e5278bf2/5a457bb2-3928-488d-8986-fe5303339888-1.png" id="9_qmvwf"]
 [ext_resource type="Texture2D" uid="uid://w8b7bjbi5usn" path="res://Livro/86e42162d216e1f016d0dd49e5278bf2/5a457bb2-3928-488d-8986-fe5303339888-0.png" id="10_k8a5y"]
+[ext_resource type="FontFile" uid="uid://ljcvfjv5v41e" path="res://assets/Mage DEMO.otf" id="11_6w6ns"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kwtlx"]
 animations = [{
@@ -125,6 +126,60 @@ offset_bottom = 558.0
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="ContainerReceitas" type="VBoxContainer" parent="NodeControle" unique_id=631411602]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 184.0
+offset_top = 78.0
+offset_right = 517.0
+offset_bottom = 536.0
+
+[node name="PaginasTutoriais" type="Control" parent="NodeControle" unique_id=1828387490]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 182.0
+offset_top = 80.0
+offset_right = 514.0
+offset_bottom = 541.0
+
+[node name="Pagina0" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=611275447]
+anchors_preset = 0
+offset_right = 722.0
+offset_bottom = 468.0
+
+[node name="Label" type="Label" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=968312873]
+layout_mode = 0
+offset_right = 295.0
+offset_bottom = 189.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_6w6ns")
+theme_override_font_sizes/font_size = 40
+text = "OLA MAGO"
+
+[node name="Pagina1" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=78455367]
+visible = false
+anchors_preset = 0
+offset_right = 722.0
+offset_bottom = 468.0
+
+[node name="Label2" type="Label" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=1727361423]
+layout_mode = 0
+offset_right = 295.0
+offset_bottom = 189.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "COMO VAI?"
+
+[node name="Pagina2" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=105073553]
+anchors_preset = 0
+offset_right = 722.0
+offset_bottom = 468.0
+
+[node name="Pagina3" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=1415368739]
+anchors_preset = 0
+offset_right = 722.0
+offset_bottom = 468.0
 
 [connection signal="pressed" from="NodeControle/Button" to="." method="_on_button_pressed"]
 [connection signal="animation_finished" from="NodeControle/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
