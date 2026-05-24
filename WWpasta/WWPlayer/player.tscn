@@ -327,9 +327,9 @@ animation = &"Idle_right"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_65viv"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_32hag")
-blend_point_0/pos = Vector2(0, 1)
+blend_point_0/pos = Vector2(0, 1.2)
 blend_point_1/node = SubResource("AnimationNodeAnimation_tqiix")
-blend_point_1/pos = Vector2(0, -1)
+blend_point_1/pos = Vector2(0, -1.2)
 blend_point_2/node = SubResource("AnimationNodeAnimation_e7oew")
 blend_point_2/pos = Vector2(-1, 0)
 blend_point_3/node = SubResource("AnimationNodeAnimation_c35mf")
@@ -350,9 +350,9 @@ animation = &"Idle_hold_right"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_ns82j"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_6d4ki")
-blend_point_0/pos = Vector2(0, 1)
+blend_point_0/pos = Vector2(0, 1.2)
 blend_point_1/node = SubResource("AnimationNodeAnimation_7dfrt")
-blend_point_1/pos = Vector2(0, -1)
+blend_point_1/pos = Vector2(0, -1.2)
 blend_point_2/node = SubResource("AnimationNodeAnimation_rwaoo")
 blend_point_2/pos = Vector2(1, 0)
 blend_point_3/node = SubResource("AnimationNodeAnimation_30ttk")
@@ -373,9 +373,9 @@ animation = &"Walk_right"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_knn7v"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_x7c3f")
-blend_point_0/pos = Vector2(0, -1)
+blend_point_0/pos = Vector2(0, -1.2)
 blend_point_1/node = SubResource("AnimationNodeAnimation_bjvpn")
-blend_point_1/pos = Vector2(0, 1)
+blend_point_1/pos = Vector2(0, 1.2)
 blend_point_2/node = SubResource("AnimationNodeAnimation_s7qer")
 blend_point_2/pos = Vector2(-1, 0)
 blend_point_3/node = SubResource("AnimationNodeAnimation_g4c7l")
@@ -386,7 +386,7 @@ blend_mode = 1
 animation = &"Walk_hold_up"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_moo6s"]
-animation = &"Walk_hold_up"
+animation = &"Walk_hold_down"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4cwqx"]
 animation = &"Walk_hold_left"
@@ -396,9 +396,9 @@ animation = &"Walk_hold_right"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_ey8bw"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_ns82j")
-blend_point_0/pos = Vector2(0, -1)
+blend_point_0/pos = Vector2(0, -1.6)
 blend_point_1/node = SubResource("AnimationNodeAnimation_moo6s")
-blend_point_1/pos = Vector2(0, 1)
+blend_point_1/pos = Vector2(0, 1.2)
 blend_point_2/node = SubResource("AnimationNodeAnimation_4cwqx")
 blend_point_2/pos = Vector2(-1, 0)
 blend_point_3/node = SubResource("AnimationNodeAnimation_ryu6i")
@@ -450,9 +450,9 @@ states/Start/position = Vector2(195, 106)
 states/Walk/node = SubResource("AnimationNodeBlendSpace2D_knn7v")
 states/Walk/position = Vector2(406, 172)
 states/WalkHold/node = SubResource("AnimationNodeBlendSpace2D_ey8bw")
-states/WalkHold/position = Vector2(623, 172)
+states/WalkHold/position = Vector2(623, 165)
 transitions = ["Start", "Walk", SubResource("AnimationNodeStateMachineTransition_7pqkx"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_uw77l"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_rptt4"), "Idle", "IdleHold", SubResource("AnimationNodeStateMachineTransition_moo6s"), "IdleHold", "Idle", SubResource("AnimationNodeStateMachineTransition_4cwqx"), "IdleHold", "WalkHold", SubResource("AnimationNodeStateMachineTransition_u8srt"), "WalkHold", "IdleHold", SubResource("AnimationNodeStateMachineTransition_ecpch"), "WalkHold", "Walk", SubResource("AnimationNodeStateMachineTransition_nrv7e"), "Walk", "WalkHold", SubResource("AnimationNodeStateMachineTransition_nnb72")]
-graph_offset = Vector2(-116, -127)
+graph_offset = Vector2(-169, 36)
 
 [node name="Player" type="CharacterBody2D" unique_id=800378027]
 collision_layer = 2
@@ -488,13 +488,14 @@ shape = SubResource("CircleShape2D_g1dw6")
 libraries/ = SubResource("AnimationLibrary_wodsf")
 
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=1899466179]
+active = false
 tree_root = SubResource("AnimationNodeStateMachine_r7pn3")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Idle/blend_position = Vector2(-0.35329342, 0.5574113)
 parameters/IdleHold/blend_position = Vector2(0.08515811, -0.6018957)
 parameters/Walk/blend_position = Vector2(-0.04875964, 0.4237995)
-parameters/WalkHold/blend_position = Vector2(-0.08353609, -0.5686275)
+parameters/WalkHold/blend_position = Vector2(0.005677223, -0.3672055)
 
 [node name="AnimationControler" type="Node2D" parent="." unique_id=1429695607 node_paths=PackedStringArray("animation_tree")]
 script = ExtResource("4_qjkh3")
