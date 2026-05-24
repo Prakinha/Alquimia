@@ -8,6 +8,7 @@
 [ext_resource type="Resource" uid="uid://dcsu243k7n5qv" path="res://itens/elementosITEMDATA/VermelhoITEMDATA.tres" id="4_7i8xt"]
 [ext_resource type="Resource" uid="uid://j4hpacp0issm" path="res://itens/elementosITEMDATA/CianoITEMDATA.tres" id="7_yq2es"]
 [ext_resource type="PackedScene" uid="uid://b3uvq4u64s8v8" path="res://maquinas/alquimia maquina/node_2d.tscn" id="8_kgfak"]
+[ext_resource type="Texture2D" uid="uid://d5r1ytuyx606" path="res://WWpasta/WWesteira/Bloco preto.png" id="10_udl5n"]
 [ext_resource type="PackedScene" uid="uid://crxxaslfu06np" path="res://maquinas/alquimia maquina/Rubedo/Rubedo.tscn" id="12_udl5n"]
 [ext_resource type="PackedScene" uid="uid://dx1chr2ln8kav" path="res://maquinas/alquimia maquina/nigredo/Nigredo.tscn" id="12_voavh"]
 [ext_resource type="PackedScene" uid="uid://csnkbvkb8furw" path="res://maquinas/alquimia maquina/Citrinitas/Citrinitas.tscn" id="13_udl5n"]
@@ -16,20 +17,33 @@
 [node name="WwMain" type="Node2D" unique_id=1219875113]
 
 [node name="mapa" parent="." unique_id=1199859687 instance=ExtResource("3_s0tju")]
-position = Vector2(-1906.9999, -800.9999)
+position = Vector2(-1904, -800)
 scale = Vector2(7, 7)
 
 [node name="Rubedo" parent="." unique_id=786778760 instance=ExtResource("12_udl5n")]
 position = Vector2(743, 837)
 
 [node name="Player" parent="." unique_id=800378027 instance=ExtResource("1_bjfuu")]
-position = Vector2(766, 422)
+position = Vector2(776, 416)
 itens_iniciais = Array[ExtResource("3_kbahf")]([])
 cena_item_drop = ExtResource("3_fxf81")
 
 [node name="Esteira" parent="." unique_id=912511156 instance=ExtResource("2_536ej")]
 position = Vector2(-88, -2)
 arrayDeItensPossiveis = Array[ExtResource("3_kbahf")]([ExtResource("7_yq2es"), ExtResource("4_7i8xt"), ExtResource("19_ya3og")])
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=942745880]
+offset_left = -296.0
+offset_top = -136.0
+offset_bottom = 224.0
+texture = ExtResource("10_udl5n")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1011592434]
+offset_left = 1344.0
+offset_top = -128.0
+offset_right = 1632.0
+offset_bottom = 208.0
+texture = ExtResource("10_udl5n")
 
 [node name="maquina 1" parent="." unique_id=992081681 instance=ExtResource("8_kgfak")]
 visible = false
