@@ -69,52 +69,62 @@ func dissolver(objeto_alvo: Node2D):
 		print("O item " + objeto_alvo.item_name + " não é um item dissolvível.")
 		return
 		
-	# 2. Divide a string retornada (Ex: "espada,C" vira o Array ["espada", "C"])
+	# 2. Divide a string retornada pelo Autoload (Ex: "Azul,Verde" -> ["Azul", "Verde"])
 	var partes = composicao.split(",")
+	print("Dissolvendo " + objeto_alvo.item_name + " nas partes: ", partes)
 	
-	var elemento_id = ""
-	var lixo_id = ""
+	# 3. Determina o tipo de dissolução baseado no que o Autoload nos devolveu
+	var caminho_1 = ""
+	var caminho_2 = ""
 	
-	# 3. Identifica quem é o lixo base e quem é o elemento de cor
-	for parte in partes:
-		if parte in ["C", "M", "Y"]:
-			elemento_id = parte
-		else:
-			lixo_id = parte # O que sobrar (espada, panela, etc) é o objeto sem cor
-			
-	print("Dissolvendo " + objeto_alvo.item_name + " em: " + lixo_id + " e " + elemento_id)
-	
-	# 4. Define o nome exato das cenas a serem carregadas
-	# Estamos assumindo que o lixo_id (ex: "espada") é exatamente o nome do arquivo .tscn
-	var nome_cena_lixo = lixo_id 
-	var nome_cena_elemento = ""
-	
-	if elemento_id == "C":
-		nome_cena_elemento = "ciano"
-	elif elemento_id == "M":
-		nome_cena_elemento = "magenta"
-	elif elemento_id == "Y":
-		nome_cena_elemento = "amarelo"
+	# CENÁRIO A: Dissolvendo um objeto pintado (Ex: "espada,C")
+	if partes.size() == 2 and ("C" in partes or "M" in partes or "Y" in partes):
+		var lixo_id = ""
+		var elemento_id = ""
 		
-	# 5. Carrega as cenas
-	var caminho_lixo = "res://itens/" + nome_cena_lixo + ".tscn"
-	var caminho_elemento = "res://itens/elementos/" + nome_cena_elemento + ".tscn"
-	
-	var cena_lixo = load(caminho_lixo) as PackedScene
-	var cena_elemento = load(caminho_elemento) as PackedScene
-	
-	# 6. Instancia e posiciona os itens
-	if cena_lixo and cena_elemento:
-		var novo_lixo = cena_lixo.instantiate()
-		var novo_elemento = cena_elemento.instantiate()
+		for parte in partes:
+			if parte in ["C", "M", "Y"]:
+				elemento_id = parte
+			else:
+				lixo_id = parte
+				
+		var nome_cena_elemento = ""
+		if elemento_id == "C": nome_cena_elemento = "ciano"
+		elif elemento_id == "M": nome_cena_elemento = "magenta"
+		elif elemento_id == "Y": nome_cena_elemento = "amarelo"
 		
-		# Offset de posição para que não nasçam colados
-		novo_lixo.global_position = objeto_alvo.global_position + Vector2(-15, 0)
-		novo_elemento.global_position = objeto_alvo.global_position + Vector2(15, 0)
+		caminho_1 = "res://itens/" + lixo_id + ".tscn"
+		caminho_2 = "res://itens/elementos/" + nome_cena_elemento + ".tscn"
+
+	# CENÁRIO B: Dissolvendo uma cor pura em duas pedras base (Ex: "Azul,Verde")
+	elif partes.size() == 2:
+		# Puxa diretamente o arquivo da pedra usando o nome (ex: "Azul.tscn")
+		# Atenção: Ajuste este caminho se as pedras base ficarem em outra pasta!
+		caminho_1 = "res://itens/elementos/" + partes[0] + ".tscn"
+		caminho_2 = "res://itens/elementos/" + partes[1] + ".tscn"
 		
-		objeto_alvo.get_parent().add_child(novo_lixo)
-		objeto_alvo.get_parent().add_child(novo_elemento)
-		
-		objeto_alvo.queue_free() # Destrói o item colorido original
 	else:
-		print("ERRO: Faltam os arquivos " + nome_cena_lixo + ".tscn ou " + nome_cena_elemento + ".tscn na pasta!")
+		print("Erro: A composição não tem duas partes para dissolver: ", partes)
+		return
+
+	# 4. Carrega as cenas
+	var cena_1 = load(caminho_1) as PackedScene
+	var cena_2 = load(caminho_2) as PackedScene
+	
+	# 5. Instancia e posiciona os itens
+	if cena_1 and cena_2:
+		var item_1 = cena_1.instantiate()
+		var item_2 = cena_2.instantiate()
+		
+		# Offset de posição
+		item_1.global_position = objeto_alvo.global_position + Vector2(-20, 0)
+		item_2.global_position = objeto_alvo.global_position + Vector2(20, 0)
+		
+		objeto_alvo.get_parent().add_child(item_1)
+		objeto_alvo.get_parent().add_child(item_2)
+		
+		objeto_alvo.queue_free() # Destrói o item original
+	else:
+		print("ERRO DE CARREGAMENTO: Verifique se as cenas existem na pasta:")
+		print("Tentou carregar 1: ", caminho_1)
+		print("Tentou carregar 2: ", caminho_2)
