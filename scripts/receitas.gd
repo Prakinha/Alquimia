@@ -19,13 +19,18 @@ var receita = {
 var dissolucao = {
 	"G,R": "Y", # Yellow
 	"B,R": "M", # Magenta
-	"B,G": "C" , # Cyan
-	"espada,C" : "espada ciano"
+	"B,G": "C",  # Cyan
+	"espada,C": "espada_ciano",
+	"panela,C": "panela_ciano",
+	"bota,M": "bota_magenta",
+	"raquete,M": "raquete_magenta",
+	"placa,Y": "placa_amarela",
+	"trompete,Y": "trompete_amarelo"
 }
 
 func consultar_mistura(ingredientes_jogados: Array[String]) -> String:
 	var lista_ordenada = ingredientes_jogados.duplicate()
-	#lista_ordenada.sort() # Organiza: R, G, B vira B, G, R #caso queiramos que tenha ordem
+	lista_ordenada.sort() # Organiza: R, G, B vira B, G, R
 	
 	var chave_de_busca = ",".join(lista_ordenada)
 	
@@ -38,3 +43,12 @@ func consultar_mistura(ingredientes_jogados: Array[String]) -> String:
 		return dissolucao[chave_de_busca]
 		
 	return "" # Retorna vazio se não achar nada
+
+func consultar_dissolucao(objeto_id: String) -> String:
+	# Percorre todas as chaves do dicionário de dissolução
+	for chave in dissolucao:
+		# Se o valor daquela chave for igual ao objeto_id, achamos a origem dele!
+		if dissolucao[chave] == objeto_id:
+			return chave # Retorna a string da receita, ex: "espada,C"
+			
+	return "" # Retorna vazio se o item não estiver na lista de dissolução

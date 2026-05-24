@@ -1,29 +1,38 @@
 [gd_scene format=3 uid="uid://diwi530gcdmi5"]
 
 [ext_resource type="PackedScene" uid="uid://ti0d1lrc5mie" path="res://maquinas/canvas_layer.tscn" id="1_eo1ab"]
-[ext_resource type="Script" uid="uid://dnjyrxkk2k3yw" path="res://mquina.gd" id="1_fkkmt"]
+[ext_resource type="Script" uid="uid://bx2m2v8bi7dot" path="res://maquinas/maquina_base.gd" id="1_vbtd1"]
 [ext_resource type="Texture2D" uid="uid://sunopfec3u4o" path="res://maquinas/assets/Hand-PNG-Images-HD.png" id="3_vbtd1"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_0oxhe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eo1ab"]
+size = Vector2(224, 164)
 
 [node name="Node2D" type="Node2D" unique_id=992081681]
-script = ExtResource("1_fkkmt")
+script = ExtResource("1_vbtd1")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1471205812]
-
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=423474624]
-scale = Vector2(20, 20)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=423474624]
+scale = Vector2(73.99216, 107.24902)
 texture = SubResource("PlaceholderTexture2D_0oxhe")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=411630738]
+[node name="AreaInteracao" type="Area2D" parent="." unique_id=1471205812]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaInteracao" unique_id=411630738]
 shape = SubResource("RectangleShape2D_eo1ab")
 
 [node name="CanvasLayer" parent="." unique_id=293933923 instance=ExtResource("1_eo1ab")]
+visible = false
 script = null
 
 [node name="Sprite2D2" type="Sprite2D" parent="CanvasLayer" unique_id=2109672041]
 position = Vector2(1068, 436)
 scale = Vector2(0.2810682, 0.34745762)
 texture = ExtResource("3_vbtd1")
+
+[node name="AvisoE" type="Label" parent="." unique_id=250360307]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "APERTE E PARA INTERAGIR"
+
+[node name="MenuDaMaquina" type="CanvasLayer" parent="." unique_id=12376411]
