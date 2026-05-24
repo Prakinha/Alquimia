@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://bs3kpo6graif8"]
 
 [ext_resource type="PackedScene" uid="uid://dd10ge25mjn47" path="res://itens/elementos/azul.tscn" id="1_jj0ra"]
+[ext_resource type="Texture2D" uid="uid://nr2os0y0ab2c" path="res://assets/Element_sprites/spr_MAGENTA.png" id="2_jyt7p"]
 
 [node name="magenta" unique_id=1751028922 instance=ExtResource("1_jj0ra")]
 item_id = "M"
 item_name = "Magenta"
 
 [node name="Sprite2D" parent="Area2D" parent_id_path=PackedInt32Array(1651896402) index="1" unique_id=1298149292]
-scale = Vector2(4, 4)
+texture = ExtResource("2_jyt7p")
