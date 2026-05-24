@@ -284,8 +284,3 @@ animation_tree = NodePath("../AnimationTree")
 position_smoothing_enabled = true
 
 [node name="MenuBase" parent="." unique_id=1415517682 instance=ExtResource("7_hpsle")]
-offset_left = -600.0
-offset_top = -88.0
-offset_right = -600.0
-offset_bottom = -88.0
-rotation = 0.0018218245
