@@ -100,18 +100,11 @@ func atualizar_visual() -> void:
 		var pos_x = 410 + (i - (total - 1) / 2.0) * espacamento 
 		novo_visual.position = Vector2(pos_x, 300)
 
-# =======================================================
+
 # ATENÇÃO: VOCÊ PRECISA CONFIGURAR ESTA FUNÇÃO ABAIXO!
-# =======================================================
+
 func _criar_item_por_nome(nome_do_item: String) -> ItemData:
-	# Como o ReceitasGlobais devolve apenas uma String (ex: "orange", "espada_ciano"),
-	# você precisa de um jeito de transformar essa String em um recurso ItemData de verdade.
-	# Se você tem um dicionário ou script que guarda todos os ItemData do jogo, chame-o aqui!
-	
 	print("AVISO: Função _criar_item_por_nome precisa ser implementada para criar o: ", nome_do_item)
 	
-	# Exemplo de como você pode implementar se carregar da pasta:
-	# var caminho = "res://Itens/Resources/" + nome_do_item + ".tres"
-	# return load(caminho) as ItemData
 	
 	return null
