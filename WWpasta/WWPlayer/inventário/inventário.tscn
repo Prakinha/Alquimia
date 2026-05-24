@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cg80ccybum57f" path="res://WWpasta/WWPlayer/inventário/inventory_panel.gd" id="1_4l7ki"]
 [ext_resource type="Script" uid="uid://q1wv82d7viog" path="res://WWpasta/WWPlayer/inventário/inventário.gd" id="1_ywqdb"]
 [ext_resource type="PackedScene" uid="uid://cmcxlcvf7ovuq" path="res://WWpasta/WWPlayer/inventário/item_drop.tscn" id="2_ywqdb"]
+[ext_resource type="Texture2D" uid="uid://sunopfec3u4o" path="res://maquinas/assets/Hand-PNG-Images-HD.png" id="5_55m8w"]
 
 [node name="Inventário" type="CanvasLayer" unique_id=1854727514]
 scale = Vector2(0.5, 0.5)
@@ -111,5 +112,13 @@ anchor_right = 0.9
 anchor_bottom = 0.9
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="HandTexture" type="TextureRect" parent="Panel" unique_id=1934757727]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 1891.0
+offset_bottom = 708.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_55m8w")
 
 [connection signal="inventario_alterado" from="Panel" to="." method="_on_panel_inventario_alterado"]

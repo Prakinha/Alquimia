@@ -260,6 +260,7 @@ hframes = 4
 vframes = 4
 
 [node name="Hand" type="Marker2D" parent="." unique_id=153346866]
+position = Vector2(0, -36)
 
 [node name="AreaColeta" type="Area2D" parent="." unique_id=2065261947]
 light_mask = 3
