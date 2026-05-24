@@ -12,6 +12,11 @@ class_name PlayerCharacter
 var item_atualmente_equipado: int = 99
 var is_active: bool = true 
 var inventario_bloqueado: bool = false 
+var indice_cheat: int = 0
+var pedras_do_rubedo: Array[String] = [
+	"orange", "olive", "pink", "purple", "cobalt", 
+	"turquoise", "ruby", "sapphire", "emerald", "white"
+]
 
 func _ready() -> void:
 	# Carrega os itens no Global
@@ -60,7 +65,8 @@ func _unhandled_key_input(event: InputEvent) -> void:
 			coletar_items()
 		elif event.keycode == KEY_G and is_active:
 			dropar_items()
-			
+		elif event.keycode == KEY_P and is_active:
+			cheat()
 	# O botão "E" funciona mesmo com o inventário bloqueado
 	if event.keycode == KEY_E:
 		interagir_com_maquina()
@@ -153,3 +159,30 @@ func dropar_items() -> void:
 
 func dialogar() -> void:
 	pass
+	
+func cheat() -> void:
+	print("=== FORNECEDOR CHEAT ACIONADO ===")
+	
+	# Ele vai tentar gerar itens até bater no limite do seu inventário
+	for i in range(4): 
+		if indice_cheat >= pedras_do_rubedo.size():
+			print("Você já pegou todas as 10 pedras da lista do Rubedo! Reiniciando...")
+			indice_cheat = 0 
+			
+		var nome_pedra = pedras_do_rubedo[indice_cheat]
+		var caminho = "res://itens/elementosITEMDATA/" + nome_pedra + "ITEMDATA.tres"
+		
+		if FileAccess.file_exists(caminho):
+			var nova_pedra: ItemData = load(caminho)
+			
+			# Tenta adicionar ao inventário.
+			# Se a sua função adicionar_item retornar true/false se der certo, fazemos assim:
+			if InventarioGlobal.adicionar_item(nova_pedra):
+				print("+ Recebeu: ", nome_pedra)
+				indice_cheat += 1 # Só avança na lista se conseguiu guardar a pedra
+			else:
+				print("- Inventário está cheio! Esvazie na máquina antes de pedir mais.")
+				break # Para o loop para não desperdiçar as pedras
+		else:
+			print("x Arquivo não encontrado: ", caminho)
+			indice_cheat += 1 # Pula pra próxima se houver erro no arquivo

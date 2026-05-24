@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://cg80ccybum57f" path="res://WWpasta/WWPlayer/inventário/inventory_panel.gd" id="3_7htib"]
 [ext_resource type="Script" uid="uid://cdvep004hkr6h" path="res://WWpasta/WWPlayer/inventário/item_slot.gd" id="4_7kmde"]
 [ext_resource type="Texture2D" uid="uid://by3bw3o5n3mdp" path="res://maquinas/assets/ive-always-loved-making-magic-circles-but-im-kind-of-v0-pftb1krxptu91.png" id="5_dy8kp"]
+[ext_resource type="Script" uid="uid://cw4ltsfi4gm2u" path="res://maquinas/alquimia maquina/Rubedo/ive_always_loved_making_magic_circles_but_im_kind_of_v_0_pftb_1_krxptu_91.gd" id="6_7htib"]
 
 [node name="RubedoMenu" type="CanvasLayer" unique_id=650143949]
 script = ExtResource("1_tyhsq")
@@ -139,7 +140,8 @@ anchor_bottom = 0.9
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="IveAlwaysLovedMakingMagicCirclesButImKindOfV0Pftb1Krxptu91" type="Sprite2D" parent="NoDeControle" unique_id=1382983910]
+[node name="circulo" type="Sprite2D" parent="NoDeControle" unique_id=1382983910]
 position = Vector2(549, 339)
 scale = Vector2(0.53515625, 0.53515625)
 texture = ExtResource("5_dy8kp")
+script = ExtResource("6_7htib")

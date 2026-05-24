@@ -89,9 +89,9 @@ func atualizar_visual() -> void:
 	
 	# 2. Posiciona os novos itens
 	var total = ingredientes.size()
-	var centro_x = 410
-	var centro_y = 300
-	var raio_do_circulo = 120 # Aumente ou diminua para afastar/aproximar os itens do centro
+	var centro_x = 550
+	var centro_y = 340
+	var raio_do_circulo = 230 # Aumente ou diminua para afastar/aproximar os itens do centro
 	
 	for i in range(total):
 		var item = ingredientes[i]
