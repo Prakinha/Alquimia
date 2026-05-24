@@ -282,5 +282,6 @@ animation_tree = NodePath("../AnimationTree")
 position_smoothing_enabled = true
 
 [node name="MenuBase" parent="." unique_id=1415517682 instance=ExtResource("7_hpsle")]
+visible = false
 
 [node name="Inventário" parent="." unique_id=1854727514 instance=ExtResource("3_i3pqv")]
