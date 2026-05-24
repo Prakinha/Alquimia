@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ti0d1lrc5mie"]
+
+[ext_resource type="Script" uid="uid://dnjyrxkk2k3yw" path="res://mquina.gd" id="1_t5yxe"]
+[ext_resource type="Texture2D" uid="uid://sunopfec3u4o" path="res://maquinas/assets/Hand-PNG-Images-HD.png" id="2_y8lnx"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=293933923]
+script = ExtResource("1_t5yxe")
+speed = null
+itens_iniciais = null
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=575777686]
+position = Vector2(1068, 436)
+scale = Vector2(0.2810682, 0.34745762)
+texture = ExtResource("2_y8lnx")

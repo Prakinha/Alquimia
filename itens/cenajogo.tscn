@@ -3,6 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://djcxipulbl6j0" path="res://WWpasta/WWPlayer/player.tscn" id="1_bjfuu"]
 [ext_resource type="PackedScene" uid="uid://s8qu6kl1dfcs" path="res://WWpasta/WWesteira/Esteira.tscn" id="2_536ej"]
 [ext_resource type="PackedScene" uid="uid://dff20ncqq8asq" path="res://mapa/alchemy lab.tscn" id="3_s0tju"]
+[ext_resource type="Script" uid="uid://dweef7bq1l6rt" path="res://WWpasta/WWPlayer/inventário/ItemData.gd" id="4_3kam1"]
+[ext_resource type="Resource" uid="uid://bs8cwemaw8xt1" path="res://itens/elementosITEMDATA/AzulITEMDATA.tres" id="5_jpfkd"]
+[ext_resource type="Resource" uid="uid://dckd4sote67p5" path="res://itens/elementosITEMDATA/RosaITEMDATA.tres" id="6_kgfak"]
+[ext_resource type="Resource" uid="uid://dcsu243k7n5qv" path="res://itens/elementosITEMDATA/VermelhoITEMDATA.tres" id="7_fxf81"]
 
 [node name="WwMain" type="Node2D" unique_id=1219875113]
 
@@ -15,3 +19,4 @@ position = Vector2(0, 2)
 
 [node name="Esteira" parent="." unique_id=912511156 instance=ExtResource("2_536ej")]
 position = Vector2(-88, -2)
+arrayDeItensPossiveis = Array[ExtResource("4_3kam1")]([ExtResource("5_jpfkd"), ExtResource("6_kgfak"), ExtResource("7_fxf81"), null])

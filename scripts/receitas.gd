@@ -3,16 +3,16 @@ extends Node
 
 # Misturas de 3 itens (Ordem alfabética nas chaves)
 var receita = {
-	"B,G,R": "White",
-	"G,R,R": "Orange",
-	"G,G,R": "Olive",
-	"B,R,R": "Pink",
-	"B,B,R": "Purple",
-	"B,B,G": "Cobalt",
-	"B,G,G": "Turquoise",
-	"R,R,R": "Ruby",
-	"B,B,B": "Sapphire",
-	"G,G,G": "Emerald"
+	"B,G,R": "white",
+	"G,R,R": "orange",
+	"G,G,R": "olive",
+	"B,R,R": "pink",
+	"B,B,R": "purple",
+	"B,B,G": "cobalt",
+	"B,G,G": "turquoise",
+	"R,R,R": "ruby",
+	"B,B,B": "sapphire",
+	"G,G,G": "emerald"
 }
 
 # Misturas de 2 itens (Dissolvidos - Ordem alfabética nas chaves)
