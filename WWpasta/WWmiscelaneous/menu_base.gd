@@ -1,12 +1,19 @@
 extends CanvasLayer
+
 @onready var NoDeControle: Control = %NoDeControle
 
-func _ready() -> void:
-	SubirOMenu()
 
+var posicao_escondida: float = 1000.0 
+
+func _ready() -> void:
+	NoDeControle.position.y = posicao_escondida
 
 func SubirOMenu() -> void:
 	var NewTween: Tween = create_tween()
-	NewTween.set_trans(Tween.TRANS_EXPO)
-	NewTween.set_ease(Tween.EASE_IN_OUT)
-	NewTween.tween_property(NoDeControle,"position:y",0,1.0)
+	NewTween.set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_IN_OUT)
+	NewTween.tween_property(NoDeControle, "position:y", 0, 1.0)
+
+func DescerOMenu() -> void:
+	var NewTween: Tween = create_tween()
+	NewTween.set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_IN_OUT)
+	NewTween.tween_property(NoDeControle, "position:y", posicao_escondida, 1.0)

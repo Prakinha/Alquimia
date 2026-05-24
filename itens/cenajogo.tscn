@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://bs8cwemaw8xt1" path="res://itens/elementosITEMDATA/AzulITEMDATA.tres" id="5_jpfkd"]
 [ext_resource type="Resource" uid="uid://dckd4sote67p5" path="res://itens/elementosITEMDATA/RosaITEMDATA.tres" id="6_kgfak"]
 [ext_resource type="Resource" uid="uid://dcsu243k7n5qv" path="res://itens/elementosITEMDATA/VermelhoITEMDATA.tres" id="7_fxf81"]
-[ext_resource type="PackedScene" uid="uid://dd4blmhdvnilc" path="res://WWpasta/WWmiscelaneous/placa.tscn" id="8_kgfak"]
+[ext_resource type="PackedScene" uid="uid://diwi530gcdmi5" path="res://maquinas/maquina base.tscn" id="8_kgfak"]
 
 [node name="WwMain" type="Node2D" unique_id=1219875113]
 
@@ -19,8 +19,9 @@ scale = Vector2(7, 7)
 position = Vector2(72, 2)
 
 [node name="Esteira" parent="." unique_id=912511156 instance=ExtResource("2_536ej")]
+visible = false
 position = Vector2(-88, -2)
 arrayDeItensPossiveis = Array[ExtResource("4_3kam1")]([ExtResource("5_jpfkd"), ExtResource("6_kgfak"), ExtResource("7_fxf81"), null])
 
-[node name="Placa" parent="." unique_id=935575288 instance=ExtResource("8_kgfak")]
-position = Vector2(1116, 21)
+[node name="Node2D" parent="." unique_id=992081681 instance=ExtResource("8_kgfak")]
+position = Vector2(193, 13)

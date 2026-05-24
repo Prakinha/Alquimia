@@ -64,14 +64,24 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		equipar_item(3)
 	elif event.keycode == KEY_F:
 		coletar_items()
+	elif event.keycode == KEY_E :
+		interagir_com_maquina()
 	elif event.keycode == KEY_G:
 		dropar_items()
 	elif event.keycode == KEY_J:
 		
 		dialogar()
 
+func interagir_com_maquina() -> void:
+	var todas_as_maquinas = get_tree().get_nodes_in_group("maquina")
+	
+	for maquina in todas_as_maquinas:
+		var placa = maquina.get_node("Placa")
 		
-		
+		if placa.overlaps_body(self):
+			maquina.SubirOMenu()
+			return
+	
 		
 func equipar_item(slot_index: int) -> void:
 	
