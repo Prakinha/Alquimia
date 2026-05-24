@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://b863cvjq3t2iw"]
 
 [ext_resource type="PackedScene" uid="uid://dgcarvigog85b" path="res://itens/elementos/amarelo.tscn" id="1_dyup4"]
+[ext_resource type="Texture2D" uid="uid://rk0p0dasebqh" path="res://assets/Element_sprites/spr_OLIVE.png" id="2_bxkpv"]
 
 [node name="olives" unique_id=1751028922 instance=ExtResource("1_dyup4")]
 item_id = "olive"
 item_name = "olive"
+
+[node name="Sprite2D" parent="Area2D" parent_id_path=PackedInt32Array(1651896402) index="1" unique_id=1298149292]
+texture = ExtResource("2_bxkpv")

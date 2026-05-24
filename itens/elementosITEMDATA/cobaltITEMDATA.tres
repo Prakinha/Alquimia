@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://d3lgd6f0xf12k" path="res://itens/elementos/cobalt.tscn" id="1_i7p2w"]
 [ext_resource type="Script" uid="uid://dweef7bq1l6rt" path="res://WWpasta/WWPlayer/inventário/ItemData.gd" id="1_msxqv"]
-[ext_resource type="Texture2D" uid="uid://dcastyc2lx34s" path="res://itens/elementosSprites/Azul.png" id="2_b2tq5"]
+[ext_resource type="Texture2D" uid="uid://bgsnf4w116uqa" path="res://assets/Element_sprites/spr_COBALT.png" id="2_i7p2w"]
 
 [resource]
 script = ExtResource("1_msxqv")
 ItemName = "cobalt"
-icon = ExtResource("2_b2tq5")
+icon = ExtResource("2_i7p2w")
 ItemScene = ExtResource("1_i7p2w")
 metadata/_custom_type_script = "uid://dweef7bq1l6rt"

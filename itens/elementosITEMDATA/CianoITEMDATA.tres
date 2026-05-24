@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://j4hpacp0issm"]
 
 [ext_resource type="PackedScene" uid="uid://dqj3lxla1brit" path="res://itens/elementos/ciano.tscn" id="1_4p7hn"]
-[ext_resource type="Texture2D" uid="uid://ch2bnwlxjvgcw" path="res://itens/elementosSprites/Ciano.png" id="2_2ttwg"]
+[ext_resource type="Texture2D" uid="uid://dqubwjmx2755o" path="res://assets/Element_sprites/spr_CYAN.png" id="2_4p7hn"]
 [ext_resource type="Script" uid="uid://dweef7bq1l6rt" path="res://WWpasta/WWPlayer/inventário/ItemData.gd" id="3_qc485"]
 
 [resource]
 script = ExtResource("3_qc485")
 ItemName = "ciano"
-icon = ExtResource("2_2ttwg")
+icon = ExtResource("2_4p7hn")
 ItemScene = ExtResource("1_4p7hn")
 metadata/_custom_type_script = "uid://dweef7bq1l6rt"

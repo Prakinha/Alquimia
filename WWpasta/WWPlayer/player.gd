@@ -30,7 +30,7 @@ func _physics_process(_delta: float) -> void:
 		
 	if direction:
 		velocity = direction * speed
-		Hand.rotation = lerp_angle(Hand.rotation, direction.angle(), 0.5)
+		Hand.rotation = lerp_angle(Hand.rotation, direction.angle() + Vector2.DOWN.angle(), 0.5)
 		inventario_bloqueado = false
 	else:
 		velocity = Vector2.ZERO

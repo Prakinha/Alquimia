@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://dweef7bq1l6rt" path="res://WWpasta/WWPlayer/inventário/ItemData.gd" id="1_lbk0l"]
 [ext_resource type="PackedScene" uid="uid://n05mbm1tmkim" path="res://itens/elementos/ruby.tscn" id="1_pqraq"]
-[ext_resource type="Texture2D" uid="uid://dcastyc2lx34s" path="res://itens/elementosSprites/Azul.png" id="2_30wli"]
+[ext_resource type="Texture2D" uid="uid://cjsboy3r00muk" path="res://assets/Element_sprites/spr_RED.png" id="2_pqraq"]
 
 [resource]
 script = ExtResource("1_lbk0l")
 ItemName = "ruby"
-icon = ExtResource("2_30wli")
+icon = ExtResource("2_pqraq")
 ItemScene = ExtResource("1_pqraq")
 metadata/_custom_type_script = "uid://dweef7bq1l6rt"

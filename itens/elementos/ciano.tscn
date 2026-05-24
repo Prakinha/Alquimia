@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dqj3lxla1brit"]
 
 [ext_resource type="PackedScene" uid="uid://bs3kpo6graif8" path="res://itens/elementos/magenta.tscn" id="1_tpfst"]
-[ext_resource type="Texture2D" uid="uid://ch2bnwlxjvgcw" path="res://itens/elementosSprites/Ciano.png" id="2_7p5gv"]
+[ext_resource type="Texture2D" uid="uid://dqubwjmx2755o" path="res://assets/Element_sprites/spr_CYAN.png" id="2_7p5gv"]
 
 [node name="ciano" unique_id=1751028922 instance=ExtResource("1_tpfst")]
 item_id = "C"

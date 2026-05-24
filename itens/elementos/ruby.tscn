@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://n05mbm1tmkim"]
 
 [ext_resource type="Script" uid="uid://xwsw7ys78k6l" path="res://itens/itembase.gd" id="1_p2wjy"]
-[ext_resource type="Texture2D" uid="uid://sip6cufx8s2g" path="res://icon.svg" id="2_uamm5"]
+[ext_resource type="Texture2D" uid="uid://cjsboy3r00muk" path="res://assets/Element_sprites/spr_RED.png" id="2_d6353"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cxh00"]
 size = Vector2(122, 125)
@@ -17,4 +17,5 @@ shape = SubResource("RectangleShape2D_cxh00")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1298149292]
 position = Vector2(50, 0)
-texture = ExtResource("2_uamm5")
+scale = Vector2(5, 5)
+texture = ExtResource("2_d6353")
