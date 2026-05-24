@@ -22,7 +22,7 @@ func _ready() -> void:
 func _on_btn_anterior_pressed():
 	if pagina_atual > 0 and not animando:
 		animando = true
-		anim_sprite.play("fowards") # Use o nome exato da sua animação de voltar
+		anim_sprite.play("backwards")
 		pagina_atual -= 1
 		atualizar_botoes()
 		
@@ -45,7 +45,7 @@ func atualizar_botoes():
 func _on_btn_proxima_pressed():
 	if pagina_atual < total_paginas and not animando:
 		animando = true
-		anim_sprite.play("backwards") # Use o nome exato da sua animação de ir para frente
+		anim_sprite.play("fowards")
 		pagina_atual += 1
 		atualizar_botoes()
 

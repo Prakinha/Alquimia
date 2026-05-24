@@ -32,17 +32,17 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("9_qmvwf")
 }],
-"loop": true,
+"loop": false,
 "name": &"backwards",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("10_k8a5y")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -63,9 +63,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_f878t")
 }],
-"loop": true,
+"loop": false,
 "name": &"fowards",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [node name="MenuPause" type="CanvasLayer" unique_id=2122471675]
@@ -105,8 +105,7 @@ text = "passar a página"
 position = Vector2(538, 314)
 scale = Vector2(0.46666664, 0.46666667)
 sprite_frames = SubResource("SpriteFrames_kwtlx")
-animation = &"backwards"
-frame_progress = 0.5916955
+animation = &"fowards"
 
 [node name="BtnAnterior" type="Button" parent="NodeControle" unique_id=1888344795]
 layout_mode = 0
