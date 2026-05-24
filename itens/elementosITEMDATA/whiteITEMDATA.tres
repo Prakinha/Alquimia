@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dcvuviaw7gw38"]
 
-[ext_resource type="PackedScene" uid="uid://bnu4u3pjebe63" path="res://itens/elementos/branco.tscn" id="1_43icl"]
+[ext_resource type="PackedScene" uid="uid://dgcarvigog85b" path="res://itens/elementos/amarelo.tscn" id="1_43icl"]
 [ext_resource type="Script" uid="uid://dweef7bq1l6rt" path="res://WWpasta/WWPlayer/inventário/ItemData.gd" id="1_xedrl"]
-[ext_resource type="Texture2D" uid="uid://d1pep01ndm8o7" path="res://assets/Element_sprites/spr_BLUE.png" id="2_43icl"]
+[ext_resource type="Texture2D" uid="uid://dn8fwljcnxb1" path="res://assets/Element_sprites/spr_YELLOW.png" id="2_vvvn1"]
 
 [resource]
 script = ExtResource("1_xedrl")
-ItemName = "white"
-icon = ExtResource("2_43icl")
+ItemName = "Amarelo"
+icon = ExtResource("2_vvvn1")
 ItemScene = ExtResource("1_43icl")
 metadata/_custom_type_script = "uid://dweef7bq1l6rt"
