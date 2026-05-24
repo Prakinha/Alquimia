@@ -2,6 +2,7 @@ extends CanvasLayer
 
 @onready var grid_container: GridContainer = $Panel/MarginContainer/GridContainer
 var slots: Array[ItemSlot]
+@onready var HandTexture: TextureRect = %HandTexture
 
 func _ready() -> void:
 	# 1. Pega todos os slots visuais
@@ -27,6 +28,6 @@ func sincronizar_com_global() -> void:
 
 # Mantemos essa função pois o Player tenta chamá-la ao apertar 1, 2, 3 ou 4
 func moverMaoParaOSlot(slot_index: int) -> void:
-	# Se você tiver alguma lógica que desenha uma borda vermelha 
-	# no slot selecionado, ela deve ficar aqui!
-	pass
+	var MaoTween: Tween = create_tween()
+	MaoTween.set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_EXPO)
+	MaoTween.tween_property(HandTexture,"global_position",slots[slot_index].global_position + Vector2(25,100),0.5)
