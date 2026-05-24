@@ -96,7 +96,7 @@ func interagir_com_maquina() -> void:
 		
 func equipar_item(slot_index: int) -> void:
 	limpar_as_maos()
-	is_holding = true
+	
 	
 	if meu_inventario.has_method("moverMaoParaOSlot"):
 		meu_inventario.moverMaoParaOSlot(slot_index)
@@ -108,6 +108,7 @@ func equipar_item(slot_index: int) -> void:
 		var novo_item := item_selecionado.ItemScene.instantiate()
 		Hand.add_child(novo_item)
 		print("Equipou o item: ", item_selecionado.ItemName)
+		is_holding = true
 		item_atualmente_equipado = slot_index
 	else:
 		print("Slot vazio!")
