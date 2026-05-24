@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("3_xwf55")
-ItemName = "vermelho"
+ItemName = "Vermelho"
 icon = ExtResource("2_ebxkn")
 ItemScene = ExtResource("1_ebxkn")
 metadata/_custom_type_script = "uid://dweef7bq1l6rt"
