@@ -5,3 +5,6 @@
 [node name="branco" unique_id=1751028922 instance=ExtResource("1_r3142")]
 item_id = "white"
 item_name = "White"
+
+[node name="Sprite2D" parent="Area2D" parent_id_path=PackedInt32Array(1651896402) index="1" unique_id=1298149292]
+scale = Vector2(4, 4)

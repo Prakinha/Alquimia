@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bnu4u3pjebe63" path="res://itens/elementos/branco.tscn" id="1_43icl"]
 [ext_resource type="Script" uid="uid://dweef7bq1l6rt" path="res://WWpasta/WWPlayer/inventário/ItemData.gd" id="1_xedrl"]
-[ext_resource type="Texture2D" uid="uid://dcx8kkmdcxrf0" path="res://assets/Element_sprites/spr_ORANGE.png" id="2_43icl"]
+[ext_resource type="Texture2D" uid="uid://d1pep01ndm8o7" path="res://assets/Element_sprites/spr_BLUE.png" id="2_43icl"]
 
 [resource]
 script = ExtResource("1_xedrl")
