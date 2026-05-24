@@ -16,11 +16,11 @@ position = Vector2(-1906.9999, -800.9999)
 scale = Vector2(7, 7)
 
 [node name="Player" parent="." unique_id=800378027 instance=ExtResource("1_bjfuu")]
-position = Vector2(0, 2)
+position = Vector2(72, 2)
 
 [node name="Esteira" parent="." unique_id=912511156 instance=ExtResource("2_536ej")]
 position = Vector2(-88, -2)
 arrayDeItensPossiveis = Array[ExtResource("4_3kam1")]([ExtResource("5_jpfkd"), ExtResource("6_kgfak"), ExtResource("7_fxf81"), null])
 
 [node name="Node2D" parent="." unique_id=992081681 instance=ExtResource("8_kgfak")]
-position = Vector2(1130, -32)
+position = Vector2(1134, -30)
