@@ -14,6 +14,7 @@ var item_atualmente_equipado: int = 99
 var is_active: bool = true 
 var inventario_bloqueado: bool = false 
 var indice_cheat: int = 0
+var is_holding: bool = false
 var pedras_do_rubedo: Array[String] = [
 	"orange", "olive", "pink", "purple", "cobalt", 
 	"turquoise", "ruby", "sapphire", "emerald", "white"
@@ -53,6 +54,7 @@ func set_active(state: bool) -> void:
 func limpar_as_maos() -> void:
 	for item_na_mao in Hand.get_children():
 		item_na_mao.queue_free()
+	is_holding = false
 	item_atualmente_equipado = 99
 
 func _unhandled_key_input(event: InputEvent) -> void:
@@ -94,6 +96,7 @@ func interagir_com_maquina() -> void:
 		
 func equipar_item(slot_index: int) -> void:
 	limpar_as_maos()
+	is_holding = true
 	
 	if meu_inventario.has_method("moverMaoParaOSlot"):
 		meu_inventario.moverMaoParaOSlot(slot_index)
