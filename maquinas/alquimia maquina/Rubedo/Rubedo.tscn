@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://crxxaslfu06np"]
+
+[ext_resource type="PackedScene" uid="uid://dd4blmhdvnilc" path="res://WWpasta/WWmiscelaneous/placa.tscn" id="1_bhdkh"]
+[ext_resource type="Script" uid="uid://ui4yooewns3l" path="res://maquinas/alquimia maquina/Rubedo/rubedo.gd" id="1_dyf30"]
+[ext_resource type="PackedScene" uid="uid://cri34k25f6o4i" path="res://maquinas/alquimia maquina/Rubedo/rubedo_menu.tscn" id="2_dyf30"]
+[ext_resource type="Texture2D" uid="uid://by3bw3o5n3mdp" path="res://maquinas/assets/ive-always-loved-making-magic-circles-but-im-kind-of-v0-pftb1krxptu91.png" id="4_dyf30"]
+
+[node name="Rubedo" type="Node2D" unique_id=786778760 node_paths=PackedStringArray("menu_base")]
+script = ExtResource("1_dyf30")
+menu_base = NodePath("RubedoMenu")
+
+[node name="IveAlwaysLovedMakingMagicCirclesButImKindOfV0Pftb1Krxptu91" type="Sprite2D" parent="." unique_id=2525136]
+position = Vector2(2.0000002, 8)
+scale = Vector2(0.24609375, 0.24609375)
+texture = ExtResource("4_dyf30")
+
+[node name="RubedoMenu" parent="." unique_id=650143949 instance=ExtResource("2_dyf30")]
+
+[node name="Placa" parent="." unique_id=935575288 instance=ExtResource("1_bhdkh")]
+position = Vector2(3, 6)
+collision_layer = 2

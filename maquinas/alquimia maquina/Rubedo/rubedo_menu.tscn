@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://cri34k25f6o4i"]
+
+[ext_resource type="Script" uid="uid://bvbff27ogacuq" path="res://maquinas/alquimia maquina/Rubedo/rubedo_menu.gd" id="1_tyhsq"]
+[ext_resource type="Texture2D" uid="uid://d5r1ytuyx606" path="res://WWpasta/WWesteira/Bloco preto.png" id="2_dy8kp"]
+[ext_resource type="Script" uid="uid://cg80ccybum57f" path="res://WWpasta/WWPlayer/inventário/inventory_panel.gd" id="3_7htib"]
+[ext_resource type="Script" uid="uid://cdvep004hkr6h" path="res://WWpasta/WWPlayer/inventário/item_slot.gd" id="4_7kmde"]
+[ext_resource type="Texture2D" uid="uid://by3bw3o5n3mdp" path="res://maquinas/assets/ive-always-loved-making-magic-circles-but-im-kind-of-v0-pftb1krxptu91.png" id="5_dy8kp"]
+
+[node name="RubedoMenu" type="CanvasLayer" unique_id=650143949]
+script = ExtResource("1_tyhsq")
+
+[node name="NoDeControle" type="Control" parent="." unique_id=397446343]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 6.0
+offset_top = 643.0
+offset_right = 1158.0
+offset_bottom = 1343.0
+
+[node name="TextureRect" type="TextureRect" parent="NoDeControle" unique_id=2005168947]
+modulate = Color(1, 1, 1, 0.30980393)
+self_modulate = Color(1, 1, 1, 0.5882353)
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_dy8kp")
+
+[node name="Label" type="Label" parent="NoDeControle" unique_id=18382241]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 216.0
+offset_right = 888.0
+offset_bottom = 416.0
+text = "O seu menu aqui!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="NoDeControle" unique_id=358630268]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -276.0
+offset_top = -600.0
+offset_right = 249.0
+offset_bottom = -467.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("3_7htib")
+
+[node name="MarginContainer" type="MarginContainer" parent="NoDeControle/Panel" unique_id=2089876846]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -268.5
+offset_top = -138.0
+offset_right = 268.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="GridContainer" type="GridContainer" parent="NoDeControle/Panel/MarginContainer" unique_id=1947575808]
+layout_mode = 2
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 4
+
+[node name="ItemSlot" type="Panel" parent="NoDeControle/Panel/MarginContainer/GridContainer" unique_id=345281439]
+texture_filter = 1
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+script = ExtResource("4_7kmde")
+
+[node name="icon" type="TextureRect" parent="NoDeControle/Panel/MarginContainer/GridContainer/ItemSlot" unique_id=508230443]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemSlot2" type="Panel" parent="NoDeControle/Panel/MarginContainer/GridContainer" unique_id=940454179]
+texture_filter = 1
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+script = ExtResource("4_7kmde")
+
+[node name="icon" type="TextureRect" parent="NoDeControle/Panel/MarginContainer/GridContainer/ItemSlot2" unique_id=1988820313]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemSlot3" type="Panel" parent="NoDeControle/Panel/MarginContainer/GridContainer" unique_id=31834708]
+texture_filter = 1
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+script = ExtResource("4_7kmde")
+
+[node name="icon" type="TextureRect" parent="NoDeControle/Panel/MarginContainer/GridContainer/ItemSlot3" unique_id=1585246414]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemSlot4" type="Panel" parent="NoDeControle/Panel/MarginContainer/GridContainer" unique_id=1345077052]
+texture_filter = 1
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+script = ExtResource("4_7kmde")
+
+[node name="icon" type="TextureRect" parent="NoDeControle/Panel/MarginContainer/GridContainer/ItemSlot4" unique_id=905126316]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="IveAlwaysLovedMakingMagicCirclesButImKindOfV0Pftb1Krxptu91" type="Sprite2D" parent="NoDeControle" unique_id=1382983910]
+position = Vector2(549, 339)
+scale = Vector2(0.53515625, 0.53515625)
+texture = ExtResource("5_dy8kp")

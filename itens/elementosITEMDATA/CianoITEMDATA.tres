@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("3_qc485")
-ItemName = "Ciano"
+ItemName = "ciano"
 icon = ExtResource("2_2ttwg")
 ItemScene = ExtResource("1_4p7hn")
 metadata/_custom_type_script = "uid://dweef7bq1l6rt"

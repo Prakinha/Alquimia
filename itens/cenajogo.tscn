@@ -3,16 +3,15 @@
 [ext_resource type="PackedScene" uid="uid://djcxipulbl6j0" path="res://WWpasta/WWPlayer/player.tscn" id="1_bjfuu"]
 [ext_resource type="PackedScene" uid="uid://s8qu6kl1dfcs" path="res://WWpasta/WWesteira/Esteira.tscn" id="2_536ej"]
 [ext_resource type="PackedScene" uid="uid://cmcxlcvf7ovuq" path="res://WWpasta/WWPlayer/inventário/item_drop.tscn" id="3_fxf81"]
+[ext_resource type="Script" uid="uid://dweef7bq1l6rt" path="res://WWpasta/WWPlayer/inventário/ItemData.gd" id="3_kbahf"]
 [ext_resource type="PackedScene" uid="uid://dff20ncqq8asq" path="res://mapa/alchemy lab.tscn" id="3_s0tju"]
-[ext_resource type="Script" uid="uid://dweef7bq1l6rt" path="res://WWpasta/WWPlayer/inventário/ItemData.gd" id="4_3kam1"]
-[ext_resource type="Resource" uid="uid://bs8cwemaw8xt1" path="res://itens/elementosITEMDATA/AzulITEMDATA.tres" id="5_jpfkd"]
-[ext_resource type="Resource" uid="uid://dckd4sote67p5" path="res://itens/elementosITEMDATA/pinkITEMDATA.tres" id="6_kgfak"]
-[ext_resource type="Resource" uid="uid://dcsu243k7n5qv" path="res://itens/elementosITEMDATA/VermelhoITEMDATA.tres" id="7_fxf81"]
+[ext_resource type="Resource" uid="uid://dcsu243k7n5qv" path="res://itens/elementosITEMDATA/VermelhoITEMDATA.tres" id="4_7i8xt"]
+[ext_resource type="Resource" uid="uid://j4hpacp0issm" path="res://itens/elementosITEMDATA/CianoITEMDATA.tres" id="7_yq2es"]
 [ext_resource type="PackedScene" uid="uid://b3uvq4u64s8v8" path="res://maquinas/alquimia maquina/node_2d.tscn" id="8_kgfak"]
-[ext_resource type="Resource" uid="uid://j4hpacp0issm" path="res://itens/elementosITEMDATA/CianoITEMDATA.tres" id="9_7i8xt"]
-[ext_resource type="Resource" uid="uid://bj2yj814csa4i" path="res://itens/elementosITEMDATA/EspadaITEMDATA.tres" id="10_voavh"]
+[ext_resource type="PackedScene" uid="uid://crxxaslfu06np" path="res://maquinas/alquimia maquina/Rubedo/Rubedo.tscn" id="12_udl5n"]
 [ext_resource type="PackedScene" uid="uid://dx1chr2ln8kav" path="res://maquinas/alquimia maquina/nigredo/Nigredo.tscn" id="12_voavh"]
 [ext_resource type="PackedScene" uid="uid://csnkbvkb8furw" path="res://maquinas/alquimia maquina/Citrinitas/Citrinitas.tscn" id="13_udl5n"]
+[ext_resource type="Resource" uid="uid://dcvuviaw7gw38" path="res://itens/elementosITEMDATA/whiteITEMDATA.tres" id="19_ya3og"]
 
 [node name="WwMain" type="Node2D" unique_id=1219875113]
 
@@ -20,13 +19,17 @@
 position = Vector2(-1906.9999, -800.9999)
 scale = Vector2(7, 7)
 
+[node name="Rubedo" parent="." unique_id=786778760 instance=ExtResource("12_udl5n")]
+position = Vector2(1737, 388)
+
 [node name="Player" parent="." unique_id=800378027 instance=ExtResource("1_bjfuu")]
 position = Vector2(766, 422)
+itens_iniciais = Array[ExtResource("3_kbahf")]([])
 cena_item_drop = ExtResource("3_fxf81")
 
 [node name="Esteira" parent="." unique_id=912511156 instance=ExtResource("2_536ej")]
 position = Vector2(-88, -2)
-arrayDeItensPossiveis = Array[ExtResource("4_3kam1")]([ExtResource("5_jpfkd"), ExtResource("6_kgfak"), ExtResource("7_fxf81"), null, ExtResource("9_7i8xt"), ExtResource("10_voavh")])
+arrayDeItensPossiveis = Array[ExtResource("3_kbahf")]([ExtResource("7_yq2es"), ExtResource("4_7i8xt"), ExtResource("19_ya3og")])
 
 [node name="maquina 1" parent="." unique_id=992081681 instance=ExtResource("8_kgfak")]
 visible = false
