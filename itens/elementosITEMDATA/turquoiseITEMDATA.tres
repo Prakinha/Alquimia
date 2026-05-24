@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://da0u25hm3xl08"]
+
+[ext_resource type="PackedScene" uid="uid://bhu5xlt0kjge5" path="res://itens/elementos/turquoise.tscn" id="1_wqag5"]
+[ext_resource type="Script" uid="uid://dweef7bq1l6rt" path="res://WWpasta/WWPlayer/inventário/ItemData.gd" id="1_yoxnp"]
+[ext_resource type="Texture2D" uid="uid://dcastyc2lx34s" path="res://itens/elementosSprites/Azul.png" id="2_p1caj"]
+
+[resource]
+script = ExtResource("1_yoxnp")
+ItemName = "turquoise"
+icon = ExtResource("2_p1caj")
+ItemScene = ExtResource("1_wqag5")
+metadata/_custom_type_script = "uid://dweef7bq1l6rt"

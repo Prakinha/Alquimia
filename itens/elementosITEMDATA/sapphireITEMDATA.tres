@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cmrixvhlt6idq"]
+
+[ext_resource type="Script" uid="uid://dweef7bq1l6rt" path="res://WWpasta/WWPlayer/inventário/ItemData.gd" id="1_4o2ce"]
+[ext_resource type="PackedScene" uid="uid://bjv3mfkelmxq1" path="res://itens/elementos/sapphire.tscn" id="1_6bpci"]
+[ext_resource type="Texture2D" uid="uid://dcastyc2lx34s" path="res://itens/elementosSprites/Azul.png" id="2_ujlxa"]
+
+[resource]
+script = ExtResource("1_4o2ce")
+ItemName = "sapphire"
+icon = ExtResource("2_ujlxa")
+ItemScene = ExtResource("1_6bpci")
+metadata/_custom_type_script = "uid://dweef7bq1l6rt"

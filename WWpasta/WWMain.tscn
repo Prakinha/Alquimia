@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://djcxipulbl6j0" path="res://WWpasta/WWPlayer/player.tscn" id="1_h3hi5"]
 [ext_resource type="Script" uid="uid://dweef7bq1l6rt" path="res://WWpasta/WWPlayer/inventário/ItemData.gd" id="3_klf0a"]
 [ext_resource type="PackedScene" uid="uid://s8qu6kl1dfcs" path="res://WWpasta/WWesteira/Esteira.tscn" id="3_mvryu"]
-[ext_resource type="Resource" uid="uid://dckd4sote67p5" path="res://itens/elementosITEMDATA/RosaITEMDATA.tres" id="4_hsihn"]
+[ext_resource type="Resource" uid="uid://dckd4sote67p5" path="res://itens/elementosITEMDATA/pinkITEMDATA.tres" id="4_hsihn"]
 [ext_resource type="Resource" uid="uid://dcsu243k7n5qv" path="res://itens/elementosITEMDATA/VermelhoITEMDATA.tres" id="5_idusj"]
 [ext_resource type="Resource" uid="uid://bs8cwemaw8xt1" path="res://itens/elementosITEMDATA/AzulITEMDATA.tres" id="6_dl40o"]
 

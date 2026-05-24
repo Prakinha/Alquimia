@@ -104,7 +104,12 @@ func atualizar_visual() -> void:
 # ATENÇÃO: VOCÊ PRECISA CONFIGURAR ESTA FUNÇÃO ABAIXO!
 
 func _criar_item_por_nome(nome_do_item: String) -> ItemData:
-	print("AVISO: Função _criar_item_por_nome precisa ser implementada para criar o: ", nome_do_item)
+	var caminho = "res://itens/elementosITEMDATA/" + nome_do_item + "ITEMDATA.tres"
+	if FileAccess.file_exists(caminho):
+		var NovoItem: ItemData = load(caminho)
+		return NovoItem
+	
+	print("AVISO: Ainda não existe ItemData para: " + nome_do_item + " ou Função _criar_item_por_nome precisa ser implementada para criar o: ", nome_do_item)
 	
 	
 	return null

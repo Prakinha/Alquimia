@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cd2yc5nj1vl5q"]
+
+[ext_resource type="PackedScene" uid="uid://b863cvjq3t2iw" path="res://itens/elementos/olives.tscn" id="1_cfr41"]
+[ext_resource type="Script" uid="uid://dweef7bq1l6rt" path="res://WWpasta/WWPlayer/inventário/ItemData.gd" id="1_y2j4j"]
+[ext_resource type="Texture2D" uid="uid://dcastyc2lx34s" path="res://itens/elementosSprites/Azul.png" id="2_s6bhq"]
+
+[resource]
+script = ExtResource("1_y2j4j")
+ItemName = "olive"
+icon = ExtResource("2_s6bhq")
+ItemScene = ExtResource("1_cfr41")
+metadata/_custom_type_script = "uid://dweef7bq1l6rt"
