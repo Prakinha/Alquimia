@@ -1,7 +1,7 @@
 extends Node2D
 class_name MaquinaBase
 
-@onready var menu_base: MenuBase = $MenuBase
+@export var menu_base: MenuBase
 @onready var placa: Area2D = $Placa
 
 var menu_aberto: bool = false

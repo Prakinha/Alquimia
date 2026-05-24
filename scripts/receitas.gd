@@ -12,7 +12,17 @@ var receita = {
 	"B,G,G": "turquoise",
 	"R,R,R": "ruby",
 	"B,B,B": "sapphire",
-	"G,G,G": "emerald"
+	"G,G,G": "emerald",
+	"Azul,Verde,Vermelho": "white",
+	"Verde,Vermelho,Vermelho": "orange",
+	"Verde,Verde,Vermelho": "olive",
+	"Azul,Vermelho,Vermelho": "pink",
+	"Azul,Azul,Vermelho": "purple",
+	"Azul,Azul,Verde": "cobalt",
+	"Azul,Verde,Verde": "turquoise",
+	"Vermelho,Vermelho,Vermelho": "ruby",
+	"Azul,Azul,Azul": "sapphire",
+	"Verde,Verde,Verde": "emerald"
 }
 
 # Misturas de 2 itens (Dissolvidos - Ordem alfabética nas chaves)

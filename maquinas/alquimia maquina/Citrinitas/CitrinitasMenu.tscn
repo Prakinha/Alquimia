@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://bp5citui5ogrn"]
+
+[ext_resource type="Script" uid="uid://tvjfqr8vksmj" path="res://maquinas/alquimia maquina/Citrinitas/citrinitas_menu.gd" id="1_8eppo"]
+[ext_resource type="Texture2D" uid="uid://d5r1ytuyx606" path="res://WWpasta/WWesteira/Bloco preto.png" id="1_efgtp"]
+[ext_resource type="Script" uid="uid://cg80ccybum57f" path="res://WWpasta/WWPlayer/inventário/inventory_panel.gd" id="2_8eppo"]
+[ext_resource type="Script" uid="uid://cdvep004hkr6h" path="res://WWpasta/WWPlayer/inventário/item_slot.gd" id="3_i1k8j"]
+[ext_resource type="Texture2D" uid="uid://d0w54d7rmmc2j" path="res://maquinas/alquimia maquina/nigredo/RealAlchemiter.png" id="4_fedaq"]
+
+[node name="CitrinitasMenu" type="CanvasLayer" unique_id=1838215778]
+script = ExtResource("1_8eppo")
+
+[node name="NoDeControle" type="Control" parent="." unique_id=884233285]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 6.0
+offset_top = 643.0
+offset_right = 1158.0
+offset_bottom = 1343.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="NoDeControle" unique_id=1535100799]
+modulate = Color(1, 1, 1, 0.30980393)
+self_modulate = Color(1, 1, 1, 0.5882353)
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_efgtp")
+
+[node name="Label" type="Label" parent="NoDeControle" unique_id=1795853820]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 216.0
+offset_right = 888.0
+offset_bottom = 416.0
+text = "O seu menu aqui!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="NoDeControle" unique_id=1123229445]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -276.0
+offset_top = -600.0
+offset_right = 249.0
+offset_bottom = -467.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("2_8eppo")
+
+[node name="MarginContainer" type="MarginContainer" parent="NoDeControle/Panel" unique_id=23918319]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -268.5
+offset_top = -138.0
+offset_right = 268.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="GridContainer" type="GridContainer" parent="NoDeControle/Panel/MarginContainer" unique_id=1556816701]
+layout_mode = 2
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 4
+
+[node name="ItemSlot" type="Panel" parent="NoDeControle/Panel/MarginContainer/GridContainer" unique_id=1366242243]
+texture_filter = 1
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+script = ExtResource("3_i1k8j")
+
+[node name="icon" type="TextureRect" parent="NoDeControle/Panel/MarginContainer/GridContainer/ItemSlot" unique_id=427185515]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemSlot2" type="Panel" parent="NoDeControle/Panel/MarginContainer/GridContainer" unique_id=1853271205]
+texture_filter = 1
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+script = ExtResource("3_i1k8j")
+
+[node name="icon" type="TextureRect" parent="NoDeControle/Panel/MarginContainer/GridContainer/ItemSlot2" unique_id=880275497]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemSlot3" type="Panel" parent="NoDeControle/Panel/MarginContainer/GridContainer" unique_id=1414808026]
+texture_filter = 1
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+script = ExtResource("3_i1k8j")
+
+[node name="icon" type="TextureRect" parent="NoDeControle/Panel/MarginContainer/GridContainer/ItemSlot3" unique_id=1062496648]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemSlot4" type="Panel" parent="NoDeControle/Panel/MarginContainer/GridContainer" unique_id=1993032987]
+texture_filter = 1
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+script = ExtResource("3_i1k8j")
+
+[node name="icon" type="TextureRect" parent="NoDeControle/Panel/MarginContainer/GridContainer/ItemSlot4" unique_id=740980693]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RealAlchemiter" type="Sprite2D" parent="NoDeControle" unique_id=742362390]
+position = Vector2(522, 303)
+texture = ExtResource("4_fedaq")

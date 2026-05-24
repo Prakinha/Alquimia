@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dx1chr2ln8kav"]
+
+[ext_resource type="Script" uid="uid://deb5vt6gp2j56" path="res://maquinas/alquimia maquina/nigredo/nigredo.gd" id="1_bh84t"]
+[ext_resource type="PackedScene" uid="uid://dd4blmhdvnilc" path="res://WWpasta/WWmiscelaneous/placa.tscn" id="2_t3awq"]
+[ext_resource type="PackedScene" uid="uid://d4m2rxtfcl7hq" path="res://maquinas/alquimia maquina/nigredo/menunigredo.tscn" id="3_hhsq4"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_wh0fd"]
+
+[node name="Nigredo" type="Node2D" unique_id=1367211300 node_paths=PackedStringArray("menu_base")]
+script = ExtResource("1_bh84t")
+menu_base = NodePath("MenuNigredo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1433021163]
+scale = Vector2(73.99216, 107.24902)
+texture = SubResource("PlaceholderTexture2D_wh0fd")
+
+[node name="Placa" parent="." unique_id=935575288 instance=ExtResource("2_t3awq")]
+position = Vector2(3, 6)
+collision_layer = 2
+
+[node name="MenuNigredo" parent="." unique_id=559825891 instance=ExtResource("3_hhsq4")]

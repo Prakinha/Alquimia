@@ -48,13 +48,17 @@ func executar_dissolucao() -> void:
 		if item_visual.has_method("dissolver"):
 			print("Tentando dissolver: ", item_dissoluto.ItemName)
 			item_visual.dissolver(item_visual)
+			
 			item_dissoluto = null
-			item_visual = null
+			atualizar_visual() 
 		else:
-			print("Este item não possui a função de dissolver.")
+			print("Este item não possui a função de dissolver. Devolvendo...")
+			InventarioGlobal.adicionar_item(item_dissoluto)
+			item_dissoluto = null
+			atualizar_visual()
+			
 	else:
 		print("Nenhum item na máquina para dissolver!")
-
 func atualizar_visual() -> void:
 	if is_instance_valid(item_visual):
 		item_visual.queue_free()
@@ -72,5 +76,5 @@ func atualizar_visual() -> void:
 		menu_base.NoDeControle.add_child(item_visual)
 		
 		# Ajuste a posição de acordo com o centro do NoDeControle
-		item_visual.position = Vector2(0, -30) 
+		item_visual.position = Vector2(410, 300) 
 		item_visual.z_index = 10

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://itn5dq11g83u"
-path="res://.godot/imported/images.png-224f060eb9bfde27604a7da64bfcd0b8.ctex"
+uid="uid://d0w54d7rmmc2j"
+path="res://.godot/imported/RealAlchemiter.png-2ee2f8c0767a14bb2491b5f5d86dcde9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://maquinas/assets/images.png"
-dest_files=["res://.godot/imported/images.png-224f060eb9bfde27604a7da64bfcd0b8.ctex"]
+source_file="res://maquinas/alquimia maquina/nigredo/RealAlchemiter.png"
+dest_files=["res://.godot/imported/RealAlchemiter.png-2ee2f8c0767a14bb2491b5f5d86dcde9.ctex"]
 
 [params]
 

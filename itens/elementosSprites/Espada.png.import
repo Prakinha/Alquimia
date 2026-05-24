@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0w54d7rmmc2j"
-path="res://.godot/imported/RealAlchemiter.png-61565735c2fd99167d976dd1f181b3c9.ctex"
+uid="uid://0okqut5yv1hr"
+path="res://.godot/imported/Espada.png-4d9fe299b52b46dbf3cfacfd69bb06f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://maquinas/assets/RealAlchemiter.png"
-dest_files=["res://.godot/imported/RealAlchemiter.png-61565735c2fd99167d976dd1f181b3c9.ctex"]
+source_file="res://itens/elementosSprites/Espada.png"
+dest_files=["res://.godot/imported/Espada.png-4d9fe299b52b46dbf3cfacfd69bb06f3.ctex"]
 
 [params]
 

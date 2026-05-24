@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d5r1ytuyx606" path="res://WWpasta/WWesteira/Bloco preto.png" id="2_7uq0i"]
 [ext_resource type="Script" uid="uid://cg80ccybum57f" path="res://WWpasta/WWPlayer/inventário/inventory_panel.gd" id="3_botd1"]
 [ext_resource type="Script" uid="uid://cdvep004hkr6h" path="res://WWpasta/WWPlayer/inventário/item_slot.gd" id="4_cw1e2"]
-[ext_resource type="PackedScene" uid="uid://bi37r66gyps6b" path="res://maquinas/alquimia maquina/nigredo.tscn" id="5_cw1e2"]
+[ext_resource type="PackedScene" uid="uid://bi37r66gyps6b" path="res://maquinas/alquimia maquina/nigredo/nigredo.tscn" id="5_cw1e2"]
 
 [node name="MenuBase" type="CanvasLayer" unique_id=2122471675]
 script = ExtResource("1_t7lsm")
@@ -140,6 +140,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Node2D" parent="NoDeControle" unique_id=1395692869 instance=ExtResource("5_cw1e2")]
+visible = false
 
 [node name="Control" type="Control" parent="NoDeControle" unique_id=1626103460]
 visible = false

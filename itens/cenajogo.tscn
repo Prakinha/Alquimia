@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://b3uvq4u64s8v8" path="res://maquinas/alquimia maquina/node_2d.tscn" id="8_kgfak"]
 [ext_resource type="Resource" uid="uid://j4hpacp0issm" path="res://itens/elementosITEMDATA/CianoITEMDATA.tres" id="9_7i8xt"]
 [ext_resource type="Resource" uid="uid://bj2yj814csa4i" path="res://itens/elementosITEMDATA/EspadaITEMDATA.tres" id="10_voavh"]
+[ext_resource type="PackedScene" uid="uid://dx1chr2ln8kav" path="res://maquinas/alquimia maquina/nigredo/Nigredo.tscn" id="12_voavh"]
+[ext_resource type="PackedScene" uid="uid://csnkbvkb8furw" path="res://maquinas/alquimia maquina/Citrinitas/Citrinitas.tscn" id="13_udl5n"]
 
 [node name="WwMain" type="Node2D" unique_id=1219875113]
 
@@ -19,7 +21,7 @@ position = Vector2(-1906.9999, -800.9999)
 scale = Vector2(7, 7)
 
 [node name="Player" parent="." unique_id=800378027 instance=ExtResource("1_bjfuu")]
-position = Vector2(176, 21)
+position = Vector2(766, 422)
 cena_item_drop = ExtResource("3_fxf81")
 
 [node name="Esteira" parent="." unique_id=912511156 instance=ExtResource("2_536ej")]
@@ -27,4 +29,11 @@ position = Vector2(-88, -2)
 arrayDeItensPossiveis = Array[ExtResource("4_3kam1")]([ExtResource("5_jpfkd"), ExtResource("6_kgfak"), ExtResource("7_fxf81"), null, ExtResource("9_7i8xt"), ExtResource("10_voavh")])
 
 [node name="maquina 1" parent="." unique_id=992081681 instance=ExtResource("8_kgfak")]
-position = Vector2(206, 14)
+visible = false
+position = Vector2(617, 37)
+
+[node name="Nigredo" parent="." unique_id=1367211300 instance=ExtResource("12_voavh")]
+position = Vector2(206, 27)
+
+[node name="Citrinitas" parent="." unique_id=1710463245 instance=ExtResource("13_udl5n")]
+position = Vector2(1009, 569)

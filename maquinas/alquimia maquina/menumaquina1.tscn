@@ -1,10 +1,14 @@
 [gd_scene format=3 uid="uid://dwot5sjqkve8r"]
 
 [ext_resource type="PackedScene" uid="uid://jc63onvrrsms" path="res://WWpasta/WWmiscelaneous/MenuBase.tscn" id="1_axbhq"]
-[ext_resource type="Script" uid="uid://cg4ibg66y7235" path="res://maquinas/alquimia maquina/menumaquina_1.gd" id="2_8y2lx"]
+[ext_resource type="Script" uid="uid://cg4ibg66y7235" path="res://maquinas/alquimia maquina/menuNigredo.gd" id="2_8y2lx"]
+[ext_resource type="Script" uid="uid://deb5vt6gp2j56" path="res://maquinas/alquimia maquina/nigredo/nigredo.gd" id="3_fbdv8"]
 
 [node name="MenuBase" unique_id=2122471675 instance=ExtResource("1_axbhq")]
 script = ExtResource("2_8y2lx")
+
+[node name="Node2D" parent="NoDeControle" parent_id_path=PackedInt32Array(1875225264) index="3" unique_id=1395692869]
+script = ExtResource("3_fbdv8")
 
 [node name="Control" parent="NoDeControle" parent_id_path=PackedInt32Array(1875225264) index="4" unique_id=1626103460]
 visible = true
