@@ -7,6 +7,7 @@ class_name GoblinArea2D
 @export var itemdrop: PackedScene
 @onready var isSegurandoItem: bool
 @export var GoblinVelocidade: int = 2
+@onready var GoblinAnimation: AnimationPlayer = $AnimationPlayer
 
 
 func _ready() -> void:
@@ -16,10 +17,12 @@ func _ready() -> void:
 		var itemDoGoblin : ItemDrop = itemdrop.instantiate()
 		itemDoGoblin.itemdata = itemdata
 		goblinHand.add_child(itemDoGoblin)
+	GoblinAnimation.play("move_right")
+	
 
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	position.x = position.x + GoblinVelocidade
 	
 func isSegurando() -> bool:

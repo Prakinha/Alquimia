@@ -7,6 +7,44 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_eu6x4"]
 radius = 120.26637
 
+[sub_resource type="Animation" id="Animation_q6t5j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ggmv7"]
+resource_name = "move_right"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nubxf"]
+_data = {
+&"RESET": SubResource("Animation_q6t5j"),
+&"move_right": SubResource("Animation_ggmv7")
+}
+
 [node name="Goblin" type="Area2D" unique_id=392190091]
 script = ExtResource("1_eu6x4")
 itemdrop = ExtResource("3_myoah")
@@ -19,6 +57,10 @@ shape = SubResource("CircleShape2D_eu6x4")
 position = Vector2(32, 64)
 scale = Vector2(1, 2)
 texture = ExtResource("1_58vxr")
+hframes = 2
 
 [node name="Hand" type="Marker2D" parent="." unique_id=1998258678]
 position = Vector2(32, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=11697708]
+libraries/ = SubResource("AnimationLibrary_nubxf")
