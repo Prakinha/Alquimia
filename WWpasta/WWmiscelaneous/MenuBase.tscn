@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://jc63onvrrsms"]
+
+[ext_resource type="Script" uid="uid://4mulpn1r4m5g" path="res://WWpasta/WWmiscelaneous/menu_base.gd" id="1_t7lsm"]
+[ext_resource type="Texture2D" uid="uid://d5r1ytuyx606" path="res://WWpasta/WWesteira/Bloco preto.png" id="2_7uq0i"]
+
+[node name="MenuBase" type="Control" unique_id=1415517682]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t7lsm")
+
+[node name="NoDeControle" type="Control" parent="." unique_id=1875225264]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_top = 648.0
+offset_right = 1152.0
+offset_bottom = 1296.0002
+
+[node name="TextureRect" type="TextureRect" parent="NoDeControle" unique_id=458248441]
+self_modulate = Color(1, 1, 1, 0.5882353)
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_7uq0i")
+
+[node name="Label" type="Label" parent="NoDeControle" unique_id=635797781]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 216.0
+offset_right = 888.0
+offset_bottom = 416.0
+text = "O seu menu aqui!"
+horizontal_alignment = 1
+vertical_alignment = 1
