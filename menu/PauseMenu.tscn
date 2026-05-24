@@ -3,11 +3,75 @@
 [ext_resource type="Script" uid="uid://dbqoq0g5ooc63" path="res://WWpasta/WWmiscelaneous/menu_pause.gd" id="1_hffln"]
 [ext_resource type="Texture2D" uid="uid://d5r1ytuyx606" path="res://WWpasta/WWesteira/Bloco preto.png" id="2_7y0k2"]
 [ext_resource type="Texture2D" uid="uid://cqpm6i3o287n0" path="res://assets/spr_golem.png" id="3_gabs7"]
+[ext_resource type="Texture2D" uid="uid://bge8add6b1565" path="res://Livro/86e42162d216e1f016d0dd49e5278bf2/5a457bb2-3928-488d-8986-fe5303339888-6.png" id="4_f878t"]
+[ext_resource type="Texture2D" uid="uid://c63kutgbn2dt1" path="res://Livro/86e42162d216e1f016d0dd49e5278bf2/5a457bb2-3928-488d-8986-fe5303339888-5.png" id="5_6w6ns"]
+[ext_resource type="Texture2D" uid="uid://b4mq0mkuc6fof" path="res://Livro/86e42162d216e1f016d0dd49e5278bf2/5a457bb2-3928-488d-8986-fe5303339888-4.png" id="6_1ymlp"]
+[ext_resource type="Texture2D" uid="uid://b1yqruhf8u01j" path="res://Livro/86e42162d216e1f016d0dd49e5278bf2/5a457bb2-3928-488d-8986-fe5303339888-3.png" id="7_n84oy"]
+[ext_resource type="Texture2D" uid="uid://qvnuodoolmd0" path="res://Livro/86e42162d216e1f016d0dd49e5278bf2/5a457bb2-3928-488d-8986-fe5303339888-2.png" id="8_qnbko"]
+[ext_resource type="Texture2D" uid="uid://c6axko4kgns5l" path="res://Livro/86e42162d216e1f016d0dd49e5278bf2/5a457bb2-3928-488d-8986-fe5303339888-1.png" id="9_qmvwf"]
+[ext_resource type="Texture2D" uid="uid://w8b7bjbi5usn" path="res://Livro/86e42162d216e1f016d0dd49e5278bf2/5a457bb2-3928-488d-8986-fe5303339888-0.png" id="10_k8a5y"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kwtlx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_f878t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6w6ns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1ymlp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_n84oy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qnbko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qmvwf")
+}],
+"loop": true,
+"name": &"backwards",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_k8a5y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_qmvwf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qnbko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_n84oy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1ymlp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6w6ns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_f878t")
+}],
+"loop": true,
+"name": &"fowards",
+"speed": 5.0
+}]
 
 [node name="MenuPause" type="CanvasLayer" unique_id=2122471675]
 script = ExtResource("1_hffln")
 
-[node name="NoDeControle" type="Control" parent="." unique_id=1875225264]
+[node name="NodeControle" type="Control" parent="." unique_id=1875225264]
 unique_name_in_owner = true
 layout_mode = 3
 anchors_preset = 0
@@ -15,7 +79,7 @@ offset_top = -648.0
 offset_right = 1152.0
 offset_bottom = 52.0
 
-[node name="TextureRect" type="TextureRect" parent="NoDeControle" unique_id=458248441]
+[node name="TextureRect" type="TextureRect" parent="NodeControle" unique_id=458248441]
 modulate = Color(1, 1, 1, 0.30980393)
 self_modulate = Color(1, 1, 1, 0.5882353)
 layout_mode = 0
@@ -23,13 +87,13 @@ offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("2_7y0k2")
 
-[node name="Sprite2D" type="Sprite2D" parent="NoDeControle" unique_id=572779205]
+[node name="Sprite2D" type="Sprite2D" parent="NodeControle" unique_id=572779205]
 position = Vector2(215.99998, 312.00003)
 scale = Vector2(10, 10)
 texture = ExtResource("3_gabs7")
 hframes = 4
 
-[node name="Button" type="Button" parent="NoDeControle" unique_id=378122617]
+[node name="Button" type="Button" parent="NodeControle" unique_id=378122617]
 layout_mode = 0
 offset_left = 256.0
 offset_top = 376.0
@@ -37,4 +101,33 @@ offset_right = 385.0
 offset_bottom = 424.0
 text = "passar a página"
 
-[connection signal="pressed" from="NoDeControle/Button" to="." method="_on_button_pressed"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NodeControle" unique_id=2085372143]
+position = Vector2(538, 314)
+scale = Vector2(0.46666664, 0.46666667)
+sprite_frames = SubResource("SpriteFrames_kwtlx")
+animation = &"backwards"
+frame_progress = 0.5916955
+
+[node name="BtnAnterior" type="Button" parent="NodeControle" unique_id=1888344795]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 418.0
+offset_right = 359.0
+offset_bottom = 568.0
+
+[node name="BtnProxima" type="Button" parent="NodeControle" unique_id=416470744]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 424.0
+offset_right = 990.0
+offset_bottom = 558.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NodeControle" unique_id=2020265505]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="pressed" from="NodeControle/Button" to="." method="_on_button_pressed"]
+[connection signal="animation_finished" from="NodeControle/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="pressed" from="NodeControle/BtnAnterior" to="." method="_on_btn_anterior_pressed"]
+[connection signal="pressed" from="NodeControle/BtnProxima" to="." method="_on_btn_proxima_pressed"]

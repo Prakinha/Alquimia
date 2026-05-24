@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://crq8parf21dka" path="res://assets/spr_hermes.png" id="4_6d4ki"]
 [ext_resource type="Script" uid="uid://dr663150gojes" path="res://WWpasta/WWPlayer/animation_controler.gd" id="4_qjkh3"]
 [ext_resource type="PackedScene" uid="uid://jc63onvrrsms" path="res://WWpasta/WWmiscelaneous/MenuBase.tscn" id="7_hpsle"]
-[ext_resource type="PackedScene" uid="uid://bxae5pk1ckbgv" path="res://WWpasta/WWmiscelaneous/MenuPause.tscn" id="8_6d4ki"]
+[ext_resource type="PackedScene" uid="uid://627unygghq7i" path="res://menu/PauseMenu.tscn" id="8_6d4ki"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3pqv"]
 radius = 24.0
