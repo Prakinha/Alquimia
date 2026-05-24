@@ -30,9 +30,9 @@ var dissolucao = {
 	"G,R": "Y", # Yellow
 	"B,R": "M", # Magenta
 	"B,G": "C",  # Cyan
-	"verde,vermelho" :"amarelo",
-	"azul,vermelho" :"magenta",
-	"azul,verde" :"ciano",
+	"Verde,Vermelho" :"amarelo",
+	"Azul,Vermelho" :"magenta",
+	"Azul,Verde" :"ciano",
 	"espada,C": "espada_ciano",
 	"panela,C": "panela_ciano",
 	"bota,M": "bota_magenta",

@@ -20,7 +20,7 @@ position = Vector2(-1906.9999, -800.9999)
 scale = Vector2(7, 7)
 
 [node name="Rubedo" parent="." unique_id=786778760 instance=ExtResource("12_udl5n")]
-position = Vector2(743, 836)
+position = Vector2(743, 837)
 
 [node name="Player" parent="." unique_id=800378027 instance=ExtResource("1_bjfuu")]
 position = Vector2(766, 422)
