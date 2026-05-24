@@ -3,6 +3,13 @@
 [ext_resource type="StyleBox" uid="uid://d3cdtgk8ntm1c" path="res://menu/botaoinicio.tres" id="1_6muci"]
 [ext_resource type="Script" uid="uid://bj26eei4wye82" path="res://menu/button.gd" id="1_qob1l"]
 [ext_resource type="StyleBox" uid="uid://dyphkuvaql4yo" path="res://menu/botaoiniciohover.tres" id="2_46pa4"]
+[ext_resource type="Texture2D" uid="uid://dvktvotdxe1yc" path="res://assets/Titulo no pot menor reso.png" id="4_1mdmx"]
+
+[sub_resource type="Gradient" id="Gradient_1mdmx"]
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8hqo1"]
+gradient = SubResource("Gradient_1mdmx")
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1074062151]
 
@@ -18,10 +25,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -169.5
-offset_top = -65.0
-offset_right = 169.5
-offset_bottom = 65.0
+offset_left = 408.0
+offset_top = 432.0
+offset_right = 747.0
+offset_bottom = 562.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(169.5, 65)
@@ -33,6 +40,30 @@ theme_override_styles/disabled = ExtResource("1_6muci")
 theme_override_styles/focus = ExtResource("1_6muci")
 text = "Iniciar jogo"
 script = ExtResource("1_qob1l")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1789607818]
+offset_left = 1233.37
+offset_top = 32.000053
+offset_right = 1305.0399
+offset_bottom = 1329.37
+rotation = 1.5707964
+texture = SubResource("GradientTexture2D_8hqo1")
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=887387694]
+offset_left = 1233.37
+offset_top = 103.67002
+offset_right = 1327.37
+offset_bottom = 1401.04
+rotation = 1.5707964
+texture = SubResource("GradientTexture2D_8hqo1")
+flip_h = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=255814663]
+offset_left = 16.0
+offset_top = -192.0
+offset_right = 1154.6666
+offset_bottom = 448.0
+texture = ExtResource("4_1mdmx")
 
 [connection signal="mouse_entered" from="Control/Button" to="Control/Button" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Control/Button" to="Control/Button" method="_on_mouse_exited"]

@@ -92,5 +92,3 @@ libraries/ = SubResource("AnimationLibrary_epp70")
 autoplay = &"idle"
 
 [node name="CanvasLayer" parent="." unique_id=1074062151 instance=ExtResource("4_44jmx")]
-offset = Vector2(575, 500)
-transform = Transform2D(1, 0, 0, 1, 575, 500)
