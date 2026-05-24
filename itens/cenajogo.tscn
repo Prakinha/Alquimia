@@ -13,6 +13,10 @@
 [ext_resource type="PackedScene" uid="uid://csnkbvkb8furw" path="res://maquinas/alquimia maquina/Citrinitas/Citrinitas.tscn" id="13_udl5n"]
 [ext_resource type="Resource" uid="uid://dcvuviaw7gw38" path="res://itens/elementosITEMDATA/whiteITEMDATA.tres" id="19_ya3og"]
 
+[sub_resource type="Resource" id="Resource_voavh"]
+script = ExtResource("3_kbahf")
+metadata/_custom_type_script = "uid://dweef7bq1l6rt"
+
 [node name="WwMain" type="Node2D" unique_id=1219875113]
 
 [node name="mapa" parent="." unique_id=1199859687 instance=ExtResource("3_s0tju")]
@@ -20,11 +24,11 @@ position = Vector2(-1906.9999, -800.9999)
 scale = Vector2(7, 7)
 
 [node name="Rubedo" parent="." unique_id=786778760 instance=ExtResource("12_udl5n")]
-position = Vector2(743, 837)
+position = Vector2(743, 838)
 
 [node name="Player" parent="." unique_id=800378027 instance=ExtResource("1_bjfuu")]
 position = Vector2(766, 422)
-itens_iniciais = Array[ExtResource("3_kbahf")]([])
+itens_iniciais = Array[ExtResource("3_kbahf")]([SubResource("Resource_voavh")])
 cena_item_drop = ExtResource("3_fxf81")
 
 [node name="Esteira" parent="." unique_id=912511156 instance=ExtResource("2_536ej")]

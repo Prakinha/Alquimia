@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://brvkg038y5755"]
+
+[ext_resource type="PackedScene" uid="uid://cl18yhp1wt86u" path="res://itens/elementos/verde.tscn" id="1_w7naf"]
+[ext_resource type="Texture2D" uid="uid://vxh2a8piqd3y" path="res://WWpasta/WWesteira/goblin/triangulo.png" id="2_rsd50"]
+[ext_resource type="Script" uid="uid://dweef7bq1l6rt" path="res://WWpasta/WWPlayer/inventário/ItemData.gd" id="3_kyo2i"]
+
+[resource]
+script = ExtResource("3_kyo2i")
+ItemName = "verde"
+icon = ExtResource("2_rsd50")
+ItemScene = ExtResource("1_w7naf")
+metadata/_custom_type_script = "uid://dweef7bq1l6rt"

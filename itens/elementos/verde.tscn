@@ -1,7 +1,15 @@
 [gd_scene format=3 uid="uid://cl18yhp1wt86u"]
 
 [ext_resource type="PackedScene" uid="uid://dx4ts1l86k5j0" path="res://itens/itembase.tscn" id="1_itvmd"]
+[ext_resource type="Texture2D" uid="uid://vxh2a8piqd3y" path="res://WWpasta/WWesteira/goblin/triangulo.png" id="2_6nqn2"]
 
 [node name="verde" unique_id=1751028922 instance=ExtResource("1_itvmd")]
 item_id = "G"
 item_name = "Verde"
+
+[node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(1651896402) index="0" unique_id=1595932822]
+position = Vector2(0, 0)
+
+[node name="Sprite2D" parent="Area2D" parent_id_path=PackedInt32Array(1651896402) index="1" unique_id=1298149292]
+position = Vector2(0, 0)
+texture = ExtResource("2_6nqn2")
