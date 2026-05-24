@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cdstje25d7xbv"]
+
+[ext_resource type="Script" uid="uid://cnxjdlyop1y4g" path="res://node_3d.gd" id="1_l56ag"]
+[ext_resource type="Texture2D" uid="uid://brlvw5lxxa1tw" path="res://LabFloor_1.png" id="3_44jmx"]
+[ext_resource type="Texture2D" uid="uid://udf0k1ywixqm" path="res://assets/spr_rune.png" id="3_l56ag"]
+
+[sub_resource type="Environment" id="Environment_8687e"]
+background_energy_multiplier = 0.47
+ambient_light_energy = 2.26
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_epp70"]
+size = Vector2(600, 600)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3qxhe"]
+albedo_texture = ExtResource("3_44jmx")
+texture_filter = 0
+
+[node name="Node3D" type="Node3D" unique_id=917615474]
+script = ExtResource("1_l56ag")
+tamanho_das_gemas = 100.0
+raio_orbitacao = 50.0
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=329309674]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16880512, 2.9845428, 43.73225)
+pixel_size = 1.0
+texture_filter = 0
+texture = ExtResource("3_l56ag")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=611388823]
+transform = Transform3D(1, 0, 0, 0, 0.77973163, 0.62611395, 0, -0.62611395, 0.77973163, 0, 16.759644, 65.840935)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2016927761]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.309952, 14.317017, 15.546249)
+light_energy = 8.763
+light_indirect_energy = 10.216
+light_volumetric_fog_energy = 11.931
+light_angular_distance = 26.73
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=439088509]
+environment = SubResource("Environment_8687e")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1442983105]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.60461664, -18.420712, 0.23011112)
+mesh = SubResource("PlaneMesh_epp70")
+surface_material_override/0 = SubResource("StandardMaterial3D_3qxhe")
