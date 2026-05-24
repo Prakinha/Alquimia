@@ -3,7 +3,7 @@ extends CanvasLayer
 @onready var NoDeControle: Control = %NoDeControle
 
 
-var posicao_escondida: float = 1000.0 
+var posicao_escondida: float = 648
 
 func _ready() -> void:
 	NoDeControle.position.y = posicao_escondida
