@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://b3uvq4u64s8v8"]
 
 [ext_resource type="PackedScene" uid="uid://diwi530gcdmi5" path="res://maquinas/maquina base.tscn" id="1_fp7ag"]
-[ext_resource type="Script" uid="uid://c3pu7q5sracsl" path="res://maquinas/alquimia maquina/maquina1.gd" id="2_x40ec"]
+[ext_resource type="Script" uid="uid://deb5vt6gp2j56" path="res://maquinas/alquimia maquina/nigredo.gd" id="2_qjybm"]
 [ext_resource type="PackedScene" uid="uid://bi37r66gyps6b" path="res://maquinas/alquimia maquina/nigredo.tscn" id="3_qjybm"]
 
-[node name="maquina 1" unique_id=992081681 instance=ExtResource("1_fp7ag")]
-script = ExtResource("2_x40ec")
+[node name="Nigredo" unique_id=992081681 instance=ExtResource("1_fp7ag")]
+script = ExtResource("2_qjybm")
 
 [node name="Node2D" parent="." index="1" unique_id=1395692869 instance=ExtResource("3_qjybm")]
+visible = false
 position = Vector2(-189, 678)
+
+[node name="Placa" parent="." index="3" unique_id=935575288]
+visible = false

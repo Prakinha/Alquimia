@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bi37r66gyps6b"]
 
-[ext_resource type="Script" uid="uid://deb5vt6gp2j56" path="res://nigredo.gd" id="1_ks82r"]
+[ext_resource type="Script" uid="uid://deb5vt6gp2j56" path="res://maquinas/alquimia maquina/nigredo.gd" id="1_ks82r"]
 [ext_resource type="Texture2D" uid="uid://d0w54d7rmmc2j" path="res://maquinas/assets/RealAlchemiter.png" id="2_umrn6"]
 
 [node name="Node2D" type="Node2D" unique_id=1395692869]

@@ -17,7 +17,7 @@ position = Vector2(-1906.9999, -800.9999)
 scale = Vector2(7, 7)
 
 [node name="Player" parent="." unique_id=800378027 instance=ExtResource("1_bjfuu")]
-position = Vector2(177, 20)
+position = Vector2(176, 21)
 cena_item_drop = ExtResource("3_fxf81")
 
 [node name="Esteira" parent="." unique_id=912511156 instance=ExtResource("2_536ej")]
