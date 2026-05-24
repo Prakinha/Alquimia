@@ -17,6 +17,7 @@ offset_right = 1152.0
 offset_bottom = 1348.0
 
 [node name="TextureRect" type="TextureRect" parent="NoDeControle" unique_id=458248441]
+modulate = Color(1, 1, 1, 0.30980393)
 self_modulate = Color(1, 1, 1, 0.5882353)
 layout_mode = 0
 offset_right = 1152.0
@@ -24,6 +25,7 @@ offset_bottom = 648.0
 texture = ExtResource("2_7uq0i")
 
 [node name="Label" type="Label" parent="NoDeControle" unique_id=635797781]
+visible = false
 layout_mode = 0
 offset_left = 240.0
 offset_top = 216.0
@@ -34,6 +36,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Panel" type="Panel" parent="NoDeControle" unique_id=418769362]
+visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -134,3 +137,30 @@ anchor_right = 0.9
 anchor_bottom = 0.9
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Control" type="Control" parent="NoDeControle" unique_id=1626103460]
+visible = false
+anchors_preset = 0
+offset_left = 110.0
+offset_top = 270.0
+offset_right = 150.0
+offset_bottom = 310.0
+
+[node name="Panel2" type="Panel" parent="NoDeControle/Control" unique_id=2127434862]
+layout_mode = 0
+offset_right = 251.0
+offset_bottom = 180.0
+
+[node name="Panel3" type="Panel" parent="NoDeControle/Control" unique_id=1188285821]
+layout_mode = 0
+offset_left = 690.0
+offset_top = -4.0
+offset_right = 941.0
+offset_bottom = 176.0
+
+[node name="Panel4" type="Panel" parent="NoDeControle/Control" unique_id=1844382899]
+layout_mode = 0
+offset_left = 424.0
+offset_top = -5.0
+offset_right = 675.0
+offset_bottom = 175.0

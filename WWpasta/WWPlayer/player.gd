@@ -79,7 +79,7 @@ func interagir_com_maquina() -> void:
 		var placa = maquina.get_node("Placa")
 		
 		if placa.overlaps_body(self):
-			maquina.SubirOMenu(self)
+			maquina.SubirOMenu()
 			return
 	
 		

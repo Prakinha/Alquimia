@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b3uvq4u64s8v8"]
+
+[ext_resource type="PackedScene" uid="uid://diwi530gcdmi5" path="res://maquinas/maquina base.tscn" id="1_fp7ag"]
+[ext_resource type="Script" uid="uid://c3pu7q5sracsl" path="res://maquinas/alquimia maquina/maquina1.gd" id="2_x40ec"]
+[ext_resource type="PackedScene" uid="uid://dwot5sjqkve8r" path="res://maquinas/alquimia maquina/menumaquina1.tscn" id="3_qjybm"]
+
+[node name="maquina 1" unique_id=992081681 instance=ExtResource("1_fp7ag")]
+script = ExtResource("2_x40ec")
+
+[node name="MenuBase2" parent="." index="3" unique_id=1660306728 instance=ExtResource("3_qjybm")]
+visible = false

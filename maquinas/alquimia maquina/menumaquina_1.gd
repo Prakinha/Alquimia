@@ -1,5 +1,4 @@
 extends CanvasLayer
-class_name MenuBase
 
 @onready var NoDeControle: Control = %NoDeControle
 
