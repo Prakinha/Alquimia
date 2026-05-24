@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cmcxlcvf7ovuq"]
 
 [ext_resource type="Script" uid="uid://be44sriryu2we" path="res://WWpasta/WWPlayer/inventário/item_drop.gd" id="1_nhhfg"]
-[ext_resource type="Texture2D" uid="uid://be2tvmrclkfb4" path="res://WWpasta/WWPlayer/coco.png" id="2_lm5m2"]
+[ext_resource type="Texture2D" uid="uid://lscyajgwevbu" path="res://itens/elementosSprites/Vermelho.png" id="2_7p0dp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_an6nj"]
-radius = 128.24976
+radius = 62.289646
 
 [node name="ItemDrop" type="Area2D" unique_id=2020926545]
 collision_mask = 0
@@ -13,7 +13,7 @@ script = ExtResource("1_nhhfg")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2019497921]
 texture_filter = 1
 scale = Vector2(2, 2)
-texture = ExtResource("2_lm5m2")
+texture = ExtResource("2_7p0dp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=399906932]
 shape = SubResource("CircleShape2D_an6nj")
