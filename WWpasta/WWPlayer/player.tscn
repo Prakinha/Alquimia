@@ -263,8 +263,8 @@ vframes = 4
 position = Vector2(0, -36)
 
 [node name="AreaColeta" type="Area2D" parent="." unique_id=2065261947]
-light_mask = 3
-visibility_layer = 3
+light_mask = 24
+visibility_layer = 24
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaColeta" unique_id=1959395536]
 light_mask = 3

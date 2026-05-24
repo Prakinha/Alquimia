@@ -1,9 +1,4 @@
-extends CanvasLayer
-
-@onready var NoDeControle: Control = %NoDeControle
-
-
-var posicao_escondida: float = 648
+extends MenuBase
 
 func _ready() -> void:
 	NoDeControle.position.y = posicao_escondida

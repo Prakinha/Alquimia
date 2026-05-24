@@ -6,5 +6,5 @@
 [node name="MenuBase" unique_id=2122471675 instance=ExtResource("1_axbhq")]
 script = ExtResource("2_8y2lx")
 
-[node name="Control" parent="NoDeControle" parent_id_path=PackedInt32Array(1875225264) index="3" unique_id=1626103460]
+[node name="Control" parent="NoDeControle" parent_id_path=PackedInt32Array(1875225264) index="4" unique_id=1626103460]
 visible = true
