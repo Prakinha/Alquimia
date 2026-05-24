@@ -80,7 +80,6 @@ func executar_transmutacao() -> void:
 			print("A GRANDE TRANSMUTAÇÃO COMEÇOU!")
 			# INICIA O EFEITO CINEMATOGRÁFICO AQUI!
 			_animacao_cinematica() 
-			
 		else:
 			print("A ordem ou os elementos estão incorretos! A transmutação falhou.")
 	else:
