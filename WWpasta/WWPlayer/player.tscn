@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://dr663150gojes" path="res://WWpasta/WWPlayer/animation_controler.gd" id="4_qjkh3"]
 [ext_resource type="Texture2D" uid="uid://udf0k1ywixqm" path="res://assets/spr_rune.png" id="4_yaav1"]
 [ext_resource type="PackedScene" uid="uid://jc63onvrrsms" path="res://WWpasta/WWmiscelaneous/MenuBase.tscn" id="7_hpsle"]
+[ext_resource type="PackedScene" uid="uid://bxae5pk1ckbgv" path="res://WWpasta/WWmiscelaneous/MenuPause.tscn" id="8_6d4ki"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3pqv"]
 radius = 30.0
@@ -293,3 +294,5 @@ position_smoothing_enabled = true
 visible = false
 
 [node name="Inventário" parent="." unique_id=1854727514 instance=ExtResource("3_i3pqv")]
+
+[node name="MenuPause" parent="." unique_id=2122471675 instance=ExtResource("8_6d4ki")]
