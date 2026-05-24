@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bqfm5xkfk156r"]
+
+[ext_resource type="Script" uid="uid://dweef7bq1l6rt" path="res://WWpasta/WWPlayer/inventário/ItemData.gd" id="1_u4628"]
+[ext_resource type="PackedScene" uid="uid://bs3kpo6graif8" path="res://itens/elementos/magenta.tscn" id="1_xmpi5"]
+[ext_resource type="Texture2D" uid="uid://nr2os0y0ab2c" path="res://assets/Element_sprites/spr_MAGENTA.png" id="2_jyw3r"]
+
+[resource]
+script = ExtResource("1_u4628")
+ItemName = "magenta"
+icon = ExtResource("2_jyw3r")
+ItemScene = ExtResource("1_xmpi5")
+metadata/_custom_type_script = "uid://dweef7bq1l6rt"

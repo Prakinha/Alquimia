@@ -6,8 +6,9 @@
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_0oxhe"]
 
-[node name="Node2D" type="Node2D" unique_id=992081681]
+[node name="Node2D" type="Node2D" unique_id=992081681 node_paths=PackedStringArray("menu_base")]
 script = ExtResource("1_vbtd1")
+menu_base = NodePath("MenuBase")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=423474624]
 scale = Vector2(73.99216, 107.24902)
