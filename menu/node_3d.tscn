@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://cdstje25d7xbv"]
 
-[ext_resource type="Script" uid="uid://cnxjdlyop1y4g" path="res://node_3d.gd" id="1_l56ag"]
+[ext_resource type="Script" path="res://node_3d.gd" id="1_l56ag"]
 [ext_resource type="Texture2D" uid="uid://crq8parf21dka" path="res://assets/spr_hermes.png" id="2_l56ag"]
 [ext_resource type="Texture2D" uid="uid://brlvw5lxxa1tw" path="res://LabFloor_1.png" id="3_44jmx"]
+[ext_resource type="PackedScene" uid="uid://eed7j4y2kvjk" path="res://menu/botaoinicar.tscn" id="4_44jmx"]
 
 [sub_resource type="Environment" id="Environment_8687e"]
 background_energy_multiplier = 0.47
@@ -89,3 +90,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_3qxhe")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MeshInstance3D" unique_id=33431871]
 libraries/ = SubResource("AnimationLibrary_epp70")
 autoplay = &"idle"
+
+[node name="CanvasLayer" parent="." unique_id=1074062151 instance=ExtResource("4_44jmx")]
+offset = Vector2(575, 500)
+transform = Transform2D(1, 0, 0, 1, 575, 500)
