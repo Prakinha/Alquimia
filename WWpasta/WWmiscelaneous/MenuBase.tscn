@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://xjcbctgn0pq0" path="res://WWpasta/WWmiscelaneous/menu_base.gd" id="1_t7lsm"]
 [ext_resource type="Texture2D" uid="uid://d5r1ytuyx606" path="res://WWpasta/WWesteira/Bloco preto.png" id="2_7uq0i"]
+[ext_resource type="Script" uid="uid://cg80ccybum57f" path="res://WWpasta/WWPlayer/inventário/inventory_panel.gd" id="3_botd1"]
+[ext_resource type="Script" uid="uid://cdvep004hkr6h" path="res://WWpasta/WWPlayer/inventário/item_slot.gd" id="4_cw1e2"]
 
 [node name="MenuBase" type="CanvasLayer" unique_id=2122471675]
 script = ExtResource("1_t7lsm")
@@ -30,3 +32,105 @@ offset_bottom = 416.0
 text = "O seu menu aqui!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="NoDeControle" unique_id=418769362]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -276.0
+offset_top = -600.0
+offset_right = 249.0
+offset_bottom = -467.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("3_botd1")
+
+[node name="MarginContainer" type="MarginContainer" parent="NoDeControle/Panel" unique_id=2078053965]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -268.5
+offset_top = -138.0
+offset_right = 268.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="GridContainer" type="GridContainer" parent="NoDeControle/Panel/MarginContainer" unique_id=1954566783]
+layout_mode = 2
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 4
+
+[node name="ItemSlot" type="Panel" parent="NoDeControle/Panel/MarginContainer/GridContainer" unique_id=1928340884]
+texture_filter = 1
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+script = ExtResource("4_cw1e2")
+
+[node name="icon" type="TextureRect" parent="NoDeControle/Panel/MarginContainer/GridContainer/ItemSlot" unique_id=766490380]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemSlot2" type="Panel" parent="NoDeControle/Panel/MarginContainer/GridContainer" unique_id=2006462663]
+texture_filter = 1
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+script = ExtResource("4_cw1e2")
+
+[node name="icon" type="TextureRect" parent="NoDeControle/Panel/MarginContainer/GridContainer/ItemSlot2" unique_id=1515526762]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemSlot3" type="Panel" parent="NoDeControle/Panel/MarginContainer/GridContainer" unique_id=245990071]
+texture_filter = 1
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+script = ExtResource("4_cw1e2")
+
+[node name="icon" type="TextureRect" parent="NoDeControle/Panel/MarginContainer/GridContainer/ItemSlot3" unique_id=296896919]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemSlot4" type="Panel" parent="NoDeControle/Panel/MarginContainer/GridContainer" unique_id=264785605]
+texture_filter = 1
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+script = ExtResource("4_cw1e2")
+
+[node name="icon" type="TextureRect" parent="NoDeControle/Panel/MarginContainer/GridContainer/ItemSlot4" unique_id=419073491]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2

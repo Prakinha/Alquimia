@@ -256,8 +256,6 @@ texture = ExtResource("4_yaav1")
 hframes = 4
 vframes = 4
 
-[node name="Inventário" parent="." unique_id=1854727514 instance=ExtResource("3_i3pqv")]
-
 [node name="Hand" type="Marker2D" parent="." unique_id=153346866]
 
 [node name="AreaColeta" type="Area2D" parent="." unique_id=2065261947]
@@ -284,3 +282,5 @@ animation_tree = NodePath("../AnimationTree")
 position_smoothing_enabled = true
 
 [node name="MenuBase" parent="." unique_id=1415517682 instance=ExtResource("7_hpsle")]
+
+[node name="Inventário" parent="." unique_id=1854727514 instance=ExtResource("3_i3pqv")]
