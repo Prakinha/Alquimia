@@ -143,74 +143,50 @@ func _criar_item_por_nome(nome_do_item: String) -> ItemData:
 	return null
 
 func _animacao_cinematica() -> void:
-	# Trava o jogador para ele não interromper a cena
 	set_process_unhandled_key_input(false)
 	
 	var tween = create_tween()
-	tween.set_parallel(true) # Inicia a linha do tempo paralela
+	tween.set_parallel(true)
 	
-	# ==========================================
-	# 1. ZOOM (Começa no segundo 0.0 e dura 6.0s)
-	# ==========================================
 	var camera_jogador = null
 	if jogador_atual and jogador_atual.has_node("Camera2D"):
 		camera_jogador = jogador_atual.get_node("Camera2D")
-		var zoom_alvo = camera_jogador.zoom * 2.5 # Aproxima bem de perto
+		var zoom_alvo = camera_jogador.zoom * 2.5 
 		tween.tween_property(camera_jogador, "zoom", zoom_alvo, 6.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	
-	# ==========================================
-	# 2. GLOW (Começa no segundo 2.0 e dura 4.5s)
-	# ==========================================
 	if is_instance_valid(centro_flutuante):
-		# Atrasamos 2.0 segundos para o Glow só começar depois que o Zoom já pegou embalo
 		tween.tween_property(centro_flutuante, "modulate", Color(6.0, 6.0, 6.0, 1.0), 4.5).set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_IN).set_delay(2.0)
 	
-	# ==========================================
-	# 3. FADE TO WHITE (Começa no seg 4.5 e dura 2.5s)
-	# ==========================================
 	var canvas_branco = CanvasLayer.new()
 	canvas_branco.layer = 100
 	
 	var tela_branca = ColorRect.new()
-	tela_branca.color = Color(1.0, 1.0, 1.0, 0.0) # Nasce invisível
+	tela_branca.color = Color(1.0, 1.0, 1.0, 0.0) 
 	tela_branca.set_anchors_preset(Control.PRESET_FULL_RECT)
 	canvas_branco.add_child(tela_branca)
 	add_child(canvas_branco)
 	
-	# Atrasamos 4.5 segundos. A tela começa a embranquecer enquanto o Glow está explodindo
 	tween.tween_property(tela_branca, "color:a", 1.0, 2.5).set_delay(4.5)
 	
-	# ==========================================
-	# 4. O CLÍMAX (Acontece no segundo 7.0)
-	# ==========================================
-	# Como as animações anteriores somam 7 segundos no total, colocamos esse atraso aqui
 	tween.tween_callback(func():
-		# A tela agora está totalmente branca. Podemos trocar os itens escondidos!
 		ingredientes.clear()
 		atualizar_visual()
 		
-		# Reseta as modificações da câmera e do círculo mágico para o padrão
 		if is_instance_valid(centro_flutuante):
 			centro_flutuante.modulate = Color(1, 1, 1, 1)
 		if camera_jogador:
-			# OBS: Coloquei Vector2(1,1) ou (2,2) dependendo de qual é o zoom normal do seu jogo
 			camera_jogador.zoom = Vector2(2, 2) 
 			
-		# Transmuta a Pedra Filosofal
 		var novo_item = _criar_item_por_nome("pedra_filosofal") 
 		if novo_item != null:
 			InventarioGlobal.adicionar_item(novo_item)
 			print("Transmutação concluída com sucesso!")
 			
-		# ==========================================
-		# 5. DISSIPANDO A LUZ (Fade Out)
-		# ==========================================
 		var tween_volta = create_tween()
-		# Demora 3 segundos para a luz branca baixar revelando o resultado
 		tween_volta.tween_property(tela_branca, "color:a", 0.0, 3.0) 
 		tween_volta.tween_callback(func():
 			canvas_branco.queue_free() 
 			menu_base.DescerOMenu() 
-			set_process_unhandled_key_input(true) # Devolve o controle ao jogador
+			set_process_unhandled_key_input(true) 
 		)
 	).set_delay(7.0)
