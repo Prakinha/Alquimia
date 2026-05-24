@@ -9,7 +9,8 @@ func _ready() -> void:
 	add_to_group("maquina")
 	
 
-func SubirOMenu() -> void:
+func SubirOMenu(Player: PlayerCharacter) -> void:
+	Player.is_active = !Player.is_active
 	if menu_aberto:
 		menu_base.DescerOMenu()
 		menu_aberto = false

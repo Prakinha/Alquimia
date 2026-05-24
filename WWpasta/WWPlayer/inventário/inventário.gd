@@ -4,12 +4,14 @@ extends CanvasLayer
 @onready var player: PlayerCharacter = self.get_parent()
 @export var item_drop: PackedScene
 var slots: Array[ItemSlot]
+@onready var HandTexture: TextureRect = %HandTexture
+
 
 func _ready() -> void:
 	for filho in grid_container.get_children():
 		if filho is ItemSlot:
 			slots.append(filho)
-	
+	HandTexture.global_position = slots[0].global_position + Vector2(25,100)
 	# Toda vez que a UI abrir/carregar, ela puxa os dados do Global
 	sincronizar_com_global()
 
@@ -68,3 +70,9 @@ func _on_panel_inventario_alterado() -> void:
 	# que altera o "slots[i].item" direto na UI, você precisaria atualizar 
 	# a array do Global aqui. Se não tiver drag and drop, ignore!
 	player.limpar_as_maos()
+	
+func moverMaoParaOSlot(index: int) -> void:
+
+	var MoverMaoTween: Tween = create_tween()
+	MoverMaoTween.set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_IN_OUT)
+	MoverMaoTween.tween_property(HandTexture, "global_position",slots[index].global_position + Vector2(25,100), 0.3)

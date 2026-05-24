@@ -50,8 +50,6 @@ func limpar_as_maos() -> void:
 func _unhandled_key_input(event: InputEvent) -> void:
 	if not event.is_pressed():
 		return
-	if not is_active:
-		return
 		
 	# Troca por número (1, 2, 3)
 	if event.keycode == KEY_1:
@@ -63,14 +61,16 @@ func _unhandled_key_input(event: InputEvent) -> void:
 	elif event.keycode == KEY_4:
 		equipar_item(3)
 	elif event.keycode == KEY_F:
-		coletar_items()
+		if is_active:
+			coletar_items()
 	elif event.keycode == KEY_E :
 		interagir_com_maquina()
 	elif event.keycode == KEY_G:
-		dropar_items()
+		if is_active:
+			dropar_items()
 	elif event.keycode == KEY_J:
-		
-		dialogar()
+		if is_active:
+			dialogar()
 
 func interagir_com_maquina() -> void:
 	var todas_as_maquinas = get_tree().get_nodes_in_group("maquina")
@@ -79,14 +79,15 @@ func interagir_com_maquina() -> void:
 		var placa = maquina.get_node("Placa")
 		
 		if placa.overlaps_body(self):
-			maquina.SubirOMenu()
+			maquina.SubirOMenu(self)
 			return
 	
 		
 func equipar_item(slot_index: int) -> void:
 	
 	limpar_as_maos()
-		
+	meu_inventario.moverMaoParaOSlot(slot_index)
+	
 	
 	var item_selecionado: ItemData = meu_inventario.pegar_item_do_slot(slot_index)
 	
