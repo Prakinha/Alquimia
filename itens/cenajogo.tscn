@@ -19,7 +19,6 @@ scale = Vector2(7, 7)
 position = Vector2(72, 2)
 
 [node name="Esteira" parent="." unique_id=912511156 instance=ExtResource("2_536ej")]
-visible = false
 position = Vector2(-88, -2)
 arrayDeItensPossiveis = Array[ExtResource("4_3kam1")]([ExtResource("5_jpfkd"), ExtResource("6_kgfak"), ExtResource("7_fxf81"), null])
 
