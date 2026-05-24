@@ -6,6 +6,7 @@
 [ext_resource type="Resource" uid="uid://dcsu243k7n5qv" path="res://itens/elementosITEMDATA/VermelhoITEMDATA.tres" id="3_yaav1"]
 [ext_resource type="Script" uid="uid://dr663150gojes" path="res://WWpasta/WWPlayer/animation_controler.gd" id="4_qjkh3"]
 [ext_resource type="Texture2D" uid="uid://udf0k1ywixqm" path="res://assets/spr_rune.png" id="4_yaav1"]
+[ext_resource type="PackedScene" uid="uid://jc63onvrrsms" path="res://WWpasta/WWmiscelaneous/MenuBase.tscn" id="7_hpsle"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3pqv"]
 radius = 30.0
@@ -281,3 +282,10 @@ animation_tree = NodePath("../AnimationTree")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1991103108]
 position_smoothing_enabled = true
+
+[node name="MenuBase" parent="." unique_id=1415517682 instance=ExtResource("7_hpsle")]
+offset_left = -600.0
+offset_top = -88.0
+offset_right = -600.0
+offset_bottom = -88.0
+rotation = 0.0018218245
