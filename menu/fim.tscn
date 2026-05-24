@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dqn86mrfvvtyu"]
+
+[ext_resource type="Texture2D" uid="uid://bhy47xxy2ng0o" path="res://assets/pedra-filosofal.png" id="1_tt4bv"]
+
+[sub_resource type="SystemFont" id="SystemFont_kg3fx"]
+font_names = PackedStringArray("URW Gothic")
+
+[node name="Node2D" type="Node2D" unique_id=1980017332]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2070886038]
+offset_left = -25.0
+offset_top = -24.0
+offset_right = 1163.0
+offset_bottom = 657.0
+
+[node name="Label" type="Label" parent="." unique_id=227330099]
+modulate = Color(0, 0, 0, 1)
+offset_left = 30.0
+offset_top = 31.0
+offset_right = 1077.0
+offset_bottom = 436.0
+theme_override_fonts/font = SubResource("SystemFont_kg3fx")
+theme_override_font_sizes/font_size = 78
+text = "VOCE TEM PEDRA NO RIMM"
+
+[node name="Label" type="Label" parent="Label" unique_id=869979784]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = -37.0
+offset_top = 496.0
+offset_right = 1085.0
+offset_bottom = 901.0
+theme_override_fonts/font = SubResource("SystemFont_kg3fx")
+theme_override_font_sizes/font_size = 78
+text = "ACABOU O            BUDGET"
+
+[node name="PedraFilosofal" type="Sprite2D" parent="." unique_id=1878483662]
+position = Vector2(590, 439)
+texture = ExtResource("1_tt4bv")

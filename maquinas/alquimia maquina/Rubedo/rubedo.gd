@@ -80,6 +80,7 @@ func executar_transmutacao() -> void:
 			print("A GRANDE TRANSMUTAÇÃO COMEÇOU!")
 			# INICIA O EFEITO CINEMATOGRÁFICO AQUI!
 			_animacao_cinematica() 
+			
 		else:
 			print("A ordem ou os elementos estão incorretos! A transmutação falhou.")
 	else:
@@ -166,27 +167,19 @@ func _animacao_cinematica() -> void:
 	canvas_branco.add_child(tela_branca)
 	add_child(canvas_branco)
 	
+	# A tela termina de ficar branca em exatamente 7 segundos (4.5 de espera + 2.5 de duração)
 	tween.tween_property(tela_branca, "color:a", 1.0, 2.5).set_delay(4.5)
 	
+	# O CALLBACK DO ÁPICE (7 segundos do início)
 	tween.tween_callback(func():
-		ingredientes.clear()
-		atualizar_visual()
-		
-		if is_instance_valid(centro_flutuante):
-			centro_flutuante.modulate = Color(1, 1, 1, 1)
-		if camera_jogador:
-			camera_jogador.zoom = Vector2(2, 2) 
-			
+		# Criamos o item apenas para garantir que o inventário global seja atualizado
 		var novo_item = _criar_item_por_nome("pedra_filosofal") 
 		if novo_item != null:
 			InventarioGlobal.adicionar_item(novo_item)
-			print("Transmutação concluída com sucesso!")
-			
-		var tween_volta = create_tween()
-		tween_volta.tween_property(tela_branca, "color:a", 0.0, 3.0) 
-		tween_volta.tween_callback(func():
-			canvas_branco.queue_free() 
-			menu_base.DescerOMenu() 
-			set_process_unhandled_key_input(true) 
-		)
+		
+		# --- TROCA DE CENA NO ÁPICE DO CLARÃO ---
+		# A tela está 100% branca agora, ninguém verá a troca.
+		get_tree().change_scene_to_file("res://menu/fim.tscn")
+		
 	).set_delay(7.0)
+	
