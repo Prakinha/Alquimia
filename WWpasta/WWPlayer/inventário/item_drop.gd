@@ -11,8 +11,8 @@ func itemSway_init() -> void:
 	itemSway.set_loops(200)
 	itemSway.set_ease(Tween.EASE_IN_OUT)
 	itemSway.set_trans(Tween.TRANS_CUBIC)
-	itemSway.tween_property(sprite,"position:y",20,2)
-	itemSway.tween_property(sprite,"position:y",-20,2)
+	itemSway.tween_property(sprite,"position:y",8,1.5)
+	itemSway.tween_property(sprite,"position:y",-8,1.5)
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
