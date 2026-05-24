@@ -8,6 +8,7 @@ class_name PlayerCharacter
 @onready var meu_inventario := $"Inventário"
 @onready var Hand := $Hand
 @onready var area_coleta := $AreaColeta
+@onready var menu_pause : MenuPause = $MenuPause 
 
 var item_atualmente_equipado: int = 99
 var is_active: bool = true 
@@ -42,9 +43,11 @@ func set_active(state: bool) -> void:
 	if is_active:
 		modulate = Color(1, 1, 1, 1) 
 		meu_inventario.visible = true
+		inventario_bloqueado = false
 	else:
 		modulate = Color(0.7, 0.7, 0.7, 1)
 		meu_inventario.visible = false
+		inventario_bloqueado = true
 
 func limpar_as_maos() -> void:
 	for item_na_mao in Hand.get_children():
@@ -70,6 +73,8 @@ func _unhandled_key_input(event: InputEvent) -> void:
 	# O botão "E" funciona mesmo com o inventário bloqueado
 	if event.keycode == KEY_E:
 		interagir_com_maquina()
+	if event.keycode == KEY_ESCAPE:
+		pausar()
 	elif event.keycode == KEY_J and is_active:
 		dialogar()
 
@@ -159,7 +164,8 @@ func dropar_items() -> void:
 
 func dialogar() -> void:
 	pass
-	
+func pausar() -> void:
+	menu_pause.SubirOMenu(self)
 func cheat() -> void:
 	print("=== FORNECEDOR CHEAT ACIONADO ===")
 	

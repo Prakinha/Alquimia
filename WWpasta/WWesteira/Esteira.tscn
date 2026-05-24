@@ -19,13 +19,8 @@ texture = ExtResource("1_id4gq")
 position = Vector2(1569, 32)
 texture = ExtResource("1_id4gq")
 
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=196530221]
-modulate = Color(1, 1, 1, 0.49411765)
-position = Vector2(575.5, 32)
-scale = Vector2(16.015625, 1)
-texture = ExtResource("1_id4gq")
-
 [node name="Timer" type="Timer" parent="." unique_id=1058702934]
+wait_time = 2.0
 autostart = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2089607802]
