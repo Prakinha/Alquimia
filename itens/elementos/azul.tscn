@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://dd10ge25mjn47"]
 
 [ext_resource type="PackedScene" uid="uid://cl18yhp1wt86u" path="res://itens/elementos/verde.tscn" id="1_qawuy"]
+[ext_resource type="Texture2D" uid="uid://dcastyc2lx34s" path="res://itens/elementosSprites/Azul.png" id="2_88rey"]
 
 [node name="azul" unique_id=1751028922 instance=ExtResource("1_qawuy")]
 item_id = "B"
 item_name = "Azul"
+
+[node name="Sprite2D" parent="Area2D" parent_id_path=PackedInt32Array(1651896402) index="1" unique_id=1298149292]
+texture = ExtResource("2_88rey")
