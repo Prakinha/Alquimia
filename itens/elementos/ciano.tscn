@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://dqj3lxla1brit"]
 
 [ext_resource type="PackedScene" uid="uid://bs3kpo6graif8" path="res://itens/elementos/magenta.tscn" id="1_tpfst"]
+[ext_resource type="Texture2D" uid="uid://ch2bnwlxjvgcw" path="res://itens/elementosSprites/Ciano.png" id="2_7p5gv"]
 
 [node name="ciano" unique_id=1751028922 instance=ExtResource("1_tpfst")]
 item_id = "C"
 item_name = "Ciano"
+
+[node name="Sprite2D" parent="Area2D" parent_id_path=PackedInt32Array(1651896402) index="1" unique_id=1298149292]
+texture = ExtResource("2_7p5gv")

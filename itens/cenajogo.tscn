@@ -9,6 +9,8 @@
 [ext_resource type="Resource" uid="uid://dckd4sote67p5" path="res://itens/elementosITEMDATA/RosaITEMDATA.tres" id="6_kgfak"]
 [ext_resource type="Resource" uid="uid://dcsu243k7n5qv" path="res://itens/elementosITEMDATA/VermelhoITEMDATA.tres" id="7_fxf81"]
 [ext_resource type="PackedScene" uid="uid://b3uvq4u64s8v8" path="res://maquinas/alquimia maquina/node_2d.tscn" id="8_kgfak"]
+[ext_resource type="Resource" uid="uid://j4hpacp0issm" path="res://itens/elementosITEMDATA/CianoITEMDATA.tres" id="9_7i8xt"]
+[ext_resource type="Resource" uid="uid://bj2yj814csa4i" path="res://itens/elementosITEMDATA/EspadaITEMDATA.tres" id="10_voavh"]
 
 [node name="WwMain" type="Node2D" unique_id=1219875113]
 
@@ -22,7 +24,7 @@ cena_item_drop = ExtResource("3_fxf81")
 
 [node name="Esteira" parent="." unique_id=912511156 instance=ExtResource("2_536ej")]
 position = Vector2(-88, -2)
-arrayDeItensPossiveis = Array[ExtResource("4_3kam1")]([ExtResource("5_jpfkd"), ExtResource("6_kgfak"), ExtResource("7_fxf81"), null])
+arrayDeItensPossiveis = Array[ExtResource("4_3kam1")]([ExtResource("5_jpfkd"), ExtResource("6_kgfak"), ExtResource("7_fxf81"), null, ExtResource("9_7i8xt"), ExtResource("10_voavh")])
 
 [node name="maquina 1" parent="." unique_id=992081681 instance=ExtResource("8_kgfak")]
 position = Vector2(206, 14)
