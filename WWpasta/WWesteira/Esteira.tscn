@@ -16,7 +16,7 @@ position = Vector2(32, 32)
 texture = ExtResource("1_id4gq")
 
 [node name="Sprite2D3" type="Sprite2D" parent="." unique_id=956368437]
-position = Vector2(1569, 32)
+position = Vector2(1632, 32)
 texture = ExtResource("1_id4gq")
 
 [node name="Timer" type="Timer" parent="." unique_id=1058702934]
@@ -24,7 +24,7 @@ wait_time = 2.0
 autostart = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2089607802]
-position = Vector2(449, 0)
+position = Vector2(512, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1613512839]
 position = Vector2(1120, 32)
