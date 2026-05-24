@@ -26,3 +26,5 @@ offset_right = 449.0
 offset_bottom = 456.0
 text = "Iniciar jogo"
 script = ExtResource("2_x57rx")
+
+[connection signal="pressed" from="CanvasLayer/Control/Button" to="CanvasLayer/Control/Button" method="_on_pressed"]
