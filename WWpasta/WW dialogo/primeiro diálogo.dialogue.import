@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cyo8kl75fwnbl"
+path="res://.godot/imported/primeiro diálogo.dialogue-a2975159c02c021e6d10314f35abd922.tres"
+
+[deps]
+
+source_file="res://WWpasta/WW dialogo/primeiro diálogo.dialogue"
+dest_files=["res://.godot/imported/primeiro diálogo.dialogue-a2975159c02c021e6d10314f35abd922.tres"]
+
+[params]
+
+defaults=true

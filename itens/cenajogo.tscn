@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b3uvq4u64s8v8" path="res://maquinas/alquimia maquina/node_2d.tscn" id="8_kgfak"]
 [ext_resource type="Resource" uid="uid://j4hpacp0issm" path="res://itens/elementosITEMDATA/CianoITEMDATA.tres" id="9_7i8xt"]
 [ext_resource type="Resource" uid="uid://bj2yj814csa4i" path="res://itens/elementosITEMDATA/EspadaITEMDATA.tres" id="10_voavh"]
+[ext_resource type="PackedScene" uid="uid://owlgqhayvfhn" path="res://WWpasta/WW dialogo/dialogue_box.tscn" id="12_voavh"]
 
 [node name="WwMain" type="Node2D" unique_id=1219875113]
 
@@ -28,3 +29,6 @@ arrayDeItensPossiveis = Array[ExtResource("4_3kam1")]([ExtResource("5_jpfkd"), E
 
 [node name="maquina 1" parent="." unique_id=992081681 instance=ExtResource("8_kgfak")]
 position = Vector2(206, 14)
+
+[node name="DialogueBox" parent="." unique_id=420082910 instance=ExtResource("12_voavh")]
+position = Vector2(465, 35)

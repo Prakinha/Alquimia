@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://owlgqhayvfhn"]
+
+[ext_resource type="Script" uid="uid://cp7kg4fbvdtee" path="res://WWpasta/WW dialogo/dialogue_box.gd" id="1_x4n4j"]
+[ext_resource type="Resource" uid="uid://cyo8kl75fwnbl" path="res://WWpasta/WW dialogo/primeiro diálogo.dialogue" id="2_x4n4j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yliuv"]
+radius = 128.0
+
+[node name="DialogueBox" type="Area2D" unique_id=420082910]
+collision_mask = 0
+script = ExtResource("1_x4n4j")
+OwnDialogue = ExtResource("2_x4n4j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2002158272]
+shape = SubResource("CircleShape2D_yliuv")

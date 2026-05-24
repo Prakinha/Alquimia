@@ -11,15 +11,21 @@ class_name PlayerCharacter
 
 var item_atualmente_equipado: int = 99
 var is_active: bool = true 
+var is_dialogando: bool = false
 var inventario_bloqueado: bool = false 
 
 func _ready() -> void:
 	# Carrega os itens no Global
 	InventarioGlobal.carregar_itens_iniciais(itens_iniciais)
+	DialogueManager.dialogue_started.connect(_on_dialogue_start)
+	DialogueManager.dialogue_ended.connect(_on_dialogue_end)
+
+
+
 
 func _physics_process(_delta: float) -> void:
 	var direction := Vector2.ZERO
-	if is_active:
+	if is_active and not is_dialogando:
 		direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 		
 	if direction:
@@ -64,7 +70,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 	# O botão "E" funciona mesmo com o inventário bloqueado
 	if event.keycode == KEY_E:
 		interagir_com_maquina()
-	elif event.keycode == KEY_J and is_active:
+	elif event.keycode == KEY_J and not is_dialogando and is_active:
 		dialogar()
 
 func interagir_com_maquina() -> void:
@@ -151,5 +157,21 @@ func dropar_items() -> void:
 	else:
 		print("Não foi possível dropar o item!")
 
-func dialogar() -> void:
-	pass
+func dialogar() -> bool:
+	var areas_proximas: Array[Area2D] = area_coleta.get_overlapping_areas()
+	for area: Area2D in areas_proximas:
+		if area is DialogueArea2D:
+			print("área de diálogo encontrada")
+			area.StartDialogue()
+			print("Diálogo iniciado com sucesso!")
+			return true
+	
+	print("Nenhuma área de diálogo encontrada!")
+	return false
+	
+func _on_dialogue_start(_rosource):
+	is_dialogando = true
+	print("Is_dialogando alterado para ", is_dialogando)
+func _on_dialogue_end(_resource):
+	is_dialogando = false
+	print("Is_dialogando alterado para ", is_dialogando)

@@ -20,10 +20,23 @@ config/icon="res://icon.svg"
 Global="*uid://cys7ie1w8kqfn"
 Receitas="*uid://cel1nst3llnyn"
 InventarioGlobal="*uid://bc0cgcicnyggo"
+DialogueManager="*uid://c3rodes2l3gxb"
+
+[dialogue_manager]
+
+runtime/balloon_path="res://WWpasta/WW dialogo/balloon.tscn"
 
 [dotnet]
 
 project/assembly_name="Alquimia"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://WWpasta/WW dialogo/primeiro diálogo.dialogue")
 
 [physics]
 
