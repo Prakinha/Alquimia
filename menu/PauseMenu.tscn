@@ -11,6 +11,15 @@
 [ext_resource type="Texture2D" uid="uid://c6axko4kgns5l" path="res://Livro/86e42162d216e1f016d0dd49e5278bf2/5a457bb2-3928-488d-8986-fe5303339888-1.png" id="9_qmvwf"]
 [ext_resource type="Texture2D" uid="uid://w8b7bjbi5usn" path="res://Livro/86e42162d216e1f016d0dd49e5278bf2/5a457bb2-3928-488d-8986-fe5303339888-0.png" id="10_k8a5y"]
 [ext_resource type="FontFile" uid="uid://ljcvfjv5v41e" path="res://assets/Mage DEMO.otf" id="11_6w6ns"]
+[ext_resource type="Texture2D" uid="uid://crq8parf21dka" path="res://assets/spr_hermes.png" id="12_1ymlp"]
+[ext_resource type="Texture2D" uid="uid://cip4ccxipadup" path="res://assets/Teclas/key2Img-180x130.png" id="13_kwtlx"]
+[ext_resource type="Texture2D" uid="uid://bq866uyydworb" path="res://assets/Teclas/key2Img-140x130(1).png" id="14_67644"]
+[ext_resource type="Texture2D" uid="uid://cofgygsw15pju" path="res://assets/Teclas/key2Img-140x130(2).png" id="15_uddss"]
+[ext_resource type="Texture2D" uid="uid://3r3ttqxod0q2" path="res://assets/Teclas/key2Img-140x130(3).png" id="16_l0xhd"]
+[ext_resource type="Texture2D" uid="uid://bn3ilsxqjl0k8" path="res://assets/Teclas/key2Img-140x130.png" id="17_mt0pg"]
+[ext_resource type="Texture2D" uid="uid://bjvlse6he02ak" path="res://assets/Teclas/key2Img-140x130(4).png" id="18_l0xhd"]
+[ext_resource type="Texture2D" uid="uid://bjfhnljs73ign" path="res://assets/Teclas/key2Img-140x130(5).png" id="19_mt0pg"]
+[ext_resource type="Texture2D" uid="uid://b08qpbibuqkwp" path="res://assets/pixel-art-spellbook-ancient-lore-and-magical-secrets-free-png.png" id="20_aju4y"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kwtlx"]
 animations = [{
@@ -69,6 +78,45 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="Animation" id="Animation_n84oy"]
+length = 1.9666667
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.4666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [8, 9, 10, 11]
+}
+
+[sub_resource type="Animation" id="Animation_qnbko"]
+resource_name = "new_animation"
+length = 1.7666667
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.38252336, 0.8606776, 1.3228934),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qmvwf"]
+_data = {
+&"RESET": SubResource("Animation_n84oy"),
+&"new_animation": SubResource("Animation_qnbko")
+}
+
 [node name="MenuPause" type="CanvasLayer" unique_id=2122471675]
 script = ExtResource("1_hffln")
 
@@ -110,17 +158,19 @@ animation = &"fowards"
 
 [node name="BtnAnterior" type="Button" parent="NodeControle" unique_id=1888344795]
 layout_mode = 0
-offset_left = 82.0
-offset_top = 418.0
-offset_right = 359.0
-offset_bottom = 568.0
+offset_left = 17.999996
+offset_top = 536.0
+offset_right = 295.0
+offset_bottom = 686.0
+scale = Vector2(0.580749, 0.80325484)
 
 [node name="BtnProxima" type="Button" parent="NodeControle" unique_id=416470744]
 layout_mode = 0
-offset_left = 720.0
-offset_top = 424.0
-offset_right = 990.0
-offset_bottom = 558.0
+offset_left = 957.0
+offset_top = 516.0
+offset_right = 1227.0
+offset_bottom = 650.0
+scale = Vector2(0.5965761, 0.72491294)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="NodeControle" unique_id=2020265505]
 layout_mode = 0
@@ -154,8 +204,113 @@ offset_right = 295.0
 offset_bottom = 189.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("11_6w6ns")
-theme_override_font_sizes/font_size = 40
-text = "OLA MAGO"
+theme_override_font_sizes/font_size = 38
+text = "OLA MAGO, Bem 
+vindo(a) a sua nova 
+jornada alquimica.
+
+para iniciar, lembre-
+-se de como um ver-
+dadeiro mago se porta.
+
+este sera seu controle."
+
+[node name="Label2" type="Label" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=860588901]
+layout_mode = 0
+offset_left = 410.0
+offset_top = -6.0
+offset_right = 705.0
+offset_bottom = 183.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_6w6ns")
+theme_override_font_sizes/font_size = 38
+text = "andar"
+
+[node name="Label3" type="Label" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=480221217]
+layout_mode = 0
+offset_left = 540.0
+offset_top = -20.0
+offset_right = 835.0
+offset_bottom = 169.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_6w6ns")
+theme_override_font_sizes/font_size = 38
+text = "pegar/largar"
+
+[node name="Label4" type="Label" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=755939422]
+layout_mode = 0
+offset_left = 371.0
+offset_top = 311.0
+offset_right = 666.0
+offset_bottom = 500.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_6w6ns")
+theme_override_font_sizes/font_size = 38
+text = "livro de receitas"
+
+[node name="Sprite2D" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=965396096]
+position = Vector2(449.00006, 100.999985)
+scale = Vector2(5, 5)
+texture = ExtResource("12_1ymlp")
+hframes = 8
+vframes = 4
+frame = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="NodeControle/PaginasTutoriais/Pagina0/Sprite2D" unique_id=1284797346]
+libraries/ = SubResource("AnimationLibrary_qmvwf")
+autoplay = &"new_animation"
+
+[node name="Sprite2D2" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=128352137]
+position = Vector2(643, 100.999985)
+scale = Vector2(5, 5)
+texture = ExtResource("12_1ymlp")
+hframes = 8
+vframes = 4
+frame = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="NodeControle/PaginasTutoriais/Pagina0/Sprite2D2" unique_id=1800903313]
+libraries/ = SubResource("AnimationLibrary_qmvwf")
+autoplay = &"RESET"
+
+[node name="Key2Img180x130" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=210923755]
+position = Vector2(447, 397)
+scale = Vector2(0.7324646, 0.7324646)
+texture = ExtResource("13_kwtlx")
+
+[node name="Key2Img140x130(2)" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=1141521342]
+position = Vector2(510.27252, 257.61017)
+scale = Vector2(0.7324646, 0.7324646)
+texture = ExtResource("15_uddss")
+
+[node name="Key2Img140x130(3)" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=304498472]
+position = Vector2(392.27252, 255.61017)
+scale = Vector2(0.7324646, 0.7324646)
+texture = ExtResource("16_l0xhd")
+
+[node name="Key2Img140x130" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=601575818]
+position = Vector2(449.27252, 198.6102)
+scale = Vector2(0.7324646, 0.7324646)
+texture = ExtResource("17_mt0pg")
+
+[node name="Key2Img140x130(1)" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=15330849]
+position = Vector2(452.27252, 256.6102)
+scale = Vector2(0.7324646, 0.7324646)
+texture = ExtResource("14_67644")
+
+[node name="Key2Img140x130(4)" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=25243357]
+position = Vector2(625, 245.99997)
+scale = Vector2(0.7324646, 0.7324646)
+texture = ExtResource("18_l0xhd")
+
+[node name="Key2Img140x130(5)" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=1689102163]
+position = Vector2(683, 244.99997)
+scale = Vector2(0.7324646, 0.7324646)
+texture = ExtResource("19_mt0pg")
+
+[node name="PixelArtSpellbookAncientLoreAndMagicalSecretsFreePng" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=708109700]
+position = Vector2(572.99994, 403.99997)
+scale = Vector2(0.397332, 0.397332)
+texture = ExtResource("20_aju4y")
 
 [node name="Pagina1" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=78455367]
 visible = false
