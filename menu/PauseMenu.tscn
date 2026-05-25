@@ -18,8 +18,10 @@
 [ext_resource type="Texture2D" uid="uid://3r3ttqxod0q2" path="res://assets/Teclas/key2Img-140x130(3).png" id="16_l0xhd"]
 [ext_resource type="Texture2D" uid="uid://bn3ilsxqjl0k8" path="res://assets/Teclas/key2Img-140x130.png" id="17_mt0pg"]
 [ext_resource type="Texture2D" uid="uid://bjvlse6he02ak" path="res://assets/Teclas/key2Img-140x130(4).png" id="18_l0xhd"]
-[ext_resource type="Texture2D" uid="uid://bjfhnljs73ign" path="res://assets/Teclas/key2Img-140x130(5).png" id="19_mt0pg"]
+[ext_resource type="Texture2D" uid="uid://ced4sa745jsdu" path="res://assets/Teclas/key2Img-130x130.png" id="19_l0xhd"]
 [ext_resource type="Texture2D" uid="uid://b08qpbibuqkwp" path="res://assets/pixel-art-spellbook-ancient-lore-and-magical-secrets-free-png.png" id="20_aju4y"]
+[ext_resource type="Texture2D" uid="uid://crr70gvfecfwq" path="res://assets/iconAlbedo.png" id="21_aju4y"]
+[ext_resource type="Texture2D" uid="uid://853fjmb7gwpa" path="res://assets/iconCitrinitas.png" id="22_m3mml"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kwtlx"]
 animations = [{
@@ -194,6 +196,7 @@ offset_right = 514.0
 offset_bottom = 541.0
 
 [node name="Pagina0" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=611275447]
+visible = false
 anchors_preset = 0
 offset_right = 722.0
 offset_bottom = 468.0
@@ -298,14 +301,14 @@ scale = Vector2(0.7324646, 0.7324646)
 texture = ExtResource("14_67644")
 
 [node name="Key2Img140x130(4)" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=25243357]
-position = Vector2(625, 245.99997)
+position = Vector2(678.5632, 236.42084)
 scale = Vector2(0.7324646, 0.7324646)
 texture = ExtResource("18_l0xhd")
 
-[node name="Key2Img140x130(5)" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=1689102163]
-position = Vector2(683, 244.99997)
-scale = Vector2(0.7324646, 0.7324646)
-texture = ExtResource("19_mt0pg")
+[node name="Key2Img130x130" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=444696495]
+position = Vector2(624.56323, 235.42087)
+scale = Vector2(0.8086654, 0.7295517)
+texture = ExtResource("19_l0xhd")
 
 [node name="PixelArtSpellbookAncientLoreAndMagicalSecretsFreePng" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=708109700]
 position = Vector2(572.99994, 403.99997)
@@ -313,18 +316,73 @@ scale = Vector2(0.397332, 0.397332)
 texture = ExtResource("20_aju4y")
 
 [node name="Pagina1" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=78455367]
-visible = false
 anchors_preset = 0
 offset_right = 722.0
 offset_bottom = 468.0
 
 [node name="Label2" type="Label" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=1727361423]
 layout_mode = 0
-offset_right = 295.0
-offset_bottom = 189.0
+offset_left = 15.0
+offset_top = -15.0
+offset_right = 310.0
+offset_bottom = 174.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-text = "COMO VAI?"
+text = "Albedo"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=1306906317]
+layout_mode = 0
+offset_left = 395.0
+offset_top = -7.0
+offset_right = 690.0
+offset_bottom = 182.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Citrinitas"
+horizontal_alignment = 1
+
+[node name="IconAlbedo" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=804830289]
+position = Vector2(170, 109)
+scale = Vector2(7.274843, 7.274843)
+texture = ExtResource("21_aju4y")
+
+[node name="IconCitrinitas" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=1810333248]
+position = Vector2(556, 126)
+scale = Vector2(7.4219427, 7.4219427)
+texture = ExtResource("22_m3mml")
+
+[node name="Label5" type="Label" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=1974165044]
+layout_mode = 0
+offset_left = -11.0
+offset_top = 224.0
+offset_right = 357.0
+offset_bottom = 655.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_6w6ns")
+theme_override_font_sizes/font_size = 38
+text = "Esta bancada ira 
+realizar a 
+destilacao de 
+componentes
+"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=1417003299]
+layout_mode = 0
+offset_left = 366.0
+offset_top = 233.0
+offset_right = 734.0
+offset_bottom = 664.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_6w6ns")
+theme_override_font_sizes/font_size = 38
+text = "Esta bancada ira 
+realizar a 
+sintetizacao de 
+componentes
+"
+horizontal_alignment = 1
 
 [node name="Pagina2" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=105073553]
 anchors_preset = 0
