@@ -24,9 +24,8 @@ func _unhandled_key_input(event: InputEvent) -> void:
 func takeItem(slot_index: int) -> void:
 	var item_retirado = InventarioGlobal.retirar_item(slot_index)
 	
-	# Se o jogador clicou num slot que TEM um item
 	if item_retirado != null:
-		if ingredientes.size() < 3: # Limite de 3 itens na máquina
+		if ingredientes.size() < 3: 
 			ingredientes.append(item_retirado)
 			print("Citrinas pegou: ", item_retirado.ItemName)
 			atualizar_visual()
@@ -35,20 +34,18 @@ func takeItem(slot_index: int) -> void:
 			print("A máquina já está cheia! Devolvendo...")
 			InventarioGlobal.colocar_item_no_slot(slot_index, item_retirado)
 			
-	# Se o jogador clicou num slot VAZIO, ele quer pegar um item de volta da máquina
 	else:
 		if ingredientes.size() > 0:
-			var item_devolvido = ingredientes.pop_back() # Tira o último item colocado
+			var item_devolvido = ingredientes.pop_back() 
 			InventarioGlobal.colocar_item_no_slot(slot_index, item_devolvido)
 			print("Citrinas devolveu: ", item_devolvido.ItemName)
 			atualizar_visual()
 
 func executar_juncao() -> void:
 	if ingredientes.size() >= 2:
-		# Extrai os nomes/IDs dos itens para mandar para o ReceitasGlobais
 		var nomes_ingredientes: Array[String] = []
 		for item in ingredientes:
-			nomes_ingredientes.append(item.ItemName) # Use a propriedade que guarda o nome ("R", "G", etc)
+			nomes_ingredientes.append(item.ItemName) 
 			
 		print("Tentando misturar: ", nomes_ingredientes)
 		var nome_resultado = Receitas.consultar_mistura(nomes_ingredientes)
@@ -56,11 +53,9 @@ func executar_juncao() -> void:
 		if nome_resultado != "":
 			print("Sucesso! O resultado é: ", nome_resultado)
 			
-			# 1. Limpa os ingredientes usados
 			ingredientes.clear()
-			atualizar_visual() # Limpa as imagens da tela
+			atualizar_visual() 
 			
-			# 2. Gera o novo item e tenta mandar pro inventário
 			var novo_item = _criar_item_por_nome(nome_resultado)
 			
 			if novo_item != null:
@@ -69,19 +64,16 @@ func executar_juncao() -> void:
 			
 		else:
 			print("Essa mistura não resulta em nada. Receita inválida!")
-			# Opcional: Ejetar todos os itens de volta se falhar, ou deixá-los na máquina
 			
 	else:
 		print("Preciso de pelo menos 2 itens para fazer uma junção!")
 
 func atualizar_visual() -> void:
-	# 1. Limpa todos os visuais antigos
 	for visual in visuais:
 		if is_instance_valid(visual):
 			visual.queue_free()
 	visuais.clear()
 	
-	# 2. Cria os novos visuais baseados na lista atual
 	var total = ingredientes.size()
 	for i in range(total):
 		var item = ingredientes[i]
@@ -96,21 +88,15 @@ func atualizar_visual() -> void:
 		
 		novo_visual.z_index = 10
 		
-		# Lógica para espalhar os itens lado a lado no MenuBase (Espaçamento de 80 pixels)
 		var espacamento = 100
 		var pos_x = 410 + (i - (total - 1) / 2.0) * espacamento 
 		novo_visual.position = Vector2(pos_x, 300)
 
-
-# ATENÇÃO: VOCÊ PRECISA CONFIGURAR ESTA FUNÇÃO ABAIXO!
-
 func _criar_item_por_nome(nome_do_item: String) -> ItemData:
 	var caminho = "res://itens/elementosITEMDATA/" + nome_do_item + "ITEMDATA.tres"
-	if FileAccess.file_exists(caminho):
+	if ResourceLoader.exists(caminho):
 		var NovoItem: ItemData = load(caminho)
 		return NovoItem
 	
 	print("AVISO: Ainda não existe ItemData para: " + nome_do_item + " ou Função _criar_item_por_nome precisa ser implementada para criar o: ", nome_do_item)
-	
-	
 	return null
