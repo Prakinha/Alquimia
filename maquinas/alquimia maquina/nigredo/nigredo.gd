@@ -28,7 +28,7 @@ func takeItem(slot_index: int) -> void:
 			item_dissoluto = item_retirado
 			atualizar_visual()
 			InventarioGlobal.player_limpe_as_maos.emit()
-			print("Máquina pegou: ", item_dissoluto.ItemName) # Usando item_id se você mudou no ItemData
+			print("Máquina pegou: ", item_dissoluto.ItemName)
 	else:
 		if InventarioGlobal.colocar_item_no_slot(slot_index, item_dissoluto):
 			print("Máquina devolveu: ", item_dissoluto.ItemName)
@@ -43,10 +43,8 @@ func takeItem(slot_index: int) -> void:
 
 func executar_dissolucao() -> void:
 	if item_dissoluto != null:
-		# Consulta o Autoload usando o ID do item que está na máquina
-		# IMPORTANTE: Use .item_id ou .ItemName dependendo do que você usa no seu ItemData
 		var id_alvo = item_dissoluto.ItemName 
-		var composicao = Receitas.consultar_dissolucao(id_alvo) # Mude para ReceitasGlobais se o Autoload chamar assim
+		var composicao = Receitas.consultar_dissolucao(id_alvo)
 		
 		if composicao != "":
 			print("Dissolvendo ", id_alvo, " em: ", composicao)
@@ -55,9 +53,7 @@ func executar_dissolucao() -> void:
 			var nome_item_1 = ""
 			var nome_item_2 = ""
 			
-			# Lógica para descobrir quais os dois itens base
 			if partes.size() == 2 and ("C" in partes or "M" in partes or "Y" in partes):
-				# CENÁRIO A: É um objeto (ex: "espada,C")
 				var lixo_id = ""
 				var elemento_id = ""
 				for parte in partes:
@@ -69,19 +65,15 @@ func executar_dissolucao() -> void:
 				elif elemento_id == "M": nome_item_2 = "magenta"
 				elif elemento_id == "Y": nome_item_2 = "amarelo"
 			elif partes.size() == 2:
-				# CENÁRIO B: É uma cor pura (ex: "Azul,Verde")
 				nome_item_1 = partes[0]
 				nome_item_2 = partes[1]
 				
-			# Limpa a máquina visualmente
 			item_dissoluto = null
 			atualizar_visual()
 			
-			# Gera os recursos .tres
 			var novo_item_1 = _criar_item_por_nome(nome_item_1)
 			var novo_item_2 = _criar_item_por_nome(nome_item_2)
 			
-			# Manda para o inventário!
 			if novo_item_1: InventarioGlobal.adicionar_item(novo_item_1)
 			if novo_item_2: InventarioGlobal.adicionar_item(novo_item_2)
 			
@@ -111,14 +103,10 @@ func atualizar_visual() -> void:
 		item_visual.position = Vector2(410, 300) 
 		item_visual.z_index = 10
 
-# =======================================================
-# FUNÇÃO PARA CRIAR OS ITENS DE VOLTA
-# =======================================================
 func _criar_item_por_nome(nome_do_item: String) -> ItemData:
-	# Mesmo esquema que você usa na Citrinas e Rubedo!
 	var caminho = "res://itens/elementosITEMDATA/" + nome_do_item + "ITEMDATA.tres"
 	
-	if FileAccess.file_exists(caminho):
+	if ResourceLoader.exists(caminho):
 		return load(caminho) as ItemData
 		
 	print("AVISO: Arquivo .tres não encontrado para: " + nome_do_item)
