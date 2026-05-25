@@ -4,11 +4,9 @@ class_name Rubedo
 var ingredientes: Array[ItemData] = []
 var visuais: Array[Node2D] = []
 
-# NOVO: Variáveis para o centro flutuante
 var centro_flutuante: Node2D
 var tempo_flutuacao: float = 0.0
 
-# A ordem exata que o jogador precisa colocar na máquina
 var ordem_requerida: Array[String] = [
 	"orange", "olive", "pink", "purple", "cobalt", 
 	"turquoise", "ruby", "sapphire", "emerald", "white"
@@ -17,21 +15,16 @@ var ordem_requerida: Array[String] = [
 func _configura_maquina() -> void:
 	print("Eu sou Rubedo e preparo a transmutação final!")
 
-# NOVO: O motor que faz o centro flutuar o tempo todo
 func _process(delta: float) -> void:
 	if not menu_aberto:
 		return
 		
 	if is_instance_valid(centro_flutuante):
-		# O delta faz o tempo avançar suavemente
 		tempo_flutuacao += delta 
 		
-		# Matemática da flutuação (Ajuste os valores multiplicados para mudar a força/velocidade)
-		# sin() e cos() criam um movimento de vai-e-vem perfeito.
-		var movimento_x = sin(tempo_flutuacao * 1.5) * 15.0 # Vai 15 pixels pra esquerda e direita
-		var movimento_y = cos(tempo_flutuacao * 2.0) * 10.0 # Vai 10 pixels pra cima e pra baixo
+		var movimento_x = sin(tempo_flutuacao * 1.5) * 15.0 
+		var movimento_y = cos(tempo_flutuacao * 2.0) * 10.0 
 		
-		# A posição base é 550, 340. Somamos o movimento nela!
 		centro_flutuante.position = Vector2(550, 340) + Vector2(movimento_x, movimento_y)
 
 func _unhandled_key_input(event: InputEvent) -> void:
@@ -78,31 +71,22 @@ func executar_transmutacao() -> void:
 				
 		if transmutacao_valida:
 			print("A GRANDE TRANSMUTAÇÃO COMEÇOU!")
-			# INICIA O EFEITO CINEMATOGRÁFICO AQUI!
 			_animacao_cinematica() 
 		else:
 			print("A ordem ou os elementos estão incorretos! A transmutação falhou.")
 	else:
 		print("O círculo não está completo!")
-		
 
 func atualizar_visual() -> void:
-	# 1. Limpa os visuais antigos
 	for visual in visuais:
 		if is_instance_valid(visual):
 			visual.queue_free()
 	visuais.clear()
 	
-	# 2. Cria o Nó Âncora Flutuante se ele não existir ainda
 	if centro_flutuante == null or not is_instance_valid(centro_flutuante):
 		centro_flutuante = Node2D.new()
 		menu_base.NoDeControle.add_child(centro_flutuante)
 		
-		# Se você tiver um Sprite de um círculo mágico ou pentagrama que você quer
-		# que flutue JUNTO com as pedras no fundo, você pode instanciar e adicionar ele 
-		# como filho do 'centro_flutuante' aqui mesmo!
-	
-	# 3. Posiciona os novos itens
 	var total = ingredientes.size()
 	var raio_do_circulo = 230 
 	
@@ -115,14 +99,10 @@ func atualizar_visual() -> void:
 			
 		var novo_visual = item.ItemScene.instantiate()
 		
-		# MUDANÇA AQUI: Adicionamos a pedra como filha do Centro Flutuante!
 		centro_flutuante.add_child(novo_visual)
 		visuais.append(novo_visual)
 		novo_visual.z_index = 10
 		
-		# LÓGICA DE POSICIONAMENTO LOCAL
-		# Como o pai (centro_flutuante) já está em 550,340 e se movendo,
-		# as pedras orbitam ao redor do (0, 0) dele.
 		if i < 9:
 			var angulo = i * (TAU / 9.0) - (PI / 2.0)
 			var pos_x = cos(angulo) * raio_do_circulo
@@ -130,12 +110,11 @@ func atualizar_visual() -> void:
 			novo_visual.position = Vector2(pos_x, pos_y)
 			
 		else:
-			# O 10º item (White) fica exatamente no meio do objeto flutuante
 			novo_visual.position = Vector2(0, 0)
 
 func _criar_item_por_nome(nome_do_item: String) -> ItemData:
 	var caminho = "res://itens/elementosITEMDATA/" + nome_do_item + "ITEMDATA.tres"
-	if FileAccess.file_exists(caminho):
+	if ResourceLoader.exists(caminho):
 		var NovoItem: ItemData = load(caminho)
 		return NovoItem
 	
@@ -166,19 +145,13 @@ func _animacao_cinematica() -> void:
 	canvas_branco.add_child(tela_branca)
 	add_child(canvas_branco)
 	
-	# A tela termina de ficar branca em exatamente 7 segundos (4.5 de espera + 2.5 de duração)
 	tween.tween_property(tela_branca, "color:a", 1.0, 2.5).set_delay(4.5)
 	
-	# O CALLBACK DO ÁPICE (7 segundos do início)
 	tween.tween_callback(func():
-		# Criamos o item apenas para garantir que o inventário global seja atualizado
 		var novo_item = _criar_item_por_nome("pedra_filosofal") 
 		if novo_item != null:
 			InventarioGlobal.adicionar_item(novo_item)
 		
-		# --- TROCA DE CENA NO ÁPICE DO CLARÃO ---
-		# A tela está 100% branca agora, ninguém verá a troca.
 		get_tree().change_scene_to_file("res://menu/fim.tscn")
 		
 	).set_delay(7.0)
-	
