@@ -45,17 +45,54 @@ func _ready() -> void:
 	atualizar_tela_de_receitas()
 	atualizar_conteudo_da_pagina()
 
+func _input(event: InputEvent) -> void:
+	if node_controle.position.y != 0:
+		return
+		
+	if event.is_action_pressed("ui_right"):
+		_on_btn_proxima_pressed()
+	elif event.is_action_pressed("ui_left"):
+		_on_btn_anterior_pressed()
+
 func _on_btn_anterior_pressed():
 	if pagina_atual > 0 and not animando:
-		animando = true
-		anim_sprite.play("backwards")
+		iniciar_troca_de_pagina("backwards")
+
+func _on_btn_proxima_pressed():
+	if pagina_atual < total_paginas and not animando:
+		iniciar_troca_de_pagina("fowards")
+
+func iniciar_troca_de_pagina(animacao: String):
+	animando = true
+	
+	var tween_out = create_tween()
+	tween_out.set_parallel(true)
+	tween_out.tween_property(container_receitas, "modulate:a", 0.0, 0.15)
+	if paginas_tutoriais != null:
+		tween_out.tween_property(paginas_tutoriais, "modulate:a", 0.0, 0.15)
+		
+	await tween_out.finished 
+	
+	if animacao == "fowards":
+		pagina_atual += 1
+	else:
 		pagina_atual -= 1
-		atualizar_botoes()
+		
+	anim_sprite.play(animacao)
+	atualizar_botoes()
 
 func _on_animated_sprite_2d_animation_finished():
-	animando = false
 	atualizar_conteudo_da_pagina()
 	
+	var tween_in = create_tween()
+	tween_in.set_parallel(true)
+	tween_in.tween_property(container_receitas, "modulate:a", 1.0, 0.15)
+	if paginas_tutoriais != null:
+		tween_in.tween_property(paginas_tutoriais, "modulate:a", 1.0, 0.15)
+		
+	await tween_in.finished 
+	animando = false
+
 func atualizar_botoes():
 	if pagina_atual == 0:
 		btn_anterior.disabled = true
@@ -66,13 +103,6 @@ func atualizar_botoes():
 		btn_proxima.disabled = true
 	else:
 		btn_proxima.disabled = false
-
-func _on_btn_proxima_pressed():
-	if pagina_atual < total_paginas and not animando:
-		animando = true
-		anim_sprite.play("fowards")
-		pagina_atual += 1
-		atualizar_botoes()
 
 func SubirOMenu(player: PlayerCharacter) -> void:
 	if player.is_active:
@@ -156,31 +186,13 @@ func criar_linha_visual_da_receita(ingredientes_str: String, resultado_str: Stri
 	linha.add_child(rect_resultado)
 	
 	container_receitas.add_child(linha)
-	
-	
+
 func atualizar_conteudo_da_pagina():
-	# 1. Atualiza as receitas (a função que você já tem)
 	atualizar_tela_de_receitas()
 	
-	# 2. Esconde todas as páginas estáticas por padrão
 	if paginas_tutoriais != null:
 		for pagina in paginas_tutoriais.get_children():
 			pagina.hide()
 			
-		# 3. Se a página atual tiver um nó correspondente, mostra ele
-		# O get_child_count() garante que não dê erro se você estiver na página 8 e só tiver 3 páginas desenhadas
 		if pagina_atual < paginas_tutoriais.get_child_count():
 			paginas_tutoriais.get_child(pagina_atual).show()
-func _input(event: InputEvent) -> void:
-	# Só permite usar as setas se o menu estiver na tela (posição 0)
-	# Isso evita que o jogador vire as páginas enquanto o livro está escondido
-	if node_controle.position.y != 0:
-		return
-		
-	# "ui_right" é a seta direita (padrão do Godot)
-	if event.is_action_pressed("ui_right"):
-		_on_btn_proxima_pressed()
-		
-	# "ui_left" é a seta esquerda (padrão do Godot)
-	elif event.is_action_pressed("ui_left"):
-		_on_btn_anterior_pressed()
