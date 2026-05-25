@@ -20,6 +20,8 @@
 [ext_resource type="Texture2D" uid="uid://bjvlse6he02ak" path="res://assets/Teclas/key2Img-140x130(4).png" id="18_l0xhd"]
 [ext_resource type="Texture2D" uid="uid://ced4sa745jsdu" path="res://assets/Teclas/key2Img-130x130.png" id="19_l0xhd"]
 [ext_resource type="Texture2D" uid="uid://b08qpbibuqkwp" path="res://assets/pixel-art-spellbook-ancient-lore-and-magical-secrets-free-png.png" id="20_aju4y"]
+[ext_resource type="Texture2D" uid="uid://crr70gvfecfwq" path="res://assets/iconAlbedo.png" id="21_aju4y"]
+[ext_resource type="Texture2D" uid="uid://853fjmb7gwpa" path="res://assets/iconCitrinitas.png" id="22_m3mml"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kwtlx"]
 animations = [{
@@ -320,12 +322,13 @@ offset_bottom = 468.0
 
 [node name="Label2" type="Label" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=1727361423]
 layout_mode = 0
-offset_left = 5.0
-offset_right = 300.0
-offset_bottom = 189.0
+offset_left = 15.0
+offset_top = -15.0
+offset_right = 310.0
+offset_bottom = 174.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-text = "Nigredo"
+text = "Albedo"
 horizontal_alignment = 1
 
 [node name="Label3" type="Label" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=1306906317]
@@ -337,6 +340,48 @@ offset_bottom = 182.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 text = "Citrinitas"
+horizontal_alignment = 1
+
+[node name="IconAlbedo" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=804830289]
+position = Vector2(170, 109)
+scale = Vector2(7.274843, 7.274843)
+texture = ExtResource("21_aju4y")
+
+[node name="IconCitrinitas" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=1810333248]
+position = Vector2(556, 126)
+scale = Vector2(7.4219427, 7.4219427)
+texture = ExtResource("22_m3mml")
+
+[node name="Label5" type="Label" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=1974165044]
+layout_mode = 0
+offset_left = -11.0
+offset_top = 224.0
+offset_right = 357.0
+offset_bottom = 655.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_6w6ns")
+theme_override_font_sizes/font_size = 38
+text = "Esta bancada ira 
+realizar a 
+destilacao de 
+componentes
+"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=1417003299]
+layout_mode = 0
+offset_left = 366.0
+offset_top = 233.0
+offset_right = 734.0
+offset_bottom = 664.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_6w6ns")
+theme_override_font_sizes/font_size = 38
+text = "Esta bancada ira 
+realizar a 
+sintetizacao de 
+componentes
+"
 horizontal_alignment = 1
 
 [node name="Pagina2" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=105073553]
