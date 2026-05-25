@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://csnkbvkb8furw" path="res://maquinas/alquimia maquina/Citrinitas/Citrinitas.tscn" id="13_udl5n"]
 
 [node name="WwMain" type="Node2D" unique_id=1219875113]
+position = Vector2(0, 1)
 
 [node name="mapa" parent="." unique_id=1199859687 instance=ExtResource("3_s0tju")]
 position = Vector2(-1904, -800)
@@ -26,11 +27,6 @@ position = Vector2(743, 837)
 [node name="Esteira" parent="." unique_id=912511156 instance=ExtResource("2_536ej")]
 position = Vector2(-88, -2)
 arrayDeItensPossiveis = Array[ExtResource("3_kbahf")]([ExtResource("7_yq2es"), ExtResource("6_udl5n"), ExtResource("7_mxryl")])
-
-[node name="Player" parent="." unique_id=800378027 instance=ExtResource("1_bjfuu")]
-position = Vector2(775, 416)
-itens_iniciais = Array[ExtResource("3_kbahf")]([ExtResource("7_yq2es")])
-cena_item_drop = ExtResource("3_fxf81")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=942745880]
 offset_left = -296.0
@@ -54,3 +50,8 @@ position = Vector2(206, 27)
 
 [node name="Citrinitas" parent="." unique_id=1710463245 instance=ExtResource("13_udl5n")]
 position = Vector2(1009, 569)
+
+[node name="Player" parent="." unique_id=800378027 instance=ExtResource("1_bjfuu")]
+position = Vector2(775, 417)
+itens_iniciais = Array[ExtResource("3_kbahf")]([ExtResource("7_yq2es")])
+cena_item_drop = ExtResource("3_fxf81")

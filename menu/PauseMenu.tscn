@@ -22,6 +22,20 @@
 [ext_resource type="Texture2D" uid="uid://b08qpbibuqkwp" path="res://assets/pixel-art-spellbook-ancient-lore-and-magical-secrets-free-png.png" id="20_aju4y"]
 [ext_resource type="Texture2D" uid="uid://crr70gvfecfwq" path="res://assets/iconAlbedo.png" id="21_aju4y"]
 [ext_resource type="Texture2D" uid="uid://853fjmb7gwpa" path="res://assets/iconCitrinitas.png" id="22_m3mml"]
+[ext_resource type="Texture2D" uid="uid://cjsboy3r00muk" path="res://assets/Element_sprites/spr_RED.png" id="23_k2mmf"]
+[ext_resource type="Texture2D" uid="uid://cvwd3d0kctgbs" path="res://assets/Element_sprites/spr_GREEN.png" id="24_tm4qv"]
+[ext_resource type="Texture2D" uid="uid://d1pep01ndm8o7" path="res://assets/Element_sprites/spr_BLUE.png" id="25_hwx3j"]
+[ext_resource type="Texture2D" uid="uid://dqubwjmx2755o" path="res://assets/Element_sprites/spr_CYAN.png" id="26_g8ro4"]
+[ext_resource type="Texture2D" uid="uid://nr2os0y0ab2c" path="res://assets/Element_sprites/spr_MAGENTA.png" id="27_oaexn"]
+[ext_resource type="Texture2D" uid="uid://dn8fwljcnxb1" path="res://assets/Element_sprites/spr_YELLOW.png" id="28_jftne"]
+[ext_resource type="Texture2D" uid="uid://kieb2hu4d8w2" path="res://assets/alchemyCircle.png" id="29_5at6l"]
+[ext_resource type="Texture2D" uid="uid://bgsnf4w116uqa" path="res://assets/Element_sprites/spr_COBALT.png" id="30_fha5k"]
+[ext_resource type="Texture2D" uid="uid://rk0p0dasebqh" path="res://assets/Element_sprites/spr_OLIVE.png" id="31_8btyt"]
+[ext_resource type="Texture2D" uid="uid://dcx8kkmdcxrf0" path="res://assets/Element_sprites/spr_ORANGE.png" id="32_osr6q"]
+[ext_resource type="Texture2D" uid="uid://dqjyn2qhpebam" path="res://assets/Element_sprites/spr_PINK.png" id="33_83k18"]
+[ext_resource type="Texture2D" uid="uid://cn8p7khjaqglb" path="res://assets/Element_sprites/spr_PURPLE.png" id="34_r826w"]
+[ext_resource type="Texture2D" uid="uid://b2vchkssyxokw" path="res://assets/Element_sprites/spr_TURQUOISE.png" id="35_xodc6"]
+[ext_resource type="Texture2D" uid="uid://b8f0ltc1036rj" path="res://assets/Element_sprites/spr_WHITE.png" id="36_0o8ki"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kwtlx"]
 animations = [{
@@ -316,6 +330,7 @@ scale = Vector2(0.397332, 0.397332)
 texture = ExtResource("20_aju4y")
 
 [node name="Pagina1" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=78455367]
+visible = false
 anchors_preset = 0
 offset_right = 722.0
 offset_bottom = 468.0
@@ -343,21 +358,21 @@ text = "Citrinitas"
 horizontal_alignment = 1
 
 [node name="IconAlbedo" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=804830289]
-position = Vector2(170, 109)
+position = Vector2(163, 108)
 scale = Vector2(7.274843, 7.274843)
 texture = ExtResource("21_aju4y")
 
 [node name="IconCitrinitas" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=1810333248]
-position = Vector2(556, 126)
+position = Vector2(546, 112)
 scale = Vector2(7.4219427, 7.4219427)
 texture = ExtResource("22_m3mml")
 
 [node name="Label5" type="Label" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=1974165044]
 layout_mode = 0
-offset_left = -11.0
-offset_top = 224.0
-offset_right = 357.0
-offset_bottom = 655.0
+offset_left = -12.0
+offset_top = 192.0
+offset_right = 356.0
+offset_bottom = 623.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("11_6w6ns")
 theme_override_font_sizes/font_size = 38
@@ -365,15 +380,16 @@ text = "Esta bancada ira
 realizar a 
 destilacao de 
 componentes
+intermediarios
 "
 horizontal_alignment = 1
 
 [node name="Label6" type="Label" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=1417003299]
 layout_mode = 0
-offset_left = 366.0
-offset_top = 233.0
-offset_right = 734.0
-offset_bottom = 664.0
+offset_left = 369.0
+offset_top = 193.0
+offset_right = 737.0
+offset_bottom = 624.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("11_6w6ns")
 theme_override_font_sizes/font_size = 38
@@ -381,18 +397,128 @@ text = "Esta bancada ira
 realizar a 
 sintetizacao de 
 componentes
+base
 "
 horizontal_alignment = 1
+
+[node name="SprRed" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=1048533509]
+position = Vector2(471.88208, 432.88208)
+scale = Vector2(4.4852605, 4.4852605)
+texture = ExtResource("23_k2mmf")
+
+[node name="SprGreen" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=518182182]
+position = Vector2(539.88214, 434.88208)
+scale = Vector2(4.4852605, 4.4852605)
+texture = ExtResource("24_tm4qv")
+
+[node name="SprBlue" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=10083943]
+position = Vector2(607.8821, 435.88208)
+scale = Vector2(4.4852552, 4.4852552)
+texture = ExtResource("25_hwx3j")
+
+[node name="SprCyan" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=101887044]
+position = Vector2(95.88208, 431.88208)
+scale = Vector2(4.4852605, 4.4852605)
+texture = ExtResource("26_g8ro4")
+
+[node name="SprMagenta" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=851935352]
+position = Vector2(162.88208, 431.88208)
+scale = Vector2(4.4852605, 4.4852605)
+texture = ExtResource("27_oaexn")
+
+[node name="SprYellow" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=1396433835]
+position = Vector2(228.88211, 431.88208)
+scale = Vector2(4.4852605, 4.4852605)
+texture = ExtResource("28_jftne")
 
 [node name="Pagina2" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=105073553]
 anchors_preset = 0
 offset_right = 722.0
 offset_bottom = 468.0
 
+[node name="Label7" type="Label" parent="NodeControle/PaginasTutoriais/Pagina2" unique_id=184795454]
+layout_mode = 0
+offset_left = -13.0
+offset_top = -16.0
+offset_right = 355.0
+offset_bottom = 415.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_6w6ns")
+theme_override_font_sizes/font_size = 38
+text = "Receitas para as joias:"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="NodeControle/PaginasTutoriais/Pagina2" unique_id=1672741688]
+layout_mode = 0
+offset_left = 369.0
+offset_top = -15.0
+offset_right = 737.0
+offset_bottom = 416.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_6w6ns")
+theme_override_font_sizes/font_size = 38
+text = "Trasnsmutacao filosofal:"
+horizontal_alignment = 1
+
+[node name="AlchemyCircle" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina2" unique_id=1917113104]
+position = Vector2(550, 207)
+scale = Vector2(6.710292, 6.710292)
+texture = ExtResource("29_5at6l")
+
 [node name="Pagina3" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=1415368739]
 anchors_preset = 0
 offset_right = 722.0
 offset_bottom = 468.0
+
+[node name="SprCobalt" type="Sprite2D" parent="." unique_id=486968989]
+position = Vector2(773, -188.00002)
+scale = Vector2(5.9611583, 5.9611583)
+texture = ExtResource("30_fha5k")
+
+[node name="SprOlive" type="Sprite2D" parent="." unique_id=945557805]
+position = Vector2(829, -429)
+scale = Vector2(5.9611583, 5.9611583)
+texture = ExtResource("31_8btyt")
+
+[node name="SprOrange" type="Sprite2D" parent="." unique_id=1292524965]
+position = Vector2(731.00006, -470)
+scale = Vector2(5.9611583, 5.9611583)
+texture = ExtResource("32_osr6q")
+
+[node name="SprPink" type="Sprite2D" parent="." unique_id=1523604449]
+position = Vector2(877, -345.00003)
+scale = Vector2(5.9611583, 5.9611583)
+texture = ExtResource("33_83k18")
+
+[node name="SprPurple" type="Sprite2D" parent="." unique_id=1045982930]
+position = Vector2(851.00006, -253.99998)
+scale = Vector2(5.9611583, 5.9611583)
+texture = ExtResource("34_r826w")
+
+[node name="SprRed" type="Sprite2D" parent="." unique_id=1878234916]
+position = Vector2(610, -249)
+scale = Vector2(5.9611583, 5.9611583)
+texture = ExtResource("23_k2mmf")
+
+[node name="SprTurquoise" type="Sprite2D" parent="." unique_id=688931612]
+position = Vector2(685.00006, -184.00002)
+scale = Vector2(5.9611583, 5.9611583)
+texture = ExtResource("35_xodc6")
+
+[node name="SprWhite" type="Sprite2D" parent="." unique_id=617729573]
+position = Vector2(732, -329)
+scale = Vector2(5.9611583, 5.9611583)
+texture = ExtResource("36_0o8ki")
+
+[node name="SprBlue" type="Sprite2D" parent="." unique_id=1690899235]
+position = Vector2(644, -427.99997)
+scale = Vector2(5.7908115, 5.7908115)
+texture = ExtResource("25_hwx3j")
+
+[node name="SprGreen" type="Sprite2D" parent="." unique_id=1246432592]
+position = Vector2(591, -340)
+scale = Vector2(5.7908115, 5.7908115)
+texture = ExtResource("24_tm4qv")
 
 [connection signal="pressed" from="NodeControle/Button" to="." method="_on_button_pressed"]
 [connection signal="animation_finished" from="NodeControle/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
