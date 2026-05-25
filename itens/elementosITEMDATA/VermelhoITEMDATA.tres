@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dcsu243k7n5qv"]
 
-[ext_resource type="PackedScene" uid="uid://bs3kpo6graif8" path="res://itens/elementos/magenta.tscn" id="1_ebxkn"]
+[ext_resource type="PackedScene" uid="uid://kq6gc1gkw2ih" path="res://itens/elementos/vermelho.tscn" id="1_ebxkn"]
 [ext_resource type="Texture2D" uid="uid://cjsboy3r00muk" path="res://assets/Element_sprites/spr_RED.png" id="2_ebxkn"]
 [ext_resource type="Script" uid="uid://dweef7bq1l6rt" path="res://WWpasta/WWPlayer/inventário/ItemData.gd" id="3_xwf55"]
 
