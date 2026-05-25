@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://dqn86mrfvvtyu"]
 
+[ext_resource type="Script" uid="uid://dfmd7kbjmf006" path="res://menu/fim.gd" id="1_2ctye"]
 [ext_resource type="Texture2D" uid="uid://bhy47xxy2ng0o" path="res://assets/pedra-filosofal.png" id="1_tt4bv"]
+[ext_resource type="Texture2D" uid="uid://bde05a6l48ycy" path="res://assets/screen_victory.png" id="2_kg3fx"]
+[ext_resource type="FontFile" uid="uid://ljcvfjv5v41e" path="res://assets/Mage DEMO.otf" id="2_vj3vd"]
 
 [sub_resource type="SystemFont" id="SystemFont_kg3fx"]
 font_names = PackedStringArray("URW Gothic")
 
 [node name="Node2D" type="Node2D" unique_id=1980017332]
+script = ExtResource("1_2ctye")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2070886038]
 offset_left = -25.0
@@ -13,7 +17,29 @@ offset_top = -24.0
 offset_right = 1163.0
 offset_bottom = 657.0
 
+[node name="ScreenVictory" type="Sprite2D" parent="." unique_id=1643946247]
+position = Vector2(583, 323)
+scale = Vector2(4.1429977, 4.037713)
+texture = ExtResource("2_kg3fx")
+
+[node name="Label3" type="Label" parent="." unique_id=640595516]
+offset_left = 9.0
+offset_top = 81.0
+offset_right = 1111.0
+offset_bottom = 196.0
+scale = Vector2(1.0342056, 4.4094486)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.80784315)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_vj3vd")
+theme_override_font_sizes/font_size = 113
+text = "VOCE E O MAGO SUPREMO"
+
 [node name="Label" type="Label" parent="." unique_id=227330099]
+visible = false
 modulate = Color(0, 0, 0, 1)
 offset_left = 30.0
 offset_top = 31.0
@@ -35,5 +61,6 @@ theme_override_font_sizes/font_size = 78
 text = "ACABOU O            BUDGET"
 
 [node name="PedraFilosofal" type="Sprite2D" parent="." unique_id=1878483662]
+visible = false
 position = Vector2(590, 439)
 texture = ExtResource("1_tt4bv")

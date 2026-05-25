@@ -24,6 +24,7 @@ func _ready() -> void:
 	# Carrega os itens no Global
 	InventarioGlobal.carregar_itens_iniciais(itens_iniciais)
 	InventarioGlobal.player_limpe_as_maos.connect(_on_limpar_as_maos_signal)
+	pausar()
 
 func _physics_process(_delta: float) -> void:
 	var direction := Vector2.ZERO
