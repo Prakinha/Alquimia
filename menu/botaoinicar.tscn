@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://eed7j4y2kvjk"]
 
+[ext_resource type="Script" uid="uid://dog3l0uyf3ge" path="res://menu/Titulotweeners.gd" id="1_2e54u"]
 [ext_resource type="StyleBox" uid="uid://d3cdtgk8ntm1c" path="res://menu/botaoinicio.tres" id="1_6muci"]
 [ext_resource type="FontFile" uid="uid://ljcvfjv5v41e" path="res://assets/Mage DEMO.otf" id="1_8hqo1"]
 [ext_resource type="Script" uid="uid://bj26eei4wye82" path="res://menu/button.gd" id="1_qob1l"]
 [ext_resource type="StyleBox" uid="uid://dyphkuvaql4yo" path="res://menu/botaoiniciohover.tres" id="2_46pa4"]
-[ext_resource type="Texture2D" uid="uid://f16icj0qu0kn" path="res://assets/Titulo no pot alternativo.png" id="5_8hqo1"]
+[ext_resource type="Texture2D" uid="uid://b2yf3rwep7dfm" path="res://assets/Titulo no pot alternativo so texto.png" id="6_2k0dc"]
+[ext_resource type="Texture2D" uid="uid://yfbq2vum05vg" path="res://assets/Titulo no pot alternativo so aderecos.png" id="7_q1368"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1074062151]
 
@@ -12,6 +14,7 @@
 layout_mode = 3
 anchors_preset = 0
 tooltip_text = "BOTAO"
+script = ExtResource("1_2e54u")
 
 [node name="Button" type="Button" parent="Control" unique_id=1589366746]
 layout_mode = 1
@@ -37,12 +40,21 @@ theme_override_styles/focus = ExtResource("1_6muci")
 text = "Iniciar jogo"
 script = ExtResource("1_qob1l")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=255814663]
+[node name="Titulo" type="TextureRect" parent="Control" unique_id=255814663]
+layout_mode = 0
 offset_top = -160.0
 offset_right = 1281.0
 offset_bottom = 560.0
 scale = Vector2(0.9, 0.9)
-texture = ExtResource("5_8hqo1")
+texture = ExtResource("6_2k0dc")
+
+[node name="Aderecos" type="TextureRect" parent="Control" unique_id=1806500063]
+layout_mode = 0
+offset_top = -160.0
+offset_right = 1281.0
+offset_bottom = 560.0
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("7_q1368")
 
 [connection signal="mouse_entered" from="Control/Button" to="Control/Button" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Control/Button" to="Control/Button" method="_on_mouse_exited"]
