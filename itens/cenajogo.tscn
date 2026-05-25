@@ -47,7 +47,7 @@ texture = ExtResource("10_udl5n")
 
 [node name="maquina 1" parent="." unique_id=992081681 instance=ExtResource("8_kgfak")]
 visible = false
-position = Vector2(617, 37)
+position = Vector2(-144, 202)
 
 [node name="Nigredo" parent="." unique_id=1367211300 instance=ExtResource("12_voavh")]
 position = Vector2(206, 27)

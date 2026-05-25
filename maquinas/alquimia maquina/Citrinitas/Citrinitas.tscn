@@ -2,17 +2,18 @@
 
 [ext_resource type="PackedScene" uid="uid://dd4blmhdvnilc" path="res://WWpasta/WWmiscelaneous/placa.tscn" id="1_usl6u"]
 [ext_resource type="Script" uid="uid://djo4x1u5ndx18" path="res://maquinas/alquimia maquina/Citrinitas/citrinitas.gd" id="1_xjvde"]
+[ext_resource type="Texture2D" uid="uid://b2rqyai4anqm0" path="res://assets/alchemyTables.png" id="2_baots"]
 [ext_resource type="PackedScene" uid="uid://bp5citui5ogrn" path="res://maquinas/alquimia maquina/Citrinitas/CitrinitasMenu.tscn" id="2_xjvde"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_baots"]
 
 [node name="Citrinitas" type="Node2D" unique_id=1710463245 node_paths=PackedStringArray("menu_base")]
 script = ExtResource("1_xjvde")
 menu_base = NodePath("CitrinitasMenu")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1891273877]
-scale = Vector2(73.99216, 107.24902)
-texture = SubResource("PlaceholderTexture2D_baots")
+scale = Vector2(4, 4)
+texture = ExtResource("2_baots")
+hframes = 2
+frame = 1
 
 [node name="Placa" parent="." unique_id=935575288 instance=ExtResource("1_usl6u")]
 position = Vector2(3, 6)
