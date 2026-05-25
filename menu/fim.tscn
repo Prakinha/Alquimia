@@ -4,6 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://bhy47xxy2ng0o" path="res://assets/pedra-filosofal.png" id="1_tt4bv"]
 [ext_resource type="Texture2D" uid="uid://bde05a6l48ycy" path="res://assets/screen_victory.png" id="2_kg3fx"]
 [ext_resource type="FontFile" uid="uid://ljcvfjv5v41e" path="res://assets/Mage DEMO.otf" id="2_vj3vd"]
+[ext_resource type="Script" uid="uid://b26u1nf8opt3s" path="res://menu/screen_victory.gd" id="3_jdosm"]
+[ext_resource type="AudioStream" uid="uid://cpk4nb1blls6f" path="res://assets/Music/aPedra.mp3" id="5_tfepy"]
+[ext_resource type="Script" uid="uid://b4rr72hq16gkc" path="res://menu/audio_stream_player.gd" id="6_m282i"]
+[ext_resource type="Script" uid="uid://b5b27r0gbri7e" path="res://menu/timer.gd" id="7_4q03n"]
 
 [sub_resource type="SystemFont" id="SystemFont_kg3fx"]
 font_names = PackedStringArray("URW Gothic")
@@ -21,6 +25,7 @@ offset_bottom = 657.0
 position = Vector2(583, 323)
 scale = Vector2(4.1429977, 4.037713)
 texture = ExtResource("2_kg3fx")
+script = ExtResource("3_jdosm")
 
 [node name="Label3" type="Label" parent="." unique_id=640595516]
 offset_left = 9.0
@@ -64,3 +69,15 @@ text = "ACABOU O            BUDGET"
 visible = false
 position = Vector2(590, 439)
 texture = ExtResource("1_tt4bv")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1038236822]
+stream = ExtResource("5_tfepy")
+script = ExtResource("6_m282i")
+
+[node name="Timer" type="Timer" parent="." unique_id=241771120]
+wait_time = 1.2
+one_shot = true
+autostart = true
+script = ExtResource("7_4q03n")
+
+[connection signal="timeout" from="Timer" to="AudioStreamPlayer" method="_on_timer_timeout"]

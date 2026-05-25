@@ -25,3 +25,4 @@ func animar_cena_final():
 	
 	# Passo 3: Fade in do Label3. (Duração: 1.0 segundo)
 	tween.tween_property($Label3, "modulate:a", 3.5, 3.0)
+	tween.tween_property($Label3, "modulate:a", 0.0, 1.0)

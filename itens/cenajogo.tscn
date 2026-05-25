@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://crxxaslfu06np" path="res://maquinas/alquimia maquina/Rubedo/Rubedo.tscn" id="12_udl5n"]
 [ext_resource type="PackedScene" uid="uid://dx1chr2ln8kav" path="res://maquinas/alquimia maquina/nigredo/Nigredo.tscn" id="12_voavh"]
 [ext_resource type="PackedScene" uid="uid://csnkbvkb8furw" path="res://maquinas/alquimia maquina/Citrinitas/Citrinitas.tscn" id="13_udl5n"]
+[ext_resource type="AudioStream" uid="uid://c5fm6s7kxgqhg" path="res://assets/Music/fase.mp3" id="14_mxryl"]
 
 [node name="WwMain" type="Node2D" unique_id=1219875113]
 position = Vector2(0, 1)
@@ -55,3 +56,8 @@ position = Vector2(978, 573)
 position = Vector2(775, 417)
 itens_iniciais = Array[ExtResource("3_kbahf")]([])
 cena_item_drop = ExtResource("3_fxf81")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1407350426]
+stream = ExtResource("14_mxryl")
+autoplay = true
+parameters/looping = true
