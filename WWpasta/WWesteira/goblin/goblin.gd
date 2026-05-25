@@ -6,7 +6,7 @@ class_name GoblinArea2D
 @onready var goblinHand: Marker2D = $Hand
 @export var itemdrop: PackedScene
 @onready var isSegurandoItem: bool
-@export var GoblinVelocidade: int = 2
+@export var GoblinVelocidade: float = 120
 @onready var GoblinAnimation: AnimationPlayer = $AnimationPlayer
 
 
@@ -22,8 +22,8 @@ func _ready() -> void:
 
 
 
-func _process(_delta: float) -> void:
-	position.x = position.x + GoblinVelocidade
+func _process(delta: float) -> void:
+	position.x = position.x + GoblinVelocidade*delta
 	
 func isSegurando() -> bool:
 	return isSegurandoItem
