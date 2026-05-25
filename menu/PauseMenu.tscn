@@ -20,10 +20,15 @@
 [ext_resource type="Texture2D" uid="uid://bjvlse6he02ak" path="res://assets/Teclas/key2Img-140x130(4).png" id="18_l0xhd"]
 [ext_resource type="Texture2D" uid="uid://ced4sa745jsdu" path="res://assets/Teclas/key2Img-130x130.png" id="19_l0xhd"]
 [ext_resource type="Texture2D" uid="uid://b08qpbibuqkwp" path="res://assets/pixel-art-spellbook-ancient-lore-and-magical-secrets-free-png.png" id="20_aju4y"]
+[ext_resource type="Texture2D" uid="uid://c2j3eenencg0p" path="res://assets/Teclas/key2Img-120x130.png" id="21_0o8ki"]
 [ext_resource type="Texture2D" uid="uid://crr70gvfecfwq" path="res://assets/iconAlbedo.png" id="21_aju4y"]
+[ext_resource type="Texture2D" uid="uid://b5c6eg5jt6pkl" path="res://assets/Teclas/key2Img-130x130(1).png" id="22_g07n4"]
 [ext_resource type="Texture2D" uid="uid://853fjmb7gwpa" path="res://assets/iconCitrinitas.png" id="22_m3mml"]
+[ext_resource type="Texture2D" uid="uid://ddqmw2bxlxbkd" path="res://assets/Teclas/key2Img-130x130(2).png" id="23_6bfp2"]
 [ext_resource type="Texture2D" uid="uid://cjsboy3r00muk" path="res://assets/Element_sprites/spr_RED.png" id="23_k2mmf"]
+[ext_resource type="Texture2D" uid="uid://da282bkocvdps" path="res://assets/Teclas/key2Img-140x130(6).png" id="24_fii7l"]
 [ext_resource type="Texture2D" uid="uid://cvwd3d0kctgbs" path="res://assets/Element_sprites/spr_GREEN.png" id="24_tm4qv"]
+[ext_resource type="Texture2D" uid="uid://ch7kvhegfy41x" path="res://assets/Teclas/key2Img-220x130.png" id="25_b0vb1"]
 [ext_resource type="Texture2D" uid="uid://d1pep01ndm8o7" path="res://assets/Element_sprites/spr_BLUE.png" id="25_hwx3j"]
 [ext_resource type="Texture2D" uid="uid://dqubwjmx2755o" path="res://assets/Element_sprites/spr_CYAN.png" id="26_g8ro4"]
 [ext_resource type="Texture2D" uid="uid://nr2os0y0ab2c" path="res://assets/Element_sprites/spr_MAGENTA.png" id="27_oaexn"]
@@ -36,6 +41,7 @@
 [ext_resource type="Texture2D" uid="uid://cn8p7khjaqglb" path="res://assets/Element_sprites/spr_PURPLE.png" id="34_r826w"]
 [ext_resource type="Texture2D" uid="uid://b2vchkssyxokw" path="res://assets/Element_sprites/spr_TURQUOISE.png" id="35_xodc6"]
 [ext_resource type="Texture2D" uid="uid://b8f0ltc1036rj" path="res://assets/Element_sprites/spr_WHITE.png" id="36_0o8ki"]
+[ext_resource type="Texture2D" uid="uid://dn211vsvg6r6" path="res://assets/sr2c65dd1cf1242.png" id="37_8btyt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kwtlx"]
 animations = [{
@@ -197,9 +203,9 @@ offset_bottom = 40.0
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 184.0
-offset_top = 78.0
+offset_top = 116.0
 offset_right = 517.0
-offset_bottom = 536.0
+offset_bottom = 574.0
 
 [node name="PaginasTutoriais" type="Control" parent="NodeControle" unique_id=1828387490]
 unique_name_in_owner = true
@@ -210,7 +216,6 @@ offset_right = 514.0
 offset_bottom = 541.0
 
 [node name="Pagina0" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=611275447]
-visible = false
 anchors_preset = 0
 offset_right = 722.0
 offset_bottom = 468.0
@@ -260,10 +265,25 @@ offset_left = 371.0
 offset_top = 311.0
 offset_right = 666.0
 offset_bottom = 500.0
+scale = Vector2(0.75454676, 0.75454676)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("11_6w6ns")
 theme_override_font_sizes/font_size = 38
-text = "livro de receitas"
+text = "Livro Tutorial"
+
+[node name="Label5" type="Label" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=1704292334]
+layout_mode = 0
+offset_left = 588.0
+offset_top = 276.0
+offset_right = 889.0
+offset_bottom = 465.0
+scale = Vector2(0.75454676, 0.75454676)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_6w6ns")
+theme_override_font_sizes/font_size = 38
+text = "Inventario/
+Bancadas
+"
 
 [node name="Sprite2D" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=965396096]
 position = Vector2(449.00006, 100.999985)
@@ -290,8 +310,8 @@ libraries/ = SubResource("AnimationLibrary_qmvwf")
 autoplay = &"RESET"
 
 [node name="Key2Img180x130" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=210923755]
-position = Vector2(447, 397)
-scale = Vector2(0.7324646, 0.7324646)
+position = Vector2(406, 362)
+scale = Vector2(0.55267864, 0.55267864)
 texture = ExtResource("13_kwtlx")
 
 [node name="Key2Img140x130(2)" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=1141521342]
@@ -325,9 +345,44 @@ scale = Vector2(0.8086654, 0.7295517)
 texture = ExtResource("19_l0xhd")
 
 [node name="PixelArtSpellbookAncientLoreAndMagicalSecretsFreePng" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=708109700]
-position = Vector2(572.99994, 403.99997)
-scale = Vector2(0.397332, 0.397332)
+position = Vector2(411, 420)
+scale = Vector2(0.2998055, 0.2998055)
 texture = ExtResource("20_aju4y")
+
+[node name="Key2Img120x130" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=65848208]
+position = Vector2(570, 379.00003)
+scale = Vector2(0.58296716, 0.58296716)
+texture = ExtResource("21_0o8ki")
+
+[node name="Key2Img130x130(1)" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=629842370]
+position = Vector2(610, 380.00003)
+scale = Vector2(0.58296716, 0.58296716)
+texture = ExtResource("22_g07n4")
+
+[node name="Key2Img130x130(2)" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=591256236]
+position = Vector2(652, 380.00003)
+scale = Vector2(0.58296716, 0.58296716)
+texture = ExtResource("23_6bfp2")
+
+[node name="Key2Img140x130(6)" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=569823825]
+position = Vector2(697.00006, 378.00003)
+scale = Vector2(0.58296716, 0.58296716)
+texture = ExtResource("24_fii7l")
+
+[node name="Key2Img220x130" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=219354198]
+position = Vector2(666.00006, 444)
+scale = Vector2(0.58296716, 0.58296716)
+texture = ExtResource("25_b0vb1")
+
+[node name="IconAlbedo" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=1940334718]
+position = Vector2(563.789, 429.13275)
+scale = Vector2(3.1718664, 3.1718664)
+texture = ExtResource("21_aju4y")
+
+[node name="IconCitrinitas" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=1151211714]
+position = Vector2(601.57806, 430.26544)
+scale = Vector2(3.1718664, 3.1718664)
+texture = ExtResource("22_m3mml")
 
 [node name="Pagina1" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=78455367]
 visible = false
@@ -432,6 +487,7 @@ scale = Vector2(4.4852605, 4.4852605)
 texture = ExtResource("28_jftne")
 
 [node name="Pagina2" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=105073553]
+visible = false
 anchors_preset = 0
 offset_right = 722.0
 offset_bottom = 468.0
@@ -465,60 +521,117 @@ position = Vector2(550, 207)
 scale = Vector2(6.710292, 6.710292)
 texture = ExtResource("29_5at6l")
 
+[node name="SprCobalt" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina2" unique_id=486968989]
+position = Vector2(591, 380)
+scale = Vector2(5.9611583, 5.9611583)
+texture = ExtResource("30_fha5k")
+
+[node name="SprOlive" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina2" unique_id=945557805]
+position = Vector2(647, 139)
+scale = Vector2(5.9611583, 5.9611583)
+texture = ExtResource("31_8btyt")
+
+[node name="SprOrange" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina2" unique_id=1292524965]
+position = Vector2(549.00006, 98)
+scale = Vector2(5.9611583, 5.9611583)
+texture = ExtResource("32_osr6q")
+
+[node name="SprPink" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina2" unique_id=1523604449]
+position = Vector2(695, 222.99997)
+scale = Vector2(5.9611583, 5.9611583)
+texture = ExtResource("33_83k18")
+
+[node name="SprPurple" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina2" unique_id=1045982930]
+position = Vector2(669.00006, 314)
+scale = Vector2(5.9611583, 5.9611583)
+texture = ExtResource("34_r826w")
+
+[node name="SprRed" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina2" unique_id=1878234916]
+position = Vector2(428, 319)
+scale = Vector2(5.9611583, 5.9611583)
+texture = ExtResource("23_k2mmf")
+
+[node name="SprTurquoise" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina2" unique_id=688931612]
+position = Vector2(503.00006, 384)
+scale = Vector2(5.9611583, 5.9611583)
+texture = ExtResource("35_xodc6")
+
+[node name="SprWhite" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina2" unique_id=617729573]
+position = Vector2(550, 239)
+scale = Vector2(5.9611583, 5.9611583)
+texture = ExtResource("36_0o8ki")
+
+[node name="SprBlue" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina2" unique_id=1690899235]
+position = Vector2(462, 140.00003)
+scale = Vector2(5.7908115, 5.7908115)
+texture = ExtResource("25_hwx3j")
+
+[node name="SprGreen" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina2" unique_id=1246432592]
+position = Vector2(409, 228)
+scale = Vector2(5.7908115, 5.7908115)
+texture = ExtResource("24_tm4qv")
+
+[node name="IconCitrinitas" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina2" unique_id=21401285]
+position = Vector2(432, 202)
+scale = Vector2(1.3621609, 1.3621609)
+texture = ExtResource("22_m3mml")
+
+[node name="IconCitrinitas2" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina2" unique_id=119676993]
+position = Vector2(449, 297)
+scale = Vector2(1.362161, 1.362161)
+texture = ExtResource("22_m3mml")
+
+[node name="IconCitrinitas3" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina2" unique_id=1165574258]
+position = Vector2(479, 116)
+scale = Vector2(1.362161, 1.362161)
+texture = ExtResource("22_m3mml")
+
 [node name="Pagina3" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=1415368739]
 anchors_preset = 0
 offset_right = 722.0
 offset_bottom = 468.0
 
-[node name="SprCobalt" type="Sprite2D" parent="." unique_id=486968989]
-position = Vector2(773, -188.00002)
-scale = Vector2(5.9611583, 5.9611583)
-texture = ExtResource("30_fha5k")
+[node name="Pagina4" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=1396014676]
+anchors_preset = 0
+offset_right = 722.0
+offset_bottom = 468.0
 
-[node name="SprOlive" type="Sprite2D" parent="." unique_id=945557805]
-position = Vector2(829, -429)
-scale = Vector2(5.9611583, 5.9611583)
-texture = ExtResource("31_8btyt")
+[node name="Pagina5" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=45405391]
+anchors_preset = 0
+offset_right = 722.0
+offset_bottom = 468.0
 
-[node name="SprOrange" type="Sprite2D" parent="." unique_id=1292524965]
-position = Vector2(731.00006, -470)
-scale = Vector2(5.9611583, 5.9611583)
-texture = ExtResource("32_osr6q")
+[node name="Pagina6" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=1895042057]
+anchors_preset = 0
+offset_right = 722.0
+offset_bottom = 468.0
 
-[node name="SprPink" type="Sprite2D" parent="." unique_id=1523604449]
-position = Vector2(877, -345.00003)
-scale = Vector2(5.9611583, 5.9611583)
-texture = ExtResource("33_83k18")
+[node name="Pagina7" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=229939298]
+anchors_preset = 0
+offset_right = 722.0
+offset_bottom = 468.0
 
-[node name="SprPurple" type="Sprite2D" parent="." unique_id=1045982930]
-position = Vector2(851.00006, -253.99998)
-scale = Vector2(5.9611583, 5.9611583)
-texture = ExtResource("34_r826w")
+[node name="Pagina8" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=1845130631]
+anchors_preset = 0
+offset_right = 722.0
+offset_bottom = 468.0
 
-[node name="SprRed" type="Sprite2D" parent="." unique_id=1878234916]
-position = Vector2(610, -249)
-scale = Vector2(5.9611583, 5.9611583)
-texture = ExtResource("23_k2mmf")
+[node name="Pagina9" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=1980214399]
+visible = false
+anchors_preset = 0
+offset_right = 722.0
+offset_bottom = 468.0
 
-[node name="SprTurquoise" type="Sprite2D" parent="." unique_id=688931612]
-position = Vector2(685.00006, -184.00002)
-scale = Vector2(5.9611583, 5.9611583)
-texture = ExtResource("35_xodc6")
+[node name="Pagina10" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=1136145191]
+visible = false
+anchors_preset = 0
+offset_right = 722.0
+offset_bottom = 468.0
 
-[node name="SprWhite" type="Sprite2D" parent="." unique_id=617729573]
-position = Vector2(732, -329)
-scale = Vector2(5.9611583, 5.9611583)
-texture = ExtResource("36_0o8ki")
-
-[node name="SprBlue" type="Sprite2D" parent="." unique_id=1690899235]
-position = Vector2(644, -427.99997)
-scale = Vector2(5.7908115, 5.7908115)
-texture = ExtResource("25_hwx3j")
-
-[node name="SprGreen" type="Sprite2D" parent="." unique_id=1246432592]
-position = Vector2(591, -340)
-scale = Vector2(5.7908115, 5.7908115)
-texture = ExtResource("24_tm4qv")
+[node name="Sr2c65Dd1Cf1242" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina10" unique_id=1394587478]
+position = Vector2(375, 317)
+scale = Vector2(0.3265212, 0.20682643)
+texture = ExtResource("37_8btyt")
 
 [connection signal="pressed" from="NodeControle/Button" to="." method="_on_button_pressed"]
 [connection signal="animation_finished" from="NodeControle/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

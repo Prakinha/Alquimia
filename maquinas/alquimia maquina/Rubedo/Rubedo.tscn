@@ -4,12 +4,19 @@
 [ext_resource type="Script" uid="uid://ui4yooewns3l" path="res://maquinas/alquimia maquina/Rubedo/rubedo.gd" id="1_dyf30"]
 [ext_resource type="PackedScene" uid="uid://cri34k25f6o4i" path="res://maquinas/alquimia maquina/Rubedo/rubedo_menu.tscn" id="2_dyf30"]
 [ext_resource type="Texture2D" uid="uid://by3bw3o5n3mdp" path="res://maquinas/assets/ive-always-loved-making-magic-circles-but-im-kind-of-v0-pftb1krxptu91.png" id="4_dyf30"]
+[ext_resource type="Texture2D" uid="uid://kieb2hu4d8w2" path="res://assets/alchemyCircle.png" id="5_iew6i"]
 
 [node name="Rubedo" type="Node2D" unique_id=786778760 node_paths=PackedStringArray("menu_base")]
 script = ExtResource("1_dyf30")
 menu_base = NodePath("RubedoMenu")
 
+[node name="AlchemyCircle" type="Sprite2D" parent="." unique_id=573214601]
+position = Vector2(1, -33)
+scale = Vector2(5.0415406, 5.0415406)
+texture = ExtResource("5_iew6i")
+
 [node name="IveAlwaysLovedMakingMagicCirclesButImKindOfV0Pftb1Krxptu91" type="Sprite2D" parent="." unique_id=2525136]
+visible = false
 position = Vector2(2.0000002, 8)
 scale = Vector2(0.24609375, 0.24609375)
 texture = ExtResource("4_dyf30")

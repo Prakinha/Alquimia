@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Alquimia"
-run/main_scene="uid://ce2a0dk6qsa3y"
+run/main_scene="uid://cdstje25d7xbv"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

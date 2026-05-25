@@ -46,10 +46,10 @@ visible = false
 position = Vector2(-144, 202)
 
 [node name="Nigredo" parent="." unique_id=1367211300 instance=ExtResource("12_voavh")]
-position = Vector2(206, 27)
+position = Vector2(1788, 286)
 
 [node name="Citrinitas" parent="." unique_id=1710463245 instance=ExtResource("13_udl5n")]
-position = Vector2(1009, 569)
+position = Vector2(978, 573)
 
 [node name="Player" parent="." unique_id=800378027 instance=ExtResource("1_bjfuu")]
 position = Vector2(775, 417)
