@@ -1,12 +1,11 @@
 [gd_scene format=3 uid="uid://bnu4u3pjebe63"]
 
 [ext_resource type="PackedScene" uid="uid://dgcarvigog85b" path="res://itens/elementos/amarelo.tscn" id="1_r3142"]
-[ext_resource type="Texture2D" uid="uid://csehf2fu8hpxc" path="res://assets/Element_sprites/spr_WHITE.png" id="2_8bddt"]
+[ext_resource type="Texture2D" uid="uid://b8f0ltc1036rj" path="res://assets/Element_sprites/spr_WHITE.png" id="2_8bddt"]
 
 [node name="branco" unique_id=1751028922 instance=ExtResource("1_r3142")]
 item_id = "white"
 item_name = "White"
 
 [node name="Sprite2D" parent="Area2D" parent_id_path=PackedInt32Array(1651896402) index="1" unique_id=1298149292]
-self_modulate = Color(3.167, 3.167, 3.167, 1)
 texture = ExtResource("2_8bddt")
