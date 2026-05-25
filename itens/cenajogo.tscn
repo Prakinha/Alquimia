@@ -53,5 +53,5 @@ position = Vector2(1009, 569)
 
 [node name="Player" parent="." unique_id=800378027 instance=ExtResource("1_bjfuu")]
 position = Vector2(775, 417)
-itens_iniciais = Array[ExtResource("3_kbahf")]([ExtResource("7_yq2es")])
+itens_iniciais = Array[ExtResource("3_kbahf")]([])
 cena_item_drop = ExtResource("3_fxf81")
