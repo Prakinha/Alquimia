@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dd4blmhdvnilc"]
 
 [ext_resource type="Script" uid="uid://cunriwgic8irs" path="res://WWpasta/WWmiscelaneous/placa.gd" id="1_i43bl"]
+[ext_resource type="FontFile" uid="uid://ljcvfjv5v41e" path="res://assets/Mage DEMO.otf" id="2_kto6w"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pt8my"]
 radius = 112.0
@@ -37,6 +38,7 @@ offset_right = 59.0
 offset_bottom = -65.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_kto6w")
 theme_override_styles/normal = SubResource("StyleBoxFlat_i43bl")
 text = "Aperte \"E\" para interagir!"
 horizontal_alignment = 1
