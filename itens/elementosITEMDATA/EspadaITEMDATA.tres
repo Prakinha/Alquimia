@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://cccj2du1lfhre" path="res://itens/elementos/Espada.tscn" id="1_808na"]
 [ext_resource type="Script" uid="uid://dweef7bq1l6rt" path="res://WWpasta/WWPlayer/inventário/ItemData.gd" id="1_vlekq"]
-[ext_resource type="Texture2D" uid="uid://0okqut5yv1hr" path="res://itens/elementosSprites/Espada.png" id="2_84gb7"]
+[ext_resource type="Texture2D" uid="uid://dwgs6w80eynep" path="res://assets/Element_sprites/spr_UNKNOWN.png" id="2_808na"]
 
 [resource]
 script = ExtResource("1_vlekq")
 ItemName = "Espada"
-icon = ExtResource("2_84gb7")
+icon = ExtResource("2_808na")
 ItemScene = ExtResource("1_808na")
 metadata/_custom_type_script = "uid://dweef7bq1l6rt"

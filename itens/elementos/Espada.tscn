@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cccj2du1lfhre"]
 
 [ext_resource type="Script" uid="uid://xwsw7ys78k6l" path="res://itens/itembase.gd" id="1_2f2gk"]
-[ext_resource type="Texture2D" uid="uid://0okqut5yv1hr" path="res://itens/elementosSprites/Espada.png" id="2_nkrkw"]
+[ext_resource type="Texture2D" uid="uid://dwgs6w80eynep" path="res://assets/Element_sprites/spr_UNKNOWN.png" id="2_nkrkw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cxh00"]
 size = Vector2(122, 125)
@@ -15,4 +15,5 @@ script = ExtResource("1_2f2gk")
 shape = SubResource("RectangleShape2D_cxh00")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1298149292]
+scale = Vector2(4, 4)
 texture = ExtResource("2_nkrkw")

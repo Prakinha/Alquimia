@@ -208,6 +208,7 @@ process_material = SubResource("ParticleProcessMaterial_gt5u7")
 occluder = SubResource("OccluderPolygon2D_i6d6k")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1290683004]
+visible = false
 position = Vector2(1240, 589)
 energy = 4.03
 texture = SubResource("GradientTexture1D_8t7jr")
