@@ -21,6 +21,10 @@ Global="*uid://cys7ie1w8kqfn"
 Receitas="*uid://cel1nst3llnyn"
 InventarioGlobal="*uid://bc0cgcicnyggo"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [dotnet]
 
 project/assembly_name="Alquimia"

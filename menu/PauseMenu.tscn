@@ -10,10 +10,14 @@
 [ext_resource type="Texture2D" uid="uid://qvnuodoolmd0" path="res://Livro/86e42162d216e1f016d0dd49e5278bf2/5a457bb2-3928-488d-8986-fe5303339888-2.png" id="8_qnbko"]
 [ext_resource type="Texture2D" uid="uid://c6axko4kgns5l" path="res://Livro/86e42162d216e1f016d0dd49e5278bf2/5a457bb2-3928-488d-8986-fe5303339888-1.png" id="9_qmvwf"]
 [ext_resource type="Texture2D" uid="uid://w8b7bjbi5usn" path="res://Livro/86e42162d216e1f016d0dd49e5278bf2/5a457bb2-3928-488d-8986-fe5303339888-0.png" id="10_k8a5y"]
+[ext_resource type="StyleBox" uid="uid://d3cdtgk8ntm1c" path="res://menu/botaoinicio.tres" id="11_6bfp2"]
 [ext_resource type="FontFile" uid="uid://ljcvfjv5v41e" path="res://assets/Mage DEMO.otf" id="11_6w6ns"]
 [ext_resource type="Texture2D" uid="uid://crq8parf21dka" path="res://assets/spr_hermes.png" id="12_1ymlp"]
+[ext_resource type="StyleBox" uid="uid://bdec2pune4lwj" path="res://menu/botaoiniciopressed.tres" id="12_b0vb1"]
+[ext_resource type="StyleBox" uid="uid://dyphkuvaql4yo" path="res://menu/botaoiniciohover.tres" id="12_fii7l"]
 [ext_resource type="Texture2D" uid="uid://cip4ccxipadup" path="res://assets/Teclas/key2Img-180x130.png" id="13_kwtlx"]
 [ext_resource type="Texture2D" uid="uid://bq866uyydworb" path="res://assets/Teclas/key2Img-140x130(1).png" id="14_67644"]
+[ext_resource type="StyleBox" uid="uid://4rqcjf33bf5e" path="res://menu/botaoiniciodisabled.tres" id="14_uvtn0"]
 [ext_resource type="Texture2D" uid="uid://cofgygsw15pju" path="res://assets/Teclas/key2Img-140x130(2).png" id="15_uddss"]
 [ext_resource type="Texture2D" uid="uid://3r3ttqxod0q2" path="res://assets/Teclas/key2Img-140x130(3).png" id="16_l0xhd"]
 [ext_resource type="Texture2D" uid="uid://bn3ilsxqjl0k8" path="res://assets/Teclas/key2Img-140x130.png" id="17_mt0pg"]
@@ -42,6 +46,9 @@
 [ext_resource type="Texture2D" uid="uid://b2vchkssyxokw" path="res://assets/Element_sprites/spr_TURQUOISE.png" id="35_xodc6"]
 [ext_resource type="Texture2D" uid="uid://b8f0ltc1036rj" path="res://assets/Element_sprites/spr_WHITE.png" id="36_0o8ki"]
 [ext_resource type="Texture2D" uid="uid://dn211vsvg6r6" path="res://assets/sr2c65dd1cf1242.png" id="37_8btyt"]
+[ext_resource type="Texture2D" uid="uid://c4a8102hgjm35" path="res://assets/Element_sprites/spr_RUBY.png" id="44_7ilps"]
+[ext_resource type="Texture2D" uid="uid://g4l0628swlsv" path="res://assets/Element_sprites/spr_SAPPHIRE.png" id="47_234ce"]
+[ext_resource type="Texture2D" uid="uid://dgvwf8nmimf1i" path="res://assets/Element_sprites/spr_EMERALD.png" id="48_1fch2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kwtlx"]
 animations = [{
@@ -180,26 +187,40 @@ animation = &"fowards"
 
 [node name="BtnAnterior" type="Button" parent="NodeControle" unique_id=1888344795]
 layout_mode = 0
-offset_left = 17.999996
-offset_top = 536.0
-offset_right = 295.0
-offset_bottom = 686.0
+offset_left = 86.0
+offset_top = 550.0
+offset_right = 318.45844
+offset_bottom = 646.0
 scale = Vector2(0.580749, 0.80325484)
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = ExtResource("11_6bfp2")
+theme_override_styles/pressed = ExtResource("12_b0vb1")
+theme_override_styles/hover = ExtResource("12_fii7l")
+theme_override_styles/disabled = ExtResource("14_uvtn0")
+text = "<"
 
 [node name="BtnProxima" type="Button" parent="NodeControle" unique_id=416470744]
 layout_mode = 0
-offset_left = 957.0
-offset_top = 516.0
-offset_right = 1227.0
-offset_bottom = 650.0
+offset_left = 837.0
+offset_top = 550.0
+offset_right = 1061.6151
+offset_bottom = 657.5992
 scale = Vector2(0.5965761, 0.72491294)
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = ExtResource("11_6bfp2")
+theme_override_styles/pressed = ExtResource("12_b0vb1")
+theme_override_styles/hover = ExtResource("12_fii7l")
+theme_override_styles/disabled = ExtResource("14_uvtn0")
+text = ">"
 
 [node name="Key2Img140x130(2)2" type="Sprite2D" parent="NodeControle" unique_id=1407470538]
+visible = false
 position = Vector2(1048, 561)
 scale = Vector2(0.7324646, 0.7324646)
 texture = ExtResource("15_uddss")
 
 [node name="Key2Img140x130(3)2" type="Sprite2D" parent="NodeControle" unique_id=1492898798]
+visible = false
 position = Vector2(91.99994, 585)
 scale = Vector2(0.7324646, 0.7324646)
 texture = ExtResource("16_l0xhd")
@@ -226,6 +247,7 @@ offset_right = 514.0
 offset_bottom = 541.0
 
 [node name="Pagina0" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=611275447]
+visible = false
 anchors_preset = 0
 offset_right = 722.0
 offset_bottom = 468.0
@@ -325,32 +347,32 @@ scale = Vector2(0.55267864, 0.55267864)
 texture = ExtResource("13_kwtlx")
 
 [node name="Key2Img140x130(2)" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=1141521342]
-position = Vector2(510.27252, 257.61017)
+position = Vector2(522, 255.99997)
 scale = Vector2(0.7324646, 0.7324646)
 texture = ExtResource("15_uddss")
 
 [node name="Key2Img140x130(3)" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=304498472]
-position = Vector2(392.27252, 255.61017)
+position = Vector2(398, 255.99997)
 scale = Vector2(0.7324646, 0.7324646)
 texture = ExtResource("16_l0xhd")
 
 [node name="Key2Img140x130" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=601575818]
-position = Vector2(449.27252, 198.6102)
+position = Vector2(460.27252, 194.99997)
 scale = Vector2(0.7324646, 0.7324646)
 texture = ExtResource("17_mt0pg")
 
 [node name="Key2Img140x130(1)" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=15330849]
-position = Vector2(452.27252, 256.6102)
+position = Vector2(460.27252, 255.6102)
 scale = Vector2(0.7324646, 0.7324646)
 texture = ExtResource("14_67644")
 
 [node name="Key2Img140x130(4)" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=25243357]
-position = Vector2(678.5632, 236.42084)
+position = Vector2(679, 253.99997)
 scale = Vector2(0.7324646, 0.7324646)
 texture = ExtResource("18_l0xhd")
 
 [node name="Key2Img130x130" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=444696495]
-position = Vector2(624.56323, 235.42087)
+position = Vector2(613, 254)
 scale = Vector2(0.8086654, 0.7295517)
 texture = ExtResource("19_l0xhd")
 
@@ -360,38 +382,38 @@ scale = Vector2(0.2998055, 0.2998055)
 texture = ExtResource("20_aju4y")
 
 [node name="Key2Img120x130" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=65848208]
-position = Vector2(570, 379.00003)
+position = Vector2(557.00006, 376.00003)
 scale = Vector2(0.58296716, 0.58296716)
 texture = ExtResource("21_0o8ki")
 
 [node name="Key2Img130x130(1)" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=629842370]
-position = Vector2(610, 380.00003)
+position = Vector2(598.00006, 376.00003)
 scale = Vector2(0.58296716, 0.58296716)
 texture = ExtResource("22_g07n4")
 
 [node name="Key2Img130x130(2)" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=591256236]
-position = Vector2(652, 380.00003)
+position = Vector2(642, 376.00003)
 scale = Vector2(0.58296716, 0.58296716)
 texture = ExtResource("23_6bfp2")
 
 [node name="Key2Img140x130(6)" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=569823825]
-position = Vector2(697.00006, 378.00003)
+position = Vector2(690, 376.00003)
 scale = Vector2(0.58296716, 0.58296716)
 texture = ExtResource("24_fii7l")
 
 [node name="Key2Img220x130" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=219354198]
-position = Vector2(666.00006, 444)
+position = Vector2(659.00006, 432.00003)
 scale = Vector2(0.58296716, 0.58296716)
 texture = ExtResource("25_b0vb1")
 
 [node name="IconAlbedo" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=1940334718]
-position = Vector2(563.789, 429.13275)
+position = Vector2(516, 430)
 scale = Vector2(3.1718664, 3.1718664)
 texture = ExtResource("21_aju4y")
 
 [node name="IconCitrinitas" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina0" unique_id=1151211714]
-position = Vector2(601.57806, 430.26544)
-scale = Vector2(3.1718664, 3.1718664)
+position = Vector2(576.38916, 430.06638)
+scale = Vector2(2.8490913, 2.8490913)
 texture = ExtResource("22_m3mml")
 
 [node name="Pagina1" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=78455367]
@@ -467,37 +489,36 @@ base
 horizontal_alignment = 1
 
 [node name="SprRed" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=1048533509]
-position = Vector2(471.88208, 432.88208)
+position = Vector2(477.88208, 427.88208)
 scale = Vector2(4.4852605, 4.4852605)
 texture = ExtResource("23_k2mmf")
 
 [node name="SprGreen" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=518182182]
-position = Vector2(539.88214, 434.88208)
+position = Vector2(549.8821, 427.88208)
 scale = Vector2(4.4852605, 4.4852605)
 texture = ExtResource("24_tm4qv")
 
 [node name="SprBlue" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=10083943]
-position = Vector2(607.8821, 435.88208)
+position = Vector2(621.8821, 427.88208)
 scale = Vector2(4.4852552, 4.4852552)
 texture = ExtResource("25_hwx3j")
 
 [node name="SprCyan" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=101887044]
-position = Vector2(95.88208, 431.88208)
+position = Vector2(90, 432)
 scale = Vector2(4.4852605, 4.4852605)
 texture = ExtResource("26_g8ro4")
 
 [node name="SprMagenta" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=851935352]
-position = Vector2(162.88208, 431.88208)
+position = Vector2(162, 432)
 scale = Vector2(4.4852605, 4.4852605)
 texture = ExtResource("27_oaexn")
 
 [node name="SprYellow" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina1" unique_id=1396433835]
-position = Vector2(228.88211, 431.88208)
+position = Vector2(234, 432)
 scale = Vector2(4.4852605, 4.4852605)
 texture = ExtResource("28_jftne")
 
 [node name="Pagina2" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=105073553]
-visible = false
 anchors_preset = 0
 offset_right = 722.0
 offset_bottom = 468.0
@@ -559,7 +580,7 @@ texture = ExtResource("34_r826w")
 [node name="SprRed" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina2" unique_id=1878234916]
 position = Vector2(428, 319)
 scale = Vector2(5.9611583, 5.9611583)
-texture = ExtResource("23_k2mmf")
+texture = ExtResource("44_7ilps")
 
 [node name="SprTurquoise" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina2" unique_id=688931612]
 position = Vector2(503.00006, 384)
@@ -572,56 +593,65 @@ scale = Vector2(5.9611583, 5.9611583)
 texture = ExtResource("36_0o8ki")
 
 [node name="SprBlue" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina2" unique_id=1690899235]
-position = Vector2(462, 140.00003)
+position = Vector2(417.32648, 230.3265)
 scale = Vector2(5.7908115, 5.7908115)
-texture = ExtResource("25_hwx3j")
+texture = ExtResource("47_234ce")
 
 [node name="SprGreen" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina2" unique_id=1246432592]
-position = Vector2(409, 228)
+position = Vector2(458.32648, 138.32648)
 scale = Vector2(5.7908115, 5.7908115)
-texture = ExtResource("24_tm4qv")
+texture = ExtResource("48_1fch2")
 
 [node name="IconCitrinitas" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina2" unique_id=21401285]
-position = Vector2(432, 202)
+visible = false
+position = Vector2(481.32648, 112.32648)
 scale = Vector2(1.3621609, 1.3621609)
 texture = ExtResource("22_m3mml")
 
 [node name="IconCitrinitas2" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina2" unique_id=119676993]
+visible = false
 position = Vector2(449, 297)
 scale = Vector2(1.362161, 1.362161)
 texture = ExtResource("22_m3mml")
 
 [node name="IconCitrinitas3" type="Sprite2D" parent="NodeControle/PaginasTutoriais/Pagina2" unique_id=1165574258]
-position = Vector2(479, 116)
+visible = false
+position = Vector2(434.32648, 206.32648)
 scale = Vector2(1.362161, 1.362161)
 texture = ExtResource("22_m3mml")
 
 [node name="Pagina3" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=1415368739]
+visible = false
 anchors_preset = 0
 offset_right = 722.0
 offset_bottom = 468.0
 
 [node name="Pagina4" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=1396014676]
+visible = false
 anchors_preset = 0
 offset_right = 722.0
 offset_bottom = 468.0
 
 [node name="Pagina5" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=45405391]
+visible = false
 anchors_preset = 0
 offset_right = 722.0
 offset_bottom = 468.0
 
 [node name="Pagina6" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=1895042057]
+visible = false
 anchors_preset = 0
 offset_right = 722.0
 offset_bottom = 468.0
 
 [node name="Pagina7" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=229939298]
+visible = false
 anchors_preset = 0
 offset_right = 722.0
 offset_bottom = 468.0
 
 [node name="Pagina8" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=1845130631]
+visible = false
 anchors_preset = 0
 offset_right = 722.0
 offset_bottom = 468.0
@@ -645,10 +675,10 @@ texture = ExtResource("37_8btyt")
 
 [node name="Label6" type="Label" parent="NodeControle" unique_id=2016876411]
 layout_mode = 0
-offset_left = 852.0
-offset_top = 611.0
-offset_right = 1193.0
-offset_bottom = 800.0
+offset_left = 419.0
+offset_top = 590.0
+offset_right = 760.0
+offset_bottom = 779.0
 scale = Vector2(0.75454676, 0.75454676)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("11_6w6ns")

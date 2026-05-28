@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dweef7bq1l6rt" path="res://WWpasta/WWPlayer/inventário/ItemData.gd" id="1_7seiy"]
 [ext_resource type="PackedScene" uid="uid://do16jvgxnm7w4" path="res://itens/elementos/emeralds.tscn" id="1_fbud3"]
-[ext_resource type="Texture2D" uid="uid://cvwd3d0kctgbs" path="res://assets/Element_sprites/spr_GREEN.png" id="2_fbud3"]
+[ext_resource type="Texture2D" uid="uid://dgvwf8nmimf1i" path="res://assets/Element_sprites/spr_EMERALD.png" id="2_fbud3"]
 
 [resource]
 script = ExtResource("1_7seiy")
