@@ -20,6 +20,10 @@ var pedras_do_rubedo: Array[String] = [
 	"turquoise", "ruby", "sapphire", "emerald", "white"
 ]
 
+# --- NOVAS VARIÁVEIS DE MOVIMENTO ---
+var alvo_movimento: Vector2 = Vector2.ZERO
+var movendo_automaticamente: bool = false
+
 func _ready() -> void:
 	InventarioGlobal.carregar_itens_iniciais(itens_iniciais)
 	InventarioGlobal.player_limpe_as_maos.connect(_on_limpar_as_maos_signal)
@@ -27,7 +31,18 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	var direction := Vector2.ZERO
-	if is_active:
+	
+	# Lógica de movimento automático ou manual
+	if movendo_automaticamente:
+		direction = global_position.direction_to(alvo_movimento)
+		
+		# Margem de segurança de 10 pixels para parar e não ficar tremendo
+		if global_position.distance_to(alvo_movimento) < 10.0:
+			movendo_automaticamente = false
+			direction = Vector2.ZERO
+			set_active(true) # Devolve o controle ao jogador após chegar
+			
+	elif is_active:
 		direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 		
 	if direction:
@@ -36,7 +51,14 @@ func _physics_process(_delta: float) -> void:
 		inventario_bloqueado = false
 	else:
 		velocity = Vector2.ZERO
+		
 	move_and_slide()
+
+# --- NOVA FUNÇÃO PARA CHAMAR DE OUTROS SCRIPTS ---
+func mover_para_coordenada(alvo: Vector2) -> void:
+	alvo_movimento = alvo
+	movendo_automaticamente = true
+	set_active(false) # Tira o controle manual do jogador temporariamente
 
 func set_active(state: bool) -> void:
 	is_active = state
@@ -189,3 +211,8 @@ func cheat() -> void:
 
 func _on_limpar_as_maos_signal():
 	limpar_as_maos()
+
+
+func _on_rubedo_mover_jogador(x) -> void:
+	mover_para_coordenada(x)
+	pass # Replace with function body.

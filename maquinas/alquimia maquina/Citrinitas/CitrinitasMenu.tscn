@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://cg80ccybum57f" path="res://WWpasta/WWPlayer/inventário/inventory_panel.gd" id="2_8eppo"]
 [ext_resource type="Script" uid="uid://cdvep004hkr6h" path="res://WWpasta/WWPlayer/inventário/item_slot.gd" id="3_i1k8j"]
 [ext_resource type="Texture2D" uid="uid://d0w54d7rmmc2j" path="res://maquinas/alquimia maquina/nigredo/RealAlchemiter.png" id="4_fedaq"]
+[ext_resource type="Texture2D" uid="uid://b2rqyai4anqm0" path="res://assets/alchemyTables.png" id="6_i1k8j"]
 
 [node name="CitrinitasMenu" type="CanvasLayer" unique_id=1838215778]
 script = ExtResource("1_8eppo")
@@ -141,5 +142,13 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="RealAlchemiter" type="Sprite2D" parent="NoDeControle" unique_id=742362390]
+visible = false
 position = Vector2(522, 303)
 texture = ExtResource("4_fedaq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="NoDeControle" unique_id=221298858]
+position = Vector2(570, 317)
+scale = Vector2(22.4375, 22.4375)
+texture = ExtResource("6_i1k8j")
+hframes = 2
+frame = 1

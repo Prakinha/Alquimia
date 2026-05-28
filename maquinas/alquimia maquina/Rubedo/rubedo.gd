@@ -7,6 +7,8 @@ var visuais: Array[Node2D] = []
 var centro_flutuante: Node2D
 var tempo_flutuacao: float = 0.0
 
+signal mover_jogador(x)
+
 var ordem_requerida: Array[String] = [
 	"orange", "olive", "pink", "purple", "cobalt", 
 	"turquoise", "ruby", "sapphire", "emerald", "white"
@@ -122,8 +124,9 @@ func _criar_item_por_nome(nome_do_item: String) -> ItemData:
 	return null
 
 func _animacao_cinematica() -> void:
-	set_process_unhandled_key_input(false)
 	
+	set_process_unhandled_key_input(false)
+	mover_jogador.emit(position)
 	var tween = create_tween()
 	tween.set_parallel(true)
 	
@@ -131,8 +134,11 @@ func _animacao_cinematica() -> void:
 	if jogador_atual and jogador_atual.has_node("Camera2D"):
 		camera_jogador = jogador_atual.get_node("Camera2D")
 		var zoom_alvo = camera_jogador.zoom * 2.5 
+		
 		tween.tween_property(camera_jogador, "zoom", zoom_alvo, 6.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
-	
+		tween.tween_property($RubedoMenu.get_node("NoDeControle").get_node("TextureRect"), "modulate", Color(6.0, 6.0, 6.0, 0.0), 5.5)
+		tween.tween_property($RubedoMenu.get_node("NoDeControle").get_node("circulo"), "modulate", Color(6.0, 6.0, 6.0, 0.0), 5.5)
+
 	if is_instance_valid(centro_flutuante):
 		tween.tween_property(centro_flutuante, "modulate", Color(6.0, 6.0, 6.0, 1.0), 4.5).set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_IN).set_delay(2.0)
 	

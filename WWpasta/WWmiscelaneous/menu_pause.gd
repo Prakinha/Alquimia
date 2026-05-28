@@ -28,7 +28,8 @@ var icones_das_receitas: Dictionary = {
 	"emerald": preload("res://itens/elementosITEMDATA/emeraldITEMDATA.tres"),
 	"amarelo": preload("res://itens/elementosITEMDATA/amareloITEMDATA.tres"),
 	"magenta": preload("res://itens/elementosITEMDATA/magentaITEMDATA.tres"),
-	"ciano": preload("res://itens/elementosITEMDATA/CianoITEMDATA.tres")
+	"ciano": preload("res://itens/elementosITEMDATA/CianoITEMDATA.tres"),
+	"Espada": preload("res://itens/elementosITEMDATA/EspadaITEMDATA.tres")
 }
 
 var pagina_atual: int = 0
@@ -146,9 +147,19 @@ func atualizar_tela_de_receitas():
 			break 
 			
 		var chave = lista_de_chaves[i] 
-		var resultado = Receitas.receita[chave] 
+		var dados_da_receita = Receitas.receita[chave]
 		
-		criar_linha_visual_da_receita(chave, resultado)
+		var resultado_final = dados_da_receita["resultado"]
+		var ingredientes_str = chave
+		
+		if not dados_da_receita["feita"]:
+			var quantidade_ingredientes = chave.split(",").size()
+			var array_espadas = []
+			for j in range(quantidade_ingredientes):
+				array_espadas.append("Espada")
+			ingredientes_str = ",".join(array_espadas)
+		
+		criar_linha_visual_da_receita(ingredientes_str, resultado_final)
 
 func criar_linha_visual_da_receita(ingredientes_str: String, resultado_str: String):
 	var linha = HBoxContainer.new()
