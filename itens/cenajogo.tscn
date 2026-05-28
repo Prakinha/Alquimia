@@ -16,7 +16,6 @@
 [ext_resource type="AudioStream" uid="uid://c5fm6s7kxgqhg" path="res://assets/Music/fase.mp3" id="14_mxryl"]
 
 [node name="WwMain" type="Node2D" unique_id=1219875113]
-position = Vector2(0, 1)
 
 [node name="mapa" parent="." unique_id=1199859687 instance=ExtResource("3_s0tju")]
 position = Vector2(-1904, -800)

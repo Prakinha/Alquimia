@@ -1,12 +1,11 @@
 [gd_scene format=3 uid="uid://do16jvgxnm7w4"]
 
 [ext_resource type="PackedScene" uid="uid://dgcarvigog85b" path="res://itens/elementos/amarelo.tscn" id="1_12n5y"]
-[ext_resource type="Texture2D" uid="uid://cvwd3d0kctgbs" path="res://assets/Element_sprites/spr_GREEN.png" id="2_23u6a"]
+[ext_resource type="Texture2D" uid="uid://dgvwf8nmimf1i" path="res://assets/Element_sprites/spr_EMERALD.png" id="2_23u6a"]
 
 [node name="emeralds" unique_id=1751028922 instance=ExtResource("1_12n5y")]
 item_id = "emerald"
 item_name = "emerald"
 
 [node name="Sprite2D" parent="Area2D" parent_id_path=PackedInt32Array(1651896402) index="1" unique_id=1298149292]
-scale = Vector2(4, 4)
 texture = ExtResource("2_23u6a")

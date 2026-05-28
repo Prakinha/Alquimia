@@ -30,4 +30,4 @@ func sincronizar_com_global() -> void:
 func moverMaoParaOSlot(slot_index: int) -> void:
 	var MaoTween: Tween = create_tween()
 	MaoTween.set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_EXPO)
-	MaoTween.tween_property(HandTexture,"global_position",slots[slot_index].global_position + Vector2(25,100),0.5)
+	MaoTween.tween_property(HandTexture,"global_position",slots[slot_index].global_position + Vector2(25,78),0.5)

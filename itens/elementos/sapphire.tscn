@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bjv3mfkelmxq1"]
 
 [ext_resource type="PackedScene" uid="uid://dgcarvigog85b" path="res://itens/elementos/amarelo.tscn" id="1_jdjuu"]
-[ext_resource type="Texture2D" uid="uid://d1pep01ndm8o7" path="res://assets/Element_sprites/spr_BLUE.png" id="2_s21ru"]
+[ext_resource type="Texture2D" uid="uid://g4l0628swlsv" path="res://assets/Element_sprites/spr_SAPPHIRE.png" id="2_s21ru"]
 
 [node name="sapphire" unique_id=1751028922 instance=ExtResource("1_jdjuu")]
 item_id = "sapphire"

@@ -3,14 +3,13 @@
 [ext_resource type="Script" uid="uid://cdvep004hkr6h" path="res://WWpasta/WWPlayer/inventário/item_slot.gd" id="1_3yovt"]
 [ext_resource type="Script" uid="uid://cg80ccybum57f" path="res://WWpasta/WWPlayer/inventário/inventory_panel.gd" id="1_4l7ki"]
 [ext_resource type="Script" uid="uid://q1wv82d7viog" path="res://WWpasta/WWPlayer/inventário/inventário.gd" id="1_ywqdb"]
-[ext_resource type="PackedScene" uid="uid://cmcxlcvf7ovuq" path="res://WWpasta/WWPlayer/inventário/item_drop.tscn" id="2_ywqdb"]
-[ext_resource type="Texture2D" uid="uid://sunopfec3u4o" path="res://maquinas/assets/Hand-PNG-Images-HD.png" id="5_55m8w"]
+[ext_resource type="Texture2D" uid="uid://baeyuxjd2otn" path="res://assets/spr_INVENTORY.png" id="3_55m8w"]
+[ext_resource type="Texture2D" uid="uid://buvtkaehs48fw" path="res://assets/spr_HERMESHAND.png" id="4_ugdp5"]
 
 [node name="Inventário" type="CanvasLayer" unique_id=1854727514]
 scale = Vector2(0.5, 0.5)
 transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
 script = ExtResource("1_ywqdb")
-item_drop = ExtResource("2_ywqdb")
 
 [node name="Panel" type="Panel" parent="." unique_id=1076904265]
 anchors_preset = 7
@@ -25,6 +24,14 @@ offset_bottom = 627.0
 grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("1_4l7ki")
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=292217351]
+visible = false
+layout_mode = 0
+offset_left = -1.0
+offset_right = 526.0
+offset_bottom = 128.0
+texture = ExtResource("3_55m8w")
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=160038929]
 layout_mode = 1
@@ -116,10 +123,13 @@ grow_vertical = 2
 [node name="HandTexture" type="TextureRect" parent="Panel" unique_id=1934757727]
 unique_name_in_owner = true
 layout_mode = 0
-offset_top = 87.99999
-offset_right = 1891.0
-offset_bottom = 796.0
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("5_55m8w")
+offset_left = 28.0
+offset_top = 78.0
+offset_right = 44.0
+offset_bottom = 94.0
+scale = Vector2(5, 5)
+texture = ExtResource("4_ugdp5")
+stretch_mode = 4
+flip_h = true
 
 [connection signal="inventario_alterado" from="Panel" to="." method="_on_panel_inventario_alterado"]
