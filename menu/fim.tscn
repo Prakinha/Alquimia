@@ -80,4 +80,14 @@ one_shot = true
 autostart = true
 script = ExtResource("7_4q03n")
 
+[node name="Label4" type="Label" parent="." unique_id=919117321]
+modulate = Color(1, 1, 1, 0)
+offset_left = 32.0
+offset_top = 560.0
+offset_right = 288.0
+offset_bottom = 583.0
+theme_override_fonts/font = ExtResource("2_vj3vd")
+theme_override_font_sizes/font_size = 24
+text = "Texto teste"
+
 [connection signal="timeout" from="Timer" to="AudioStreamPlayer" method="_on_timer_timeout"]

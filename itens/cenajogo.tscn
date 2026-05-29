@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://dx1chr2ln8kav" path="res://maquinas/alquimia maquina/nigredo/Nigredo.tscn" id="12_voavh"]
 [ext_resource type="PackedScene" uid="uid://csnkbvkb8furw" path="res://maquinas/alquimia maquina/Citrinitas/Citrinitas.tscn" id="13_udl5n"]
 [ext_resource type="AudioStream" uid="uid://c5fm6s7kxgqhg" path="res://assets/Music/fase.mp3" id="14_mxryl"]
+[ext_resource type="PackedScene" uid="uid://brfw7reptwdfn" path="res://Temporizador.tscn" id="17_oiqfl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ng8qr"]
 texture = ExtResource("8_thmlx")
@@ -227,5 +228,8 @@ occluder = SubResource("OccluderPolygon2D_i6d6k")
 color = Color(0.10374681, 6.930828e-06, 0.46622455, 1)
 energy = 0.4
 blend_mode = 2
+
+[node name="Control" parent="." unique_id=1308278743 instance=ExtResource("17_oiqfl")]
+visible = false
 
 [connection signal="mover_jogador" from="Rubedo" to="Player" method="_on_rubedo_mover_jogador"]
