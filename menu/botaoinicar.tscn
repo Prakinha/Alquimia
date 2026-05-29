@@ -8,6 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://b2yf3rwep7dfm" path="res://assets/Titulo no pot alternativo so texto.png" id="6_2k0dc"]
 [ext_resource type="Texture2D" uid="uid://yfbq2vum05vg" path="res://assets/Titulo no pot alternativo so aderecos.png" id="7_q1368"]
 
+[sub_resource type="Gradient" id="Gradient_mvfea"]
+colors = PackedColorArray(0.17942658, 0.6699986, 0.9219856, 0.34509805, 0.21, 0.21, 0.21, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2e54u"]
+gradient = SubResource("Gradient_mvfea")
+use_hdr = true
+
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1074062151]
 
 [node name="Control" type="Control" parent="." unique_id=47522525]
@@ -15,6 +22,17 @@ layout_mode = 3
 anchors_preset = 0
 tooltip_text = "BOTAO"
 script = ExtResource("1_2e54u")
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=353346105]
+modulate = Color(0.78235406, 0.78235406, 0.78235406, 0.47058824)
+self_modulate = Color(1, 1, 1, 0.5882353)
+layout_mode = 0
+offset_left = -6.0
+offset_top = 648.0
+offset_right = 642.0
+offset_bottom = 1800.0
+rotation = -1.5707964
+texture = SubResource("GradientTexture2D_2e54u")
 
 [node name="Button" type="Button" parent="Control" unique_id=1589366746]
 layout_mode = 1

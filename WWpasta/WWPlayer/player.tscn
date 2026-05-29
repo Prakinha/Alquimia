@@ -10,8 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://627unygghq7i" path="res://menu/PauseMenu.tscn" id="8_6d4ki"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3pqv"]
-radius = 24.0
-height = 104.0
+radius = 28.0
+height = 78.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g1dw6"]
 radius = 106.004715
@@ -463,7 +463,7 @@ itens_iniciais = Array[ExtResource("2_yaav1")]([ExtResource("3_yaav1"), ExtResou
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1594310992]
 light_mask = 3
 visibility_layer = 3
-position = Vector2(0, 16)
+position = Vector2(-1, 26)
 shape = SubResource("CapsuleShape2D_i3pqv")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2128878290]

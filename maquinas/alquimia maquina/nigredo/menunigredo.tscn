@@ -7,6 +7,14 @@
 [ext_resource type="Script" uid="uid://cdvep004hkr6h" path="res://WWpasta/WWPlayer/inventário/item_slot.gd" id="3_r6qqv"]
 [ext_resource type="Texture2D" uid="uid://b2rqyai4anqm0" path="res://assets/alchemyTables.png" id="6_mvfea"]
 
+[sub_resource type="Gradient" id="Gradient_mvfea"]
+offsets = PackedFloat32Array(0.0038610038, 0.7992278, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.14406255, 0.14406255, 0.14406249, 1, 0.21, 0.21, 0.21, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_lcd4n"]
+gradient = SubResource("Gradient_mvfea")
+use_hdr = true
+
 [node name="MenuNigredo" type="CanvasLayer" unique_id=559825891]
 script = ExtResource("1_wqgup")
 metadata/_edit_horizontal_guides_ = [955.0]
@@ -21,7 +29,19 @@ offset_top = 643.0
 offset_right = 1158.0
 offset_bottom = 1343.0
 
-[node name="TextureRect" type="TextureRect" parent="NoDeControle" unique_id=768537607]
+[node name="TextureRect" type="TextureRect" parent="NoDeControle" unique_id=1364855933]
+modulate = Color(0.78235406, 0.78235406, 0.78235406, 0.47058824)
+self_modulate = Color(1, 1, 1, 0.5882353)
+layout_mode = 0
+offset_left = -6.0
+offset_top = 648.0
+offset_right = 642.0
+offset_bottom = 1800.0
+rotation = -1.5707964
+texture = SubResource("GradientTexture2D_lcd4n")
+
+[node name="TextureRect2" type="TextureRect" parent="NoDeControle" unique_id=768537607]
+visible = false
 modulate = Color(1, 1, 1, 0.30980393)
 self_modulate = Color(1, 1, 1, 0.5882353)
 layout_mode = 0

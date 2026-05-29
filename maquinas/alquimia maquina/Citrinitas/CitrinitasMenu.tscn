@@ -7,6 +7,14 @@
 [ext_resource type="Texture2D" uid="uid://d0w54d7rmmc2j" path="res://maquinas/alquimia maquina/nigredo/RealAlchemiter.png" id="4_fedaq"]
 [ext_resource type="Texture2D" uid="uid://b2rqyai4anqm0" path="res://assets/alchemyTables.png" id="6_i1k8j"]
 
+[sub_resource type="Gradient" id="Gradient_i1k8j"]
+offsets = PackedFloat32Array(0.0038610038, 0.7992278, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.14406255, 0.14406255, 0.14406249, 1, 0.21, 0.21, 0.21, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fedaq"]
+gradient = SubResource("Gradient_i1k8j")
+use_hdr = true
+
 [node name="CitrinitasMenu" type="CanvasLayer" unique_id=1838215778]
 script = ExtResource("1_8eppo")
 
@@ -20,7 +28,19 @@ offset_right = 1158.0
 offset_bottom = 1343.0
 metadata/_edit_use_anchors_ = true
 
-[node name="TextureRect" type="TextureRect" parent="NoDeControle" unique_id=1535100799]
+[node name="TextureRect" type="TextureRect" parent="NoDeControle" unique_id=1949281803]
+modulate = Color(0.78235406, 0.78235406, 0.78235406, 0.47058824)
+self_modulate = Color(1, 1, 1, 0.5882353)
+layout_mode = 0
+offset_left = -6.0
+offset_top = 648.0
+offset_right = 642.0
+offset_bottom = 1800.0
+rotation = -1.5707964
+texture = SubResource("GradientTexture2D_fedaq")
+
+[node name="TextureRect2" type="TextureRect" parent="NoDeControle" unique_id=1535100799]
+visible = false
 modulate = Color(1, 1, 1, 0.30980393)
 self_modulate = Color(1, 1, 1, 0.5882353)
 layout_mode = 0

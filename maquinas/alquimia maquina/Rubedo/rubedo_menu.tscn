@@ -6,6 +6,15 @@
 [ext_resource type="Script" uid="uid://cdvep004hkr6h" path="res://WWpasta/WWPlayer/inventário/item_slot.gd" id="4_7kmde"]
 [ext_resource type="Texture2D" uid="uid://by3bw3o5n3mdp" path="res://maquinas/assets/ive-always-loved-making-magic-circles-but-im-kind-of-v0-pftb1krxptu91.png" id="5_dy8kp"]
 [ext_resource type="Script" uid="uid://cw4ltsfi4gm2u" path="res://maquinas/alquimia maquina/Rubedo/ive_always_loved_making_magic_circles_but_im_kind_of_v_0_pftb_1_krxptu_91.gd" id="6_7htib"]
+[ext_resource type="Texture2D" uid="uid://kieb2hu4d8w2" path="res://assets/alchemyCircle.png" id="7_7kmde"]
+
+[sub_resource type="Gradient" id="Gradient_7kmde"]
+offsets = PackedFloat32Array(0.0038610038, 0.7992278, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.14406255, 0.14406255, 0.14406249, 1, 0.21, 0.21, 0.21, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_w4l8w"]
+gradient = SubResource("Gradient_7kmde")
+use_hdr = true
 
 [node name="RubedoMenu" type="CanvasLayer" unique_id=650143949]
 script = ExtResource("1_tyhsq")
@@ -19,13 +28,25 @@ offset_top = 643.0
 offset_right = 1158.0
 offset_bottom = 1343.0
 
-[node name="TextureRect" type="TextureRect" parent="NoDeControle" unique_id=2005168947]
+[node name="TextureRect2" type="TextureRect" parent="NoDeControle" unique_id=2005168947]
+visible = false
 modulate = Color(0.78235406, 0.78235406, 0.78235406, 0.47058824)
 self_modulate = Color(1, 1, 1, 0.5882353)
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("2_dy8kp")
+
+[node name="TextureRect" type="TextureRect" parent="NoDeControle" unique_id=1836778034]
+modulate = Color(0.78235406, 0.78235406, 0.78235406, 0.47058824)
+self_modulate = Color(1, 1, 1, 0.5882353)
+layout_mode = 0
+offset_left = -6.0
+offset_top = 648.0
+offset_right = 642.0
+offset_bottom = 1800.0
+rotation = -1.5707964
+texture = SubResource("GradientTexture2D_w4l8w")
 
 [node name="Label" type="Label" parent="NoDeControle" unique_id=18382241]
 visible = false
@@ -142,7 +163,13 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="circulo" type="Sprite2D" parent="NoDeControle" unique_id=1382983910]
+visible = false
 position = Vector2(549, 339)
 scale = Vector2(0.53515625, 0.53515625)
 texture = ExtResource("5_dy8kp")
 script = ExtResource("6_7htib")
+
+[node name="circulo2" type="Sprite2D" parent="NoDeControle" unique_id=230162943]
+position = Vector2(552, 256)
+scale = Vector2(11.1147, 11.114701)
+texture = ExtResource("7_7kmde")

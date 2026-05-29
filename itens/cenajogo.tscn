@@ -111,33 +111,14 @@ sources/0 = SubResource("TileSetAtlasSource_ng8qr")
 sources/1 = SubResource("TileSetAtlasSource_i6d6k")
 
 [sub_resource type="Gradient" id="Gradient_oiqfl"]
-offsets = PackedFloat32Array(0, 0.34749034, 0.52895755)
-colors = PackedColorArray(1, 1, 1, 1, 0.24087596, 0.24087596, 0.24087596, 1, 0, 0, 0, 1)
+offsets = PackedFloat32Array(0, 0.23938224, 0.6718147)
+colors = PackedColorArray(1, 1, 1, 1, 0.34306574, 0.34306574, 0.34306574, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_oiqfl"]
 gradient = SubResource("Gradient_oiqfl")
 fill = 1
 fill_from = Vector2(0.47008547, 0.48290598)
 fill_to = Vector2(1, 1)
-
-[sub_resource type="Gradient" id="Gradient_i6d6k"]
-offsets = PackedFloat32Array(0, 0.48034933, 1)
-colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_pmk35"]
-gradient = SubResource("Gradient_i6d6k")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_gt5u7"]
-lifetime_randomness = 1.0
-particle_flag_disable_z = true
-emission_shape = 3
-emission_box_extents = Vector3(1500, 1500, 1)
-angle_min = 45.00001
-angle_max = 45.00001
-gravity = Vector3(0, 0, 0)
-scale_min = 0.0
-scale_max = 44.01
-color_ramp = SubResource("GradientTexture1D_pmk35")
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_i6d6k"]
 resource_local_to_scene = true
@@ -195,7 +176,7 @@ position = Vector2(978, 573)
 position = Vector2(638.1094, 508.18066)
 scale = Vector2(53.102573, 53.102573)
 color = Color(0.93, 0.69563997, 0.26039997, 1)
-energy = 1.32
+energy = 0.85
 texture = SubResource("GradientTexture2D_oiqfl")
 offset = Vector2(6.305, 1.125)
 texture_scale = 0.11
@@ -205,7 +186,7 @@ height = 222.0
 position = Vector2(-107.00006, 649.99994)
 scale = Vector2(53.102573, 53.102573)
 color = Color(0.93, 0.69563997, 0.26039997, 1)
-energy = 1.32
+energy = 0.85
 texture = SubResource("GradientTexture2D_oiqfl")
 offset = Vector2(6.305, 1.125)
 texture_scale = 0.11
@@ -215,7 +196,7 @@ height = 222.0
 position = Vector2(746, 852.99994)
 scale = Vector2(53.102573, 53.102573)
 color = Color(0.93, 0.80956495, 0.5859, 1)
-energy = 1.11
+energy = 0.85
 texture = SubResource("GradientTexture2D_oiqfl")
 texture_scale = 0.21
 height = 222.0
@@ -229,7 +210,7 @@ cena_item_drop = ExtResource("3_fxf81")
 position = Vector2(1.5258789e-05, 8.34465e-06)
 scale = Vector2(7.2871513, 7.2871513)
 color = Color(0.86116797, 0.80208963, 0.5765488, 1)
-energy = 0.69
+energy = 0.73
 texture = SubResource("GradientTexture2D_oiqfl")
 offset = Vector2(6.305, 1.125)
 texture_scale = 1.95
@@ -240,23 +221,13 @@ stream = ExtResource("14_mxryl")
 autoplay = true
 parameters/looping = true
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1667181949]
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=2048425272]
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="ParallaxBackground/ParallaxLayer" unique_id=169966939]
-position = Vector2(728, 1059)
-amount = 551
-lifetime = 4.0
-process_material = SubResource("ParticleProcessMaterial_gt5u7")
-
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1616341068]
 visible = false
 position = Vector2(935, 719)
 occluder = SubResource("OccluderPolygon2D_i6d6k")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=38278777]
-color = Color(0.07193031, 0.046721023, 0.4116557, 0.8745098)
+color = Color(0.074336424, 0.049049884, 0.42834857, 0.627451)
 energy = 0.9
 blend_mode = 2
 

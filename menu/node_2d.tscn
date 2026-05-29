@@ -10,6 +10,7 @@
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1413691916]
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=546924743]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 296.0
@@ -19,6 +20,7 @@ offset_bottom = 205.0
 tooltip_text = "BOTAO"
 
 [node name="Button" type="Button" parent="CanvasLayer/Control" unique_id=2066863200]
+visible = false
 layout_mode = 0
 offset_left = 110.0
 offset_top = 326.0

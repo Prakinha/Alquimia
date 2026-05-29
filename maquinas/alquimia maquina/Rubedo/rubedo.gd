@@ -138,7 +138,7 @@ func _animacao_cinematica() -> void:
 		
 		tween.tween_property(camera_jogador, "zoom", zoom_alvo, 6.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 		tween.tween_property($RubedoMenu.get_node("NoDeControle").get_node("TextureRect"), "modulate", Color(6.0, 6.0, 6.0, 0.0), 5.5)
-		tween.tween_property($RubedoMenu.get_node("NoDeControle").get_node("circulo"), "modulate", Color(6.0, 6.0, 6.0, 0.0), 5.5)
+		tween.tween_property($RubedoMenu.get_node("NoDeControle").get_node("circulo2"), "modulate", Color(6.0, 6.0, 6.0, 0.0), 5.5)
 
 	if is_instance_valid(centro_flutuante):
 		tween.tween_property(centro_flutuante, "modulate", Color(6.0, 6.0, 6.0, 1.0), 4.5).set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_IN).set_delay(2.0)
