@@ -109,6 +109,16 @@ texture = ExtResource("9_oiqfl")
 sources/0 = SubResource("TileSetAtlasSource_ng8qr")
 sources/1 = SubResource("TileSetAtlasSource_i6d6k")
 
+[sub_resource type="Gradient" id="Gradient_thmlx"]
+offsets = PackedFloat32Array(0, 0.6293436)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_oiqfl"]
+gradient = SubResource("Gradient_thmlx")
+fill = 1
+fill_from = Vector2(0.47008547, 0.48290598)
+fill_to = Vector2(1, 1)
+
 [sub_resource type="Gradient" id="Gradient_i6d6k"]
 offsets = PackedFloat32Array(0, 0.48034933, 1)
 colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
@@ -131,12 +141,7 @@ color_ramp = SubResource("GradientTexture1D_pmk35")
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_i6d6k"]
 resource_local_to_scene = true
 cull_mode = 1
-polygon = PackedVector2Array(-425, -286, -656, 2148, 2439, 2133, 1806, -170)
-
-[sub_resource type="Gradient" id="Gradient_gt5u7"]
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_8t7jr"]
-gradient = SubResource("Gradient_gt5u7")
+polygon = PackedVector2Array(-9, -173, -4, -113, 94, -109, 93, -171)
 
 [node name="WwMain" type="Node2D" unique_id=1219875113]
 
@@ -190,6 +195,16 @@ position = Vector2(775, 417)
 itens_iniciais = Array[ExtResource("3_kbahf")]([])
 cena_item_drop = ExtResource("3_fxf81")
 
+[node name="PointLight2D" type="PointLight2D" parent="Player" unique_id=1290683004]
+position = Vector2(1.5258789e-05, 8.34465e-06)
+scale = Vector2(7.2871513, 7.2871513)
+color = Color(0.86116797, 0.80208963, 0.5765488, 1)
+energy = 0.69
+texture = SubResource("GradientTexture2D_oiqfl")
+offset = Vector2(6.305, 1.125)
+texture_scale = 1.95
+height = 222.0
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1407350426]
 stream = ExtResource("14_mxryl")
 parameters/looping = true
@@ -205,15 +220,12 @@ lifetime = 4.0
 process_material = SubResource("ParticleProcessMaterial_gt5u7")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1616341068]
+position = Vector2(935, 719)
 occluder = SubResource("OccluderPolygon2D_i6d6k")
 
-[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1290683004]
-visible = false
-position = Vector2(1240, 589)
-energy = 4.03
-texture = SubResource("GradientTexture1D_8t7jr")
-offset = Vector2(6.08, 1.125)
-texture_scale = 1.95
-height = 222.0
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=38278777]
+color = Color(0.10374681, 6.930828e-06, 0.46622455, 1)
+energy = 0.4
+blend_mode = 2
 
 [connection signal="mover_jogador" from="Rubedo" to="Player" method="_on_rubedo_mover_jogador"]
