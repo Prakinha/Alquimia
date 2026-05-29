@@ -110,12 +110,12 @@ texture = ExtResource("9_oiqfl")
 sources/0 = SubResource("TileSetAtlasSource_ng8qr")
 sources/1 = SubResource("TileSetAtlasSource_i6d6k")
 
-[sub_resource type="Gradient" id="Gradient_thmlx"]
-offsets = PackedFloat32Array(0, 0.6293436)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+[sub_resource type="Gradient" id="Gradient_oiqfl"]
+offsets = PackedFloat32Array(0, 0.34749034, 0.52895755)
+colors = PackedColorArray(1, 1, 1, 1, 0.24087596, 0.24087596, 0.24087596, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_oiqfl"]
-gradient = SubResource("Gradient_thmlx")
+gradient = SubResource("Gradient_oiqfl")
 fill = 1
 fill_from = Vector2(0.47008547, 0.48290598)
 fill_to = Vector2(1, 1)
@@ -131,7 +131,7 @@ gradient = SubResource("Gradient_i6d6k")
 lifetime_randomness = 1.0
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(2304, 2304, 1)
+emission_box_extents = Vector3(1500, 1500, 1)
 angle_min = 45.00001
 angle_max = 45.00001
 gravity = Vector3(0, 0, 0)
@@ -191,6 +191,35 @@ position = Vector2(227, 693)
 [node name="Citrinitas" parent="." unique_id=1710463245 instance=ExtResource("13_udl5n")]
 position = Vector2(978, 573)
 
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=467254128]
+position = Vector2(638.1094, 508.18066)
+scale = Vector2(53.102573, 53.102573)
+color = Color(0.93, 0.69563997, 0.26039997, 1)
+energy = 1.32
+texture = SubResource("GradientTexture2D_oiqfl")
+offset = Vector2(6.305, 1.125)
+texture_scale = 0.11
+height = 222.0
+
+[node name="PointLight2D2" type="PointLight2D" parent="." unique_id=1290195968]
+position = Vector2(-107.00006, 649.99994)
+scale = Vector2(53.102573, 53.102573)
+color = Color(0.93, 0.69563997, 0.26039997, 1)
+energy = 1.32
+texture = SubResource("GradientTexture2D_oiqfl")
+offset = Vector2(6.305, 1.125)
+texture_scale = 0.11
+height = 222.0
+
+[node name="PointLight2D3" type="PointLight2D" parent="." unique_id=572939998]
+position = Vector2(746, 852.99994)
+scale = Vector2(53.102573, 53.102573)
+color = Color(0.93, 0.80956495, 0.5859, 1)
+energy = 1.11
+texture = SubResource("GradientTexture2D_oiqfl")
+texture_scale = 0.21
+height = 222.0
+
 [node name="Player" parent="." unique_id=800378027 instance=ExtResource("1_bjfuu")]
 position = Vector2(775, 417)
 itens_iniciais = Array[ExtResource("3_kbahf")]([])
@@ -208,6 +237,7 @@ height = 222.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1407350426]
 stream = ExtResource("14_mxryl")
+autoplay = true
 parameters/looping = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1667181949]
@@ -215,18 +245,19 @@ parameters/looping = true
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=2048425272]
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="ParallaxBackground/ParallaxLayer" unique_id=169966939]
-position = Vector2(1240, 1154)
-amount = 200
+position = Vector2(728, 1059)
+amount = 551
 lifetime = 4.0
 process_material = SubResource("ParticleProcessMaterial_gt5u7")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1616341068]
+visible = false
 position = Vector2(935, 719)
 occluder = SubResource("OccluderPolygon2D_i6d6k")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=38278777]
-color = Color(0.10374681, 6.930828e-06, 0.46622455, 1)
-energy = 0.4
+color = Color(0.07193031, 0.046721023, 0.4116557, 0.8745098)
+energy = 0.9
 blend_mode = 2
 
 [node name="Control" parent="." unique_id=1308278743 instance=ExtResource("17_oiqfl")]

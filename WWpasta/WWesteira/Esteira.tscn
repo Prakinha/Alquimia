@@ -7,6 +7,16 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3036i"]
 size = Vector2(64, 64)
 
+[sub_resource type="Gradient" id="Gradient_thmlx"]
+offsets = PackedFloat32Array(0, 0.096525095, 0.74131274)
+colors = PackedColorArray(1, 1, 1, 1, 0.8125, 0.8125, 0.8125, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3036i"]
+gradient = SubResource("Gradient_thmlx")
+fill = 1
+fill_from = Vector2(0.47008547, 0.48290598)
+fill_to = Vector2(1, 1)
+
 [node name="Esteira" type="Node2D" unique_id=912511156]
 script = ExtResource("1_3036i")
 goblinScene = ExtResource("2_v2mle")
@@ -29,6 +39,46 @@ position = Vector2(512, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1613512839]
 position = Vector2(1120, 32)
 shape = SubResource("RectangleShape2D_3036i")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=2106674858]
+position = Vector2(-154, 1.9073486e-06)
+scale = Vector2(53.102573, 53.102573)
+color = Color(0.93, 0.69563997, 0.26039997, 1)
+energy = 0.6
+texture = SubResource("GradientTexture2D_3036i")
+offset = Vector2(6.305, 1.125)
+texture_scale = 0.15
+height = 222.0
+
+[node name="PointLight2D2" type="PointLight2D" parent="." unique_id=981428499]
+position = Vector2(-190, -2.1175824e-22)
+scale = Vector2(53.102573, 53.102573)
+color = Color(0.93, 0.69563997, 0.26039997, 1)
+energy = 0.6
+texture = SubResource("GradientTexture2D_3036i")
+offset = Vector2(14, 1.125)
+texture_scale = 0.15
+height = 222.0
+
+[node name="PointLight2D3" type="PointLight2D" parent="." unique_id=1583567481]
+position = Vector2(-190, -2.1175824e-22)
+scale = Vector2(53.102573, 53.102573)
+color = Color(0.93, 0.69563997, 0.26039997, 1)
+energy = 0.6
+texture = SubResource("GradientTexture2D_3036i")
+offset = Vector2(28, 1.125)
+texture_scale = 0.15
+height = 222.0
+
+[node name="PointLight2D4" type="PointLight2D" parent="." unique_id=2088137444]
+position = Vector2(-190, -2.1175824e-22)
+scale = Vector2(53.102573, 53.102573)
+color = Color(0.93, 0.69563997, 0.26039997, 1)
+energy = 0.6
+texture = SubResource("GradientTexture2D_3036i")
+offset = Vector2(21, 1.125)
+texture_scale = 0.15
+height = 222.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

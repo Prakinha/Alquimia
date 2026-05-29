@@ -247,7 +247,6 @@ offset_right = 514.0
 offset_bottom = 541.0
 
 [node name="Pagina0" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=611275447]
-visible = false
 anchors_preset = 0
 offset_right = 722.0
 offset_bottom = 468.0
@@ -257,15 +256,16 @@ layout_mode = 0
 offset_right = 295.0
 offset_bottom = 189.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.23529412)
 theme_override_fonts/font = ExtResource("11_6w6ns")
 theme_override_font_sizes/font_size = 38
-text = "OLA MAGO, Bem 
+text = "OLA MAGO, Bem-
 vindo(a) a sua nova 
 jornada alquimica.
 
-para iniciar, lembre-
--se de como um ver-
-dadeiro mago se porta.
+para iniciar, lembra-te 
+como um verdadeiro 
+mago se porta.
 
 este sera seu controle."
 
@@ -276,6 +276,7 @@ offset_top = -6.0
 offset_right = 705.0
 offset_bottom = 183.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.23529412)
 theme_override_fonts/font = ExtResource("11_6w6ns")
 theme_override_font_sizes/font_size = 38
 text = "andar"
@@ -287,6 +288,7 @@ offset_top = -20.0
 offset_right = 835.0
 offset_bottom = 169.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.23529412)
 theme_override_fonts/font = ExtResource("11_6w6ns")
 theme_override_font_sizes/font_size = 38
 text = "pegar/largar"
@@ -299,6 +301,7 @@ offset_right = 666.0
 offset_bottom = 500.0
 scale = Vector2(0.75454676, 0.75454676)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.23529412)
 theme_override_fonts/font = ExtResource("11_6w6ns")
 theme_override_font_sizes/font_size = 38
 text = "Livro Tutorial"
@@ -311,6 +314,7 @@ offset_right = 889.0
 offset_bottom = 465.0
 scale = Vector2(0.75454676, 0.75454676)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.23529412)
 theme_override_fonts/font = ExtResource("11_6w6ns")
 theme_override_font_sizes/font_size = 38
 text = "Inventario/
@@ -429,6 +433,8 @@ offset_top = -15.0
 offset_right = 310.0
 offset_bottom = 174.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.23529412)
+theme_override_fonts/font = ExtResource("11_6w6ns")
 theme_override_font_sizes/font_size = 40
 text = "Albedo"
 horizontal_alignment = 1
@@ -440,6 +446,8 @@ offset_top = -7.0
 offset_right = 690.0
 offset_bottom = 182.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.23529412)
+theme_override_fonts/font = ExtResource("11_6w6ns")
 theme_override_font_sizes/font_size = 40
 text = "Citrinitas"
 horizontal_alignment = 1
@@ -461,6 +469,7 @@ offset_top = 192.0
 offset_right = 356.0
 offset_bottom = 623.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.23529412)
 theme_override_fonts/font = ExtResource("11_6w6ns")
 theme_override_font_sizes/font_size = 38
 text = "Esta bancada ira 
@@ -478,6 +487,7 @@ offset_top = 193.0
 offset_right = 737.0
 offset_bottom = 624.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.23529412)
 theme_override_fonts/font = ExtResource("11_6w6ns")
 theme_override_font_sizes/font_size = 38
 text = "Esta bancada ira 
@@ -519,6 +529,7 @@ scale = Vector2(4.4852605, 4.4852605)
 texture = ExtResource("28_jftne")
 
 [node name="Pagina2" type="Control" parent="NodeControle/PaginasTutoriais" unique_id=105073553]
+visible = false
 anchors_preset = 0
 offset_right = 722.0
 offset_bottom = 468.0
@@ -530,6 +541,7 @@ offset_top = -16.0
 offset_right = 355.0
 offset_bottom = 415.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.23529412)
 theme_override_fonts/font = ExtResource("11_6w6ns")
 theme_override_font_sizes/font_size = 38
 text = "Receitas para as joias:"
@@ -542,6 +554,7 @@ offset_top = -15.0
 offset_right = 737.0
 offset_bottom = 416.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.23529412)
 theme_override_fonts/font = ExtResource("11_6w6ns")
 theme_override_font_sizes/font_size = 38
 text = "Trasnsmutacao filosofal:"
@@ -681,6 +694,7 @@ offset_right = 760.0
 offset_bottom = 779.0
 scale = Vector2(0.75454676, 0.75454676)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.23529412)
 theme_override_fonts/font = ExtResource("11_6w6ns")
 theme_override_font_sizes/font_size = 38
 text = "APERTE ESC PARA SAIR"
