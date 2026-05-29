@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Global="*uid://cys7ie1w8kqfn"
 Receitas="*uid://cel1nst3llnyn"
 InventarioGlobal="*uid://bc0cgcicnyggo"
+TempoFinal="*uid://ba4thmerqear7"
 
 [display]
 

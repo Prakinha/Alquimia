@@ -8,6 +8,7 @@ func _ready():
 	# Deixa a tela de vitória e o texto transparentes (invisíveis)
 	$ScreenVictory.modulate.a = 0.0
 	$Label3.modulate.a = 0.0
+	$Label4.text = "Tempo final: %02d:%02d.%03d" % [TempoFinal.minFinal, TempoFinal.secFinal, TempoFinal.msecFinal]
 	
 	# Inicia a animação
 	animar_cena_final()
@@ -26,3 +27,4 @@ func animar_cena_final():
 	# Passo 3: Fade in do Label3. (Duração: 1.0 segundo)
 	tween.tween_property($Label3, "modulate:a", 3.5, 3.0)
 	tween.tween_property($Label3, "modulate:a", 0.0, 1.0)
+	tween.tween_property($Label4, "modulate:a", 1, 2.0)

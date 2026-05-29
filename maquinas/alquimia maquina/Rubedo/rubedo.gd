@@ -72,6 +72,7 @@ func executar_transmutacao() -> void:
 				break
 				
 		if transmutacao_valida:
+			TempoFinal.fimdejogo.emit()
 			print("A GRANDE TRANSMUTAÇÃO COMEÇOU!")
 			_animacao_cinematica() 
 		else:
